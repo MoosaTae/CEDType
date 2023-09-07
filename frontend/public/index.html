@@ -5,13 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CEDType</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div>
-        <h1>Frontend</h1>
-        <p>Frontend</p>
-        <p>วันนี้เรามาเก็บยางพารา</p>
+        <div class="container">
+            <input type="text" id="input-container">
+            <div class="content-box">
+                <div class="typing-text">
+                    <span id="message">message</span>
+                </div>
+                <div class="content">
+                    <div class="summarize">
+                        <ul class="result">
+                            <li>TIME: <span id="wpm">60</span></li>
+                            <li>WPM: <span id="wpm">0</span></li>
+                            <li>CPM: <span id="cpm">0</span></li>
+                            <li>ACC: <span id="acc">0</span></li>
+                        </ul>
+                    </div>
+                    <button id="restart-button">Restart</button>
+                </div>
+            </div>
+
+        </div>
     </div>
 </body>
 
