@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font: 100% sans-serif;
-
 }
 
 body {
@@ -98,7 +97,6 @@ body {
     cursor: pointer;
     background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
 }
-
 
 .correct {
     color: #ffc933;
