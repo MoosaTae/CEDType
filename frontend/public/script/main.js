@@ -1,5 +1,7 @@
 const paragraphs = [
-    "peak", "lol", "Hello", "World", "Love", "Like", "hate", "dislike", "scary", "structure", "project", "approach", "manager", "team", "system", "exc"
+    "Peak", "lol", "Hello", "World", "Love", "Like", "hate", "dislike", "scary", "structure", "Project", "approach", "manager", "team", "system", "Exc",
+    "shout", "fan", "bean", "leave", "Wardrobe", "reward", "Skeleton", "difinite", "queen", "Goat", "reptile", "Will", "reservoir",
+    "Sting", "String", "lose", "Copper", "eternal", "uniform", "admission", "rent", "Survey", "criticism", "grief", "DAMN", "run", "morale", "farewell", "leftovers", "design", "marketing", "preoccupation", "institution", "registration", "Application", "transaction", "Celebration", "participate", "continuation", "improvement", "Advertising", "entitlement", "contraction", "anticipation", "Deteriorate", "circumstance"
 ];
 
 const typingText = document.querySelector(".typing-text")
@@ -72,6 +74,7 @@ function CheckWord() {
         timeLeft += 2.5;
     } else {
         timeLeft -= 5;
+        if (timeLeft < 0) timeLeft = 0;
     }
     let charactersIndex = Math.floor(Math.random() * paragraphs.length);
     typingText.innerHTML = "";
