@@ -10,18 +10,23 @@
 
 <body>
     <div>
+        <div class=header>
+            <img src="Col.png" id="HImage">
+            <h id="HEAD">CEDType</h>
+        </div>
         <div class="container">
             <input type="text" id="input-container">
             <div class="content-box">
+                <div id="event-lover"></div>
                 <div class="typing-text">
-                    <span id="message">message</span>
+
                 </div>
                 <div class="content">
                     <div class="summarize">
                         <ul class="result">
-                            <li>TIME: <span id="wpm">60</span></li>
+                            <li>Time: <span id="time">60</span></li>
+                            <li>Score: <span id="score">0</span> </li>
                             <li>WPM: <span id="wpm">0</span></li>
-                            <li>CPM: <span id="cpm">0</span></li>
                             <li>ACC: <span id="acc">0</span></li>
                         </ul>
                     </div>
@@ -31,6 +36,7 @@
 
         </div>
     </div>
+    <script src="script/main.js"></script>
 </body>
 
 </html>
