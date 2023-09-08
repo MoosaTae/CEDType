@@ -1,108 +1,154 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font: 100% sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 100% sans-serif;
 }
 
 body {
-    display: flex;
-    padding: 0 10px;
-    justify-content: center;
-    background-color: rgb(165, 175, 201);
+  display: flex;
+  padding: 0 10px;
+  justify-content: center;
+  background-color: rgb(165, 175, 201);
 }
 
 #HImage {
-    width: 50px;
-    position: relative;
-    top: 50px;
-    left: 75px;
+  width: 50px;
+  position: relative;
+  top: 50px;
+  left: 75px;
 }
 
 .header {
-    width: 1313px;
-    height: 10px;
-    font-size: 4ch;
-    position: relative;
+  width: 1313px;
+  height: 10px;
+  font-size: 4ch;
+  position: relative;
 }
 
 #HEAD {
-    position: relative;
-    left: 75px;
-    top: 40px;
+  position: relative;
+  left: 75px;
+  top: 40px;
 }
 
 .container {
-    width: 500px;
-    margin: 10% auto;
-    padding: 20px 30px;
-    border-radius: 20px;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    background-color: white;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  width: 500px;
+  margin: 10% auto;
+  padding: 20px 30px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  background-color: white;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .message {
-    color: red;
+  color: red;
 }
 
 .summarize {
-    color: cornflowerblue;
+  color: cornflowerblue;
 }
 
 ::selection {
-    background-color: #555;
-    color: white;
+  background-color: #555;
+  color: white;
 }
 
 .container #input-container {
-    opacity: 0;
-    position: absolute;
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
 }
 
 .container .typing-text {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin: 0px 10px 15px 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0px 10px 15px 10px;
 }
 
 .container .typing-text {
-    color: #4e4e4e2f;
-
+  color: #4e4e4e2f;
 }
 
 .container ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .container ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid #aaa;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #aaa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #restart-button {
-    border-radius: 8px;
-    padding: 5px 10px;
-    margin: 20px auto;
-    border: 1px solid #aaa;
-    background: white;
-    width: 100px;
-    cursor: pointer;
-    background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+  border-radius: 8px;
+  padding: 5px 10px;
+  margin: 20px auto;
+  border: 1px solid #aaa;
+  background: white;
+  width: 100px;
+  cursor: pointer;
+  background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+}
+#restart-button:hover {
+  background: linear-gradient(
+    to bottom,
+    cornflowerblue 5%,
+    cornflowerblue 100%
+  );
 }
 
 .correct {
-    color: #ffc933;
+  color: #ffc933;
+  transition: color 0.1s;
 }
 
 .incorrect {
-    color: #ff0000;
-    border-radius: 4px;
+  color: #ff0000;
+  border-radius: 4px;
+}
+
+#option {
+  display: flex;
+  background-color: black;
+  border-radius: 20px;
+  width: 30rem;
+  margin: 0 auto;
+  padding: 0.5rem 0 0.5rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+#option .textButton,
+#option .textButton-active {
+  padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+}
+#option .textButton:hover,
+#option .textButton-active:hover {
+  color: yellowgreen;
+  transition: color 0.3s;
+}
+#option .textButton-active {
+  color: orange;
+  transition: color 0.3s;
+}
+
+#mode-option {
+  justify-content: center;
+  display: grid;
+  grid-auto-flow: column;
+  margin: 0 1rem 0 0;
+}
+
+#time-option {
+  justify-content: center;
+  display: grid;
+  grid-auto-flow: column;
 }
