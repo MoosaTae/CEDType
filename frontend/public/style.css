@@ -17,19 +17,19 @@ body {
     width: 50px;
     position: relative;
     top: 50px;
-    left: 115px;
+    left: 75px;
 }
 
 .header {
     width: 1313px;
     height: 100px;
     font-size: 4ch;
-    position: absolute;
+    position: relative;
 }
 
 #HEAD {
     position: relative;
-    left: 115px;
+    left: 75px;
     top: 40px;
 }
 
