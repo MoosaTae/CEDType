@@ -22,7 +22,6 @@ body {
 .header {
   width: 1313px;
   height: 10px;
-  font-size: 4ch;
   position: relative;
 }
 
@@ -30,6 +29,7 @@ body {
   position: relative;
   left: 75px;
   top: 40px;
+  font-size: 4ch;
 }
 
 .container {
@@ -115,10 +115,20 @@ body {
   border-radius: 4px;
 }
 
+#menu {
+  display: flex;
+  background-color: black;
+  border-radius: 20rem;
+  width: 30rem;
+  padding: 0.5rem 0 0.5rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
 #option {
   display: flex;
   background-color: black;
-  border-radius: 20px;
+  border-radius: 20rem;
   width: 30rem;
   margin: 0 auto;
   padding: 0.5rem 0 0.5rem 0;
