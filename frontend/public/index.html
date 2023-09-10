@@ -1,17 +1,72 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CEDType</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-    <div>
-        <h1>Frontend</h1>
-        <p>Frontend</p>
-        <p>วันนี้เรามาเก็บยางพารา</p>
+    <div id="header">
+        <ul class="menu">
+            <li class="logoText">
+                <p>
+                    <b>CEDType</b>
+                </p>
+            </li>
+            <li class="leaderboard">
+                <p>
+                    <button><b>♛</b></button>
+                </p>
+            <li class="education">
+                <p>
+                    <button><b>🕮</b></button>
+                </p>
+            </li>
+            <li class="information">
+                <p>
+                    <button><b>🛈</b></button>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <input type="text" class="input-field">
+        <div class="content-box">
+            <div class="typing-text">
+                <p id="paragraph"></p>
+            </div>
+            <div class="content">
+                <ul class="result-details">
+                    <li class="time">
+                        <p>
+                            Time Left:
+                        </p>
+                        <span><b>60</b>s</span>
+                    </li>
+                    <li class="mistake">
+                        <p>
+                            Mistakes:
+                        </p>
+                        <span>0</span>
+                    </li>
+                    <li class="wpm">
+                        <p>
+                            WPM:
+                        </p>
+                        <span>0</span>
+                    </li>
+                    <li class="cpm">
+                        <p>
+                            CPM:
+                        </p>
+                        <span>0</span>
+                    </li>
+                </ul>
+                <button>Try Again</button>
+            </div>
+        </div>
     </div>
 </body>
 
