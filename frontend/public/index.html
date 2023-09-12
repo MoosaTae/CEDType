@@ -4,74 +4,86 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CEDType</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-    <div>
-      <div class="header">
-        <img src="Col.png" id="HImage" />
-        <h id="HEAD">CEDType</h>
-        <div id="option">
-          <div id="mode-option">
-            <div class="textButton">
-              <span>tutorial</span>
-            </div>
-            <div class="textButton">
-              <span>leaderboard</span>
-            </div>
-            <div class="textButton">
-              <span>setting</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <input type="text" id="input-container" />
-        <div class="content-box">
-          <div class="typing-text"></div>
-          <div class="content">
-            <div class="summarize">
-              <ul class="result">
-                <li>Time: <span id="time">60</span></li>
-                <li>Score: <span id="score">0</span></li>
-                <li>WPM: <span id="wpm">0</span></li>
-                <li>ACC: <span id="acc">0</span></li>
-              </ul>
-            </div>
-            <button id="restart-button">Restart</button>
-          </div>
-        </div>
-      </div>
-      <div id="option">
-        <div id="mode-option">
-          <div class="textButton">
-            <span>⌚time</span>
-          </div>
-          <div class="textButton-active">
-            <span>⛔endless</span>
-          </div>
-          <div class="textButton">
-            <span>🍔Hard</span>
-          </div>
-        </div>
-        <div id="time-option">
-          <div class="textButton">
-            <span>15</span>
-          </div>
-          <div class="textButton">
-            <span>30</span>
-          </div>
-          <div class="textButton-active">
-            <span>60</span>
-          </div>
-          <div class="textButton">
-            <span>custom</span>
-          </div>
-        </div>
-      </div>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div id="header">
+        <ul class="menu">
+            <li class="logoText">
+                <p>
+                    <b>CEDType</b>
+                </p>
+            </li>
+            <li class="leaderboard">
+                <p>
+                    <button><b>♛</b></button>
+                </p>
+            <li class="education">
+                <p>
+                    <button><b>🕮</b></button>
+                </p>
+            </li>
+            <li class="information">
+                <p>
+                    <button><b>🛈</b></button>
+                </p>
+            </li>
+        </ul>
     </div>
-    <script src="script/main.js"></script>
-  </body>
+    <div class="wrapper">
+        <input type="text" class="input-field">
+        <div class="content-box">
+            <div class="typing-text">
+                <p id="paragraph"></p>
+            </div>
+            <div class="content">
+                <ul class="result-details">
+                    <li class="time">
+                        <p>
+                            Time Left:
+                        </p>
+                        <span><b>60</b>s</span>
+                    </li>
+                    <li class="mistake">
+                        <p>
+                            Mistakes:
+                        </p>
+                        <span>0</span>
+                    </li>
+                    <li class="wpm">
+                        <p>
+                            WPM:
+                        </p>
+                        <span>0</span>
+                    </li>
+                    <li class="cpm">
+                        <p>
+                            CPM:
+                        </p>
+                        <span>0</span>
+                    </li>
+                </ul>
+                <button>Try Again</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class = "Tutorial">
+    
+    <h1 class = "eduTitle">CEDTutorial</h1>
+    <h2 class = "eduSubTitle" id = "lesson1">Lesson 1:Home Row</h2>
+    <p class = "eduText">The fisrt part of your <strong>JOURNEY</strong> comes from  knowing how to type homerow correctly</p>
+    <p class = "eduText">For your <strong>Right Hand</strong>,put your finger above j k l ; start from your index finger to pinky finger</p>
+    <p class = "eduText">The same goes for <strong>Left Hand</strong>.Put your finger above f d s a . </p>
+    <img src="C:\Users\LENOVO\Documents\CEDType\frontend\both.jpg"></img>
+    <p class ="eduText">For <strong>G H</strong>,practice your index finger to reach these key</p>
+    
+    <h2 class ="eduSubTitle" id = "lesson2">Lesson 2:Top Row</h2>
+    <p class = "eduText">Congrats! Now that you have master the home row key,you can move next to top row .It will cover from Q to P let's start with <strong>R U</strong> first </p>
+
+</div>
+</body>
+
 </html>

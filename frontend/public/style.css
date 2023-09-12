@@ -4,6 +4,15 @@
   box-sizing: border-box;
   font: 100% sans-serif;
 }
+<<<<<<< Updated upstream
+=======
+.container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+>>>>>>> Stashed changes
 
 body {
   display: flex;
@@ -162,3 +171,28 @@ body {
   display: grid;
   grid-auto-flow: column;
 }
+
+.Tutorial {
+    width: 1000px;
+    padding: 35px;
+    background:#FBE4D8;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+    position : fixed;
+    margin-top: 1200px;
+}
+
+.eduTitle {
+    color :#522B5B
+}
+.eduSubTitle {
+    color :#c788b5
+}
+.eduText {
+    color :#C38EB4
+}
+
+
+
+
+
