@@ -111,5 +111,9 @@ function resetGame() {
   multiplier = 1;
   timepass = 0;
 }
+function setMaxTime(newTime) {
+  maxTime = newTime;
+  resetGame();
+}
 
-export { loadParagraph, initTyping, resetGame }
+export { loadParagraph, initTyping, resetGame, maxTime, setMaxTime }
