@@ -1,19 +1,44 @@
 import {setMaxTime} from './state.js';
 
-function initializeTimeButtonHandlers(){
-    const textButtons = document.querySelectorAll(".textButton");
+function swapButtonActive(textButtons, button){
+    textButtons.forEach((btn) => {
+        btn.classList.remove("textButton-active");
+    });
+    button.classList.add("textButton-active");
+}
+
+function initializeTimeButton(){
+    const textButtons = document.querySelectorAll("#time-option .textButton");
     textButtons.forEach((button) => {
         button.addEventListener("click", () => {
             const timeValue = button.querySelector('span').textContent;
             setMaxTime(timeValue);
-            console.log(`Selected time: ${timeValue}`);
-
-            textButtons.forEach((btn) => {
-                btn.classList.remove("textButton-active");
-            });
-
-            button.classList.add("textButton-active");
+            swapButtonActive(textButtons, button);
         });
     });
 }
-export {initializeTimeButtonHandlers};
+function initializeModeButton(){
+    const textButtons = document.querySelectorAll("#mode-option .textButton");
+    textButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const mode = button.querySelector('span').parentElement.id;
+            switch (mode){
+                case "time-mode":
+                    break;
+                case "endless-mode":
+                    break;
+                case "secret-mode":
+                    break;
+                default:
+                    break;
+            }
+            swapButtonActive(textButtons, button);
+        });
+    });
+}
+function initializeButton(){
+    initializeTimeButton();
+    initializeModeButton();
+}
+
+export {initializeButton};

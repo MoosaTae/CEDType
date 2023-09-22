@@ -2,7 +2,6 @@ import { paragraphs } from "./paragraph.js";
 
 const typingText = document.querySelector(".typing-text");
 const inpField = document.querySelector("#input-container");
-const tryAgainBtn = document.querySelector("#restart-button");
 const timeTag = document.querySelector("#time");
 //const mistakeTag = document.querySelector(".mistake span")
 const wpmTag = document.querySelector("#wpm");
@@ -19,6 +18,10 @@ let score = 0;
 let multiplier = 1;
 let timepass = 0;
 
+/*
+- randomly load a paragraph from the paragraphs
+- 
+*/
 function loadParagraph() {
     let charactersIndex = Math.floor(Math.random() * paragraphs.length);
     typingText.innerHTML = "";
@@ -26,6 +29,7 @@ function loadParagraph() {
       let span = `<span>${char}</span>`;
       typingText.innerHTML += span;
     });
+    console.log(typingText)
     typingText.querySelectorAll("span")[0].classList.add("active");
     document.addEventListener("keydown", () => inpField.focus());
     typingText.addEventListener("click", () => inpField.focus());
