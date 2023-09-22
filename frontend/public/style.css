@@ -147,6 +147,7 @@ body {
 
 #option .textButton,
 #option .textButton-active {
+  color: white;
   padding: 0.75rem 0.5rem 0.75rem 0.5rem;
 }
 #option .textButton:hover,
