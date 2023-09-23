@@ -17,6 +17,7 @@ function initializeTimeButton(){
         });
     });
 }
+
 function initializeModeButton(){
     const textButtons = document.querySelectorAll("#mode-option .textButton");
     textButtons.forEach((button) => {
@@ -36,6 +37,7 @@ function initializeModeButton(){
         });
     });
 }
+
 function initializeButton(){
     initializeTimeButton();
     initializeModeButton();

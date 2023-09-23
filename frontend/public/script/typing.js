@@ -7,7 +7,7 @@ const tryAgainBtn = document.querySelector("#restart-button");
 function gameStart() {
     initializeButton();
     loadParagraph();
-    
+
     inpField.addEventListener("input", initTyping);
     tryAgainBtn.addEventListener("click", resetGame);
     inpField.addEventListener("keydown", (e) => {
