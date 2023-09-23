@@ -1,4 +1,4 @@
-import { paragraphs } from "./paragraph.js";
+import { words } from "./items.js";
 
 const typingText = document.querySelector(".typing-text");
 const inpField = document.querySelector("#input-container");
@@ -18,14 +18,36 @@ let misplay = 0;
 let score = 0;
 let multiplier = 1;
 let timepass = 0;
+let max_length = 10;
+let min_length = 5;
+let game_mode = "endless-mode";
+
+function generateRandomParagraph() {
+  const paragraphLength = Math.floor(Math.random() * (max_length - min_length + 1)) + min_length;
+  const paragraph = [];
+  
+  for (let i = 0; i < paragraphLength; i++) {
+      const randomWordIndex = Math.floor(Math.random() *words.length);
+      paragraph.push(words[randomWordIndex]);
+  }
+  return paragraph.join(' ');
+}
 
 function addParagraph() {
-  let charactersIndex = Math.floor(Math.random() * paragraphs.length);
-
-  paragraphs[charactersIndex].split("").forEach((char) => {
-    let span = `<span>${char}</span>`;
-    typingText.innerHTML += span;
-  });
+  if (game_mode == "endless-mode") {
+    let charactersIndex = Math.floor(Math.random() * words.length);
+    words[charactersIndex].split("").forEach((char) => {
+      let span = `<span>${char}</span>`;
+      typingText.innerHTML += span;
+    });
+  }
+  else if (game_mode == "time-mode") {
+    let paragraph = generateRandomParagraph();
+    for (let i = 0; i < paragraph.length; i++) {
+      let span = `<span>${paragraph[i]}</span>`;
+      typingText.innerHTML += span;
+    }
+  }
   // typingText.querySelector("span").classList.add("active");
 }
 function resetWord(){
@@ -34,7 +56,8 @@ function resetWord(){
   charIndex = 0;
   addParagraph();
 }
-// randomly load a paragraph from the paragraphs
+
+// randomly load a paragraph from the words
 function loadParagraph() {
   resetWord()
   document.addEventListener("keydown", () => inpField.focus());
@@ -117,7 +140,7 @@ function initTimer() {
     timeTag.innerText = timeLeft;
     let wpm = Math.round((score * 60) / timepass);
     wpmTag.innerText = wpm;
-  } 
+  }
   else {
     clearInterval(timer);
   }
@@ -128,4 +151,9 @@ function setMaxTime(newTime) {
   resetGame();
 }
 
-export { loadParagraph, initTyping, resetGame, maxTime, setMaxTime }
+function changeMode(mode){
+  game_mode = mode;
+  resetGame();
+}
+
+export { loadParagraph, initTyping , resetWord, resetGame, maxTime, setMaxTime, initTimer, changeMode }

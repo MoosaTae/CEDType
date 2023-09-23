@@ -1,4 +1,4 @@
-import {setMaxTime} from './state.js';
+import {setMaxTime, changeMode} from './state.js';
 
 function swapButtonActive(textButtons, button){
     textButtons.forEach((btn) => {
@@ -25,8 +25,10 @@ function initializeModeButton(){
             const mode = button.querySelector('span').parentElement.id;
             switch (mode){
                 case "time-mode":
+                    changeMode("time-mode");
                     break;
                 case "endless-mode":
+                    changeMode("endless-mode");
                     break;
                 case "secret-mode":
                     break;
