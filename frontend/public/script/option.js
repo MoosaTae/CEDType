@@ -28,7 +28,7 @@ function initializeModeButton(){
                     changeMode("time-mode");
                     break;
                 case "endless-mode":
-                    changeMode("endless-mode");
+                    game_mode = "endless-mode";
                     break;
                 case "secret-mode":
                     break;
