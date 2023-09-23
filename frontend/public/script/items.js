@@ -1,4 +1,4 @@
-const paragraphs = [
+const words = [
     "Peak",
     "lol",
     "Hello",
@@ -63,4 +63,4 @@ const paragraphs = [
     "circumstance",
   ];
 
-export {paragraphs};
+export {words};
