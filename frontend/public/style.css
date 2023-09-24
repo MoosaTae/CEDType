@@ -48,6 +48,62 @@ body {
   color: red;
 }
 
+.NameS {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 38%;
+  top: 30%;
+  background-color: white;
+  border: #555 solid 0.4ch;
+  text-align: center;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.NameS span {
+  font-size: 30px;
+  position: relative;
+  top: 10%;
+}
+
+
+
+.NameS button {
+  position: relative;
+  top: 50%;
+  background-color: aquamarine;
+  width: 148px;
+  height: 24px;
+}
+
+.show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .summarize {
   color: cornflowerblue;
 }
@@ -55,6 +111,10 @@ body {
 ::selection {
   background-color: #555;
   color: white;
+}
+
+#loginS {
+  color: #e9e9e9;
 }
 
 .container #input-container {
@@ -79,6 +139,8 @@ body {
   margin: 0;
 }
 
+
+
 .container ul li {
   padding: 10px 0;
   border-bottom: 1px solid #aaa;
@@ -97,12 +159,11 @@ body {
   cursor: pointer;
   background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
 }
+
 #restart-button:hover {
-  background: linear-gradient(
-    to bottom,
-    cornflowerblue 5%,
-    cornflowerblue 100%
-  );
+  background: linear-gradient(to bottom,
+      cornflowerblue 5%,
+      cornflowerblue 100%);
 }
 
 .correct {
@@ -141,17 +202,20 @@ body {
   color: white;
   padding: 0.75rem 0.5rem 0.75rem 0.5rem;
 }
+
 #option .textButton:hover,
 #option .textButton-active:hover {
   color: yellowgreen;
   transition: color 0.3s;
 }
+
 #option .textButton-active {
   color: orange;
   transition: color 0.3s;
 }
 
-#mode-option {
+#mode-option,
+#setting-option {
   justify-content: center;
   display: grid;
   grid-auto-flow: column;
@@ -162,4 +226,10 @@ body {
   justify-content: center;
   display: grid;
   grid-auto-flow: column;
+}
+
+.NameS input {
+  position: relative;
+  top: 20%;
+  height: 10%;
 }
