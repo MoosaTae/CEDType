@@ -186,3 +186,13 @@ tryAgainBtn.addEventListener("keydown", (e) => {
     resetGame();
   }
 });
+
+let tutorial = document.querySelector(".Tutorial");
+
+function toggleEdu() {
+  tutorial.classList.toggle("active"); 
+  console.log(okay);
+}
+
+document.querySelector(".education").addEventListener("click", toggleEdu);
+
