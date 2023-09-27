@@ -1,33 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Roboto+Mono&display=swap');
 :root{
     --bgColor: #333;
+    --bgColorSecondary:#1e1e1e;
     --textPrimary: #fff;
     --textSecondary: #666;
     --primaryColor: #fd5;
     --error-color: #fc5d7c;
     --error-extra-color: #ecac6a;
     --text-correct-color: #e2e2e3;
+    --bgGradient: #FBE4D8, #DFB6B2, #854F6C, #522B5B, #2B124C, #190019;
 }
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: var(--bgColor);
+    background: linear-gradient(var(--bgGradient));
     color: var(--textPrimary);
     font-size: 1.4rem;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    display: flex;
 }
 main{
     width: 600px;
     margin: 50px auto;
 }
-h1{
+.logo h1{
     color: var(--primaryColor);
+    position: absolute;
 }
-h1 svg{
+.icon svg{
     width: 55px;
+    position: absolute;
 }
 #header{
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 20px 6px 30px;
+    top: 10%;
 }
 #buttons{
     text-align: right;
@@ -43,6 +53,23 @@ button{
     border-radius: 5px;
     cursor: pointer;
 }
+.wrapper{
+    max-width: 700px;
+    padding: 35px;
+    background: var(--bgColorSecondary);
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+    align-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    height: -moz-fit-content;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: 100%;
+    margin: auto;
+}
 div#game{
     line-height: 35px;
     height: 105px;
@@ -53,11 +80,23 @@ div#game:focus{
     outline: 0;
 }
 #words{
-    filter: blur(5px);
-    color: var(--textSecondary);
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    opacity: .25;
+    color: var(--primaryColor);
 }
 #game:focus #words{
     filter: blur(0);
+    opacity: 1;
+    align-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    height: -moz-fit-content;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: 100%;
 }
 #focus-error{
     position: absolute;
@@ -120,4 +159,21 @@ div.word{
 }
 #game.over #focus-error{
     display: none;
- }
+}
+#top{
+    align-items: center;
+    font-size: 2.3rem;
+    grid-auto-flow: column;
+    grid-template-areas: "logo menu";
+    line-height: 2.3rem;
+    padding: 0 5px;
+    z-index: 2;
+}
+#top .logo{
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: auto 1fr;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}

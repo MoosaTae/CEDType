@@ -156,10 +156,10 @@ document.getElementById('game').addEventListener('keydown', ev => {
     }
 
     // move lines
-    if (currentWord.getBoundingClientRect().top > 270) {
+    if (currentWord.getBoundingClientRect().top > 560) {
         const words = document.getElementById('words');
         const margin = parseInt(words.style.marginTop || '0px');
-        words.style.marginTop = (margin - 36) + 'px';
+        words.style.marginTop = (margin - 35) + 'px';
     }
 
     // move cursor
