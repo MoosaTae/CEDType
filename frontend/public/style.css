@@ -343,3 +343,9 @@ body {
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
 }
+
+.NameS input {
+  position: relative;
+  top: 20%;
+  height: 10%;
+}
