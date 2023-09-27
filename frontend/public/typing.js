@@ -176,19 +176,19 @@ document.getElementById('game').addEventListener('keydown', ev => {
     cursor.style.left = (nextLetter || nextWord).getBoundingClientRect()[nextLetter ? 'left' : 'right'] + 'px';
 });
 
-document.getElementById('newGameBtn').addEventListener('click', () => {
-    gameOver();
-    newGame();
-    resetCursor();
-});
+// document.getElementById('newGameBtn').addEventListener('click', () => {
+//     gameOver();
+//     newGame();
+//     resetCursor();
+// });
 
 function resetCursor() {
     cursor.style.top = document.querySelector('.letter.current').getBoundingClientRect().top + 4 + 'px';
     cursor.style.left = document.querySelector('.letter.current').getBoundingClientRect().left + 'px';
 }
 
-newGame();
-resetCursor();
+// newGame();
+// resetCursor();
 
 
 function homePractice() {

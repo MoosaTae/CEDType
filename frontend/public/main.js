@@ -82,6 +82,7 @@ let timepass = 0;
 
 function loadParagraph() {
   let charactersIndex = Math.floor(Math.random() * paragraphs.length);
+  console.log(typingText); 
   typingText.innerHTML = "";
   paragraphs[charactersIndex].split("").forEach((char) => {
     let span = `<span>${char}</span>`;
@@ -173,25 +174,25 @@ function resetGame() {
   timepass = 0;
 }
 
-loadParagraph();
-inpField.addEventListener("input", initTyping);
-tryAgainBtn.addEventListener("click", resetGame);
-inpField.addEventListener("keydown", (e) => {
-  if (e.keyCode == 9) {
-    resetGame();
-  }
-});
-tryAgainBtn.addEventListener("keydown", (e) => {
-  if (e.keyCode == 9) {
-    resetGame();
-  }
-});
+// loadParagraph();
+// inpField.addEventListener("input", initTyping);
+// tryAgainBtn.addEventListener("click", resetGame);
+// inpField.addEventListener("keydown", (e) => {
+//   if (e.keyCode == 9) {
+//     resetGame();
+//   }
+// });
+// tryAgainBtn.addEventListener("keydown", (e) => {
+//   if (e.keyCode == 9) {
+//     resetGame();
+//   }
+// });
 
-let tutorial = document.querySelector(".Tutorial");
+const tutorial = document.querySelector(".Tutorial");
 
 function toggleEdu() {
   tutorial.classList.toggle("active"); 
-  console.log(okay);
+  console.log("okay");
 }
 
 document.querySelector(".education").addEventListener("click", toggleEdu);

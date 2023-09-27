@@ -251,8 +251,11 @@ li:not(:first-child) span {
     overflow-x : hidden
     
 }
-.Tutorial.active{
-    visibility: show;
+.Tutorial{
+    visibility: hidden;
+}
+.active{
+    visibility: visible;
 }
 .Tutorial ::-webkit-scrollbar {
     display: hidden ;
