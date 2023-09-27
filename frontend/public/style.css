@@ -234,47 +234,43 @@ li:not(:first-child) span {
     }
 }
 
-.Tutorial {
+#Tutorial {
     background-color: rgb(230, 213, 189);
     position: absolute;
     opacity: 1;
-    border-radius: 2%;
+    border-radius: 1%;
     top: 150px;
-    visibility: show;
-    text-align: left;
+    visibility: hidden;
     box-shadow: 0 10px 15px rgba(0,0,0,0.5);
     overflow: hidden;
     height: 600px;
     width: 1100px;
     text-align: center;
-    overflow: scroll;
-    overflow-x : hidden
+    overflow-x : hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
     
 }
-.Tutorial.active{
-    visibility: show;
+#Tutorial.active{
+    visibility: visible;
 }
-.Tutorial ::-webkit-scrollbar {
-    display: hidden ;
-  }
-.Tutorial ::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-  }
 
-.Tutorial ::-webkit-scrollbar-thumb::before {
-    content: "6";
-    display: block;
-    text-align: center;
-    color: rgb(206, 26, 161);
-  }
+
   
-.Tutorial ::-webkit-scrollbar-thumb::after {
-    content: "9";
-    display: block;
-    text-align: center;
-    color: rgb(208, 64, 201);
-  }
-  
+#Tutorial::-webkit-scrollbar {
+    width: 12px;
+}
+
+#Tutorial::-webkit-scrollbar-track {
+    background-color: #ad82a0;
+    border-radius: 20px;
+}
+
+#Tutorial::-webkit-scrollbar-thumb:hover {
+    background-color: burlywood;
+    border-radius: 6px;
+}
 
 .eduTitle {
     color: #9c577c;
@@ -292,4 +288,11 @@ li:not(:first-child) span {
     background: #b66e6e;
     border-radius: 10px;
     box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+}
+
+.image-frame{
+    border-radius: 3%;
+    box-shadow: #000000;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    animation:;
 }
