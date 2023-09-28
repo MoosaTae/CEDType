@@ -64,12 +64,17 @@ function initializeTutorialButton() {
 
   document.querySelector(".education").addEventListener("click", toggleEdu);
 }
-
+function initializeLeaderboardButton() {
+  const leaderboard = document.querySelector(".leaderboard");
+  document.querySelector(".hallofframe").addEventListener("click", () => { leaderboard.classList.toggle("show"); });
+  document.querySelector("#LBRimg").addEventListener("click", () => { leaderboard.classList.toggle("show"); });
+}
 function initializeButton() {
   initializeTimeButton();
   initializeModeButton();
   initializeNameInputButton();
   initializeTutorialButton();
+  initializeLeaderboardButton();
 }
 
 export { initializeButton };
