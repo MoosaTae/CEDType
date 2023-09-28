@@ -181,85 +181,82 @@ body {
     font-size: 13px;
     margin-left: 10px;
 }
-li span b {
-    font-weight: 500;
-}
-li:not(:first-child) span {
-    font-weight: 500;
-}
-@media (max-width: 745px) {
-    .wrapper {
-        padding: 20px;
-    }
-    .content-box .content {
-        padding: 20px 0;
-    }
-    .content-box .typing-text {
-        max-height: 100%;
-    }
-    .typing-text p {
-        font-size: 19px;
-        text-align: left;
-    }
-    .content button {
-        width: 100%;
-        font-size: 15px;
-        padding: 10px 0;
-        margin-top: 20px;
-    }
-    .content .result-details {
-        width: 100%;
-    }
-    .result-details li:not(:first-child) {
-        border-left: 0;
-        padding: 0;
-    }
-    .result-details li p,
-    .result-details li span {
-        font-size: 15px;
-    }
-}
-@media (max-width: 518px) {
-    .wrapper .content-box {
-        padding: 10px 15px 0;
-    }
-    .typing-text p {
-        font-size: 13px;
-    }
-    .result-details li {
-        margin-bottom: 10px;
-    }
-    .content button {
-        margin-top: 10px;
-    }
+
+#option .textButton-active {
+  color: orange;
+  transition: color 0.3s;
 }
 
-#Tutorial {
-    background-color: rgb(230, 213, 189);
-    position: absolute;
-    opacity: 1;
-    border-radius: 1%;
-    top: 150px;
-    visibility: hidden;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
-    overflow: hidden;
-    height: 600px;
-    width: 1100px;
-    text-align: center;
-    overflow-x : hidden;
-    overflow-y: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: #888 #f1f1f1;
+#mode-option,
+#setting-option {
+  justify-content: center;
+  display: grid;
+  grid-auto-flow: column;
+  margin: 0 1rem 0 0;
+}
+
+/* #setting-option span{
     
+} */
+
+#time-option {
+  justify-content: center;
+  display: grid;
+  grid-auto-flow: column;
 }
-#Tutorial.active{
-    visibility: visible;
+
+.NameS input {
+  position: relative;
+  top: 20%;
+  height: 10%;
 }
 
 
-  
-#Tutorial::-webkit-scrollbar {
-    width: 12px;
+.bounce {
+  animation: bounce 0.5s ease-in-out;
+  transform-origin: center center;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0.2);
+  }
+  20% {
+    transform: scale(0.8);
+  }
+  40% {
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0.83);
+  }
+}
+
+.Tutorial {
+  background-color: rgb(230, 213, 189);
+  position: absolute;
+  opacity: 1;
+  z-index: 1;
+  border-radius: 1%;
+  top: 150px;
+  visibility: hidden;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  height: 600px;
+  width: 1100px;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+.active {
+  visibility: visible;
+}
+
+.Tutorial::-webkit-scrollbar {
+  width: 12px;
 }
 
 #Tutorial::-webkit-scrollbar-track {
@@ -272,8 +269,28 @@ li:not(:first-child) span {
     border-radius: 6px;
 }
 
+.close-tutorial {
+  box-sizing: 200%;
+  border-radius: 10%;
+  position: fixed;
+  top: 10px;
+  right: 10px; 
+  width: 50px;
+  font-weight: bold;
+  color: #efe378;
+  background-color: #7c11ce;
+  font-size: large;
+}
+
+.close-tutorial:hover{
+  background-color: #4e4e4e2f;
+  animation: ;
+  animation-duration: infinite;
+}
+
 .eduTitle {
-    color: #9c577c;
+  color: #9c577c;
+  font-size: 45px;
 }
 .eduSubTitle{
     color: #ad82a0;
@@ -295,4 +312,10 @@ li:not(:first-child) span {
     box-shadow: #000000;
     box-shadow: 0 5px 5px rgba(0,0,0,0.5);
     animation:;
+}
+
+#eduCloseBtn {
+  position: flex;
+  padding-right: 10%;
+  transform: scale(500%);
 }
