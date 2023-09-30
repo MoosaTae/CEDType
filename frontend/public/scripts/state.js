@@ -1,4 +1,6 @@
 import { words } from "./items.js";
+import { name } from "./option.js";
+import { handleCreateItem } from "./leaderboard.js";
 
 const typingText = document.querySelector(".typing-text");
 const inpField = document.querySelector("#input-container");
@@ -25,10 +27,10 @@ let game_mode = "endless-mode";
 function generateRandomParagraph() {
   const paragraphLength = Math.floor(Math.random() * (max_length - min_length + 1)) + min_length;
   const paragraph = [];
-  
+
   for (let i = 0; i < paragraphLength; i++) {
-      const randomWordIndex = Math.floor(Math.random() *words.length);
-      paragraph.push(words[randomWordIndex]);
+    const randomWordIndex = Math.floor(Math.random() * words.length);
+    paragraph.push(words[randomWordIndex]);
   }
   return paragraph.join(' ');
 }
@@ -50,7 +52,7 @@ function addParagraph() {
   }
   // typingText.querySelector("span").classList.add("active");
 }
-function resetWord(){
+function resetWord() {
   typingText.innerHTML = "";
   inpField.value = "";
   charIndex = 0;
@@ -102,7 +104,7 @@ function initTyping() {
     else {
       if (characters[charIndex].innerText == typedChar) {
         characters[charIndex].classList.add("correct");
-      } 
+      }
       else {
         misplay = 1;
         characters[charIndex].classList.add("incorrect");
@@ -112,7 +114,7 @@ function initTyping() {
         CheckWord();
       }
     }
-  } 
+  }
   else {
     clearInterval(timer);
     inpField.value = "";
@@ -143,6 +145,10 @@ function initTimer() {
   }
   else {
     clearInterval(timer);
+    //เมื่อ create item ไป handle
+    if (name != "") {
+      handleCreateItem(name, score, wpm);
+    }
   }
 }
 
@@ -151,9 +157,9 @@ function setMaxTime(newTime) {
   resetGame();
 }
 
-function changeMode(mode){
+function changeMode(mode) {
   game_mode = mode;
   resetGame();
 }
 
-export { loadParagraph, initTyping , resetWord, resetGame, maxTime, setMaxTime, initTimer, changeMode }
+export { loadParagraph, initTyping, resetWord, resetGame, maxTime, setMaxTime, initTimer, changeMode }

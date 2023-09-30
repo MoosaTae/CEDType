@@ -1,4 +1,5 @@
-import { createItem, deleteItem, getItems } from "./api.js";
+import { createItem, deleteItem, getItems, getyouItems, getyouItems } from "./api.js";
+import { name } from "./option.js";
 /**
  * @typedef {Object} People
  * @property {number} ranking
@@ -28,58 +29,49 @@ function InitLeaderboard() {
 }
 InitLeaderboard();
 
-function drawTable(items) {
+function drawTable(items, youitem) {
     /** @type {HTMLTableSectionElement} */
     const table = document.querySelector("#LBtable");
+    const youtable = document.querySelector("#Yourtable");
 
     // Clear all elements
     table.innerHTML = "";
-    let temp = 0;
+    youtable.innerHTML = "";
     for (const item of items) {
 
-        const row = table.insertRow(temp);
-        temp++;
-        row.insertCell().innerText = item.item;
-        row.insertCell().innerText = item.item;
+        const row = table.insertRow();
+        row.insertCell().innerText = item.ranking;
         row.insertCell().innerText = item.name;
-        row.insertCell().innerText = item.price;
-
-        const button = document.createElement("button");
-        button.addEventListener("click", () => handleDelete(item._id));
-        button.innerText = "ลบ";
-
-        row.insertCell().appendChild(button);
+        row.insertCell().innerText = item.score;
+        row.insertCell().innerText = item.wpm;
     }
+    const row2 = youtable.insertRow();
+    row2.insertCell().innerText = youitem.ranking;
+    row2.insertCell().innerText = youitem.name;
+    row2.insertCell().innerText = youitem.score;
+    row2.insertCell().innerText = youitem.wpm;
 }
 
 export async function fetchAndDrawTable() {
-    const items = await getItems(option);
+    if (name != "") {
+        const items = await getItems(option);
+        const youitem = await getyouItems(option, name);
+        drawTable(items, youitem);
+    }
 
-    drawTable(items);
 }
 //เดะทำ
-export async function handleCreateItem() {
-    /** @type {HTMLInputElement} */
-    const itemToAdd = document.getElementById("item-to-add");
-
-    /** @type {HTMLSelectElement} */
-    const nameToAdd = document.getElementById("name-to-add");
-
-    /** @type {HTMLInputElement} */
-    const priceToAdd = document.getElementById("price-to-add");
+export async function handleCreateItem(name, score, wpm) {
 
     const payload = {
-        item: itemToAdd.value,
-        name: nameToAdd.value,
-        price: priceToAdd.value,
+        name: name,
+        score: score,
+        wpm: wpm,
     };
 
-    await createItem(payload, option);
+    await editItem(payload, option);
     await fetchAndDrawTable();
 
-    itemToAdd.value = "";
-    nameToAdd.value = "0";
-    priceToAdd.value = "";
 }
 
 export { InitLeaderboard };

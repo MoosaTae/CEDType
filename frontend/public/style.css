@@ -128,8 +128,8 @@ td {
   font-weight: lighter;
 }
 
-#LBname {
-  padding: 5px 100px;
+#LBtable {
+  overflow: hidden;
 }
 
 .NameS span {
