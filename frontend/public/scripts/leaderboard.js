@@ -1,4 +1,4 @@
-import { createItem, deleteItem, getItems, getyouItems, getyouItems } from "./api.js";
+import { getItems, editItem, getyouItems } from "./api.js";
 import { name } from "./option.js";
 /**
  * @typedef {Object} People

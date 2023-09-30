@@ -1,4 +1,4 @@
-import { Item, editItem } from "../models/itemModel.js";
+import { Item, editItem } from "../itemModel.js";
 
 /** @type {import("express").RequestHandler} */
 /*export const createItem = async (req, res) => {
@@ -28,7 +28,7 @@ export const getItems = async (req, res) => {
 };
 
 /** @type {import("express").RequestHandler} */
-export const editItem = async (req, res) => {
+export const editItems = async (req, res) => {
   try {
     const name = req.body.name;
     const query = { name: name };
