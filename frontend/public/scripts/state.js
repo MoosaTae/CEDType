@@ -11,6 +11,7 @@ const scoreTag = document.querySelector("#score");
 const timeFrequency = 10; // millisecond
 
 let timer;
+let wpm;
 let maxTime = 60;
 let timeLeft = maxTime;
 let charIndex = 0;
@@ -140,14 +141,15 @@ function initTimer() {
     multiplier = Math.ceil(timepass / 30);
     if (timeLeft < 0) timeLeft = 0;
     timeTag.innerText = timeLeft;
-    let wpm = Math.round((score * 60) / timepass);
+    wpm = Math.round((score * 60) / timepass);
     wpmTag.innerText = wpm;
   }
   else {
     clearInterval(timer);
     //เมื่อ create item ไป handle
     if (name != "") {
-      handleCreateItem(name, score, wpm);
+      if(game_mode=="endless-mode") handleCreateItem(name, score, wpm,2);
+      else handleCreateItem(name, score, wpm,1);
     }
   }
 }

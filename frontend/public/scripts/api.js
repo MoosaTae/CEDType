@@ -1,4 +1,4 @@
-import { BACKEND_URL } from "./leaderboard.js";
+const BACKEND_URL = "http://44.201.155.243:3222";
 
 /** @typedef {import("./leaderboard.js").People} People */
 
@@ -8,13 +8,6 @@ export async function getItems(which) {
 
 
   return items;
-}
-export async function getyouItems(which, name) {
-  /** @type {People[]} */
-
-  const youitems = await fetch(`${BACKEND_URL}/leaderboard${which}`, { method: "GET", body: JSON.stringify(name), }).then((r) => r.json());
-
-  return youitems;
 }
 /**
  * @param {People} item

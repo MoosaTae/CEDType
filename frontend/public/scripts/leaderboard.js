@@ -1,4 +1,4 @@
-import { getItems, editItem, getyouItems } from "./api.js";
+import { getItems, editItem } from "./api.js";
 import { name } from "./option.js";
 /**
  * @typedef {Object} People
@@ -11,16 +11,17 @@ import { name } from "./option.js";
  * @param {People[]} people
  */
 
-export const BACKEND_URL = "http://localhost:3222";
 let timeop = document.querySelector("#LBtimeOp");
 let endlessop = document.querySelector("#LBEndlessOp");
 let option = 1;
 function changeoption() {
     timeop.classList.toggle("selectedLBop");
     endlessop.classList.toggle("selectedLBop");
-    fetchAndDrawTable();
     if (option == 1) option = 2;
     else option = 1;
+    console.log(option);
+    fetchAndDrawTable();
+    
 }
 function InitLeaderboard() {
     timeop.addEventListener("click", changeoption);
@@ -29,14 +30,14 @@ function InitLeaderboard() {
 }
 InitLeaderboard();
 
-function drawTable(items, youitem) {
+function drawTable(items) {
     /** @type {HTMLTableSectionElement} */
     const table = document.querySelector("#LBtable");
-    const youtable = document.querySelector("#Yourtable");
+    // const youtable = document.querySelector("#Yourtable");
 
     // Clear all elements
     table.innerHTML = "";
-    youtable.innerHTML = "";
+    //youtable.innerHTML = "";
     for (const item of items) {
 
         const row = table.insertRow();
@@ -45,23 +46,20 @@ function drawTable(items, youitem) {
         row.insertCell().innerText = item.score;
         row.insertCell().innerText = item.wpm;
     }
-    const row2 = youtable.insertRow();
-    row2.insertCell().innerText = youitem.ranking;
-    row2.insertCell().innerText = youitem.name;
-    row2.insertCell().innerText = youitem.score;
-    row2.insertCell().innerText = youitem.wpm;
+    // const row2 = youtable.insertRow();
+    // row2.insertCell().innerText = youitem.ranking;
+    // row2.insertCell().innerText = youitem.name;
+    // row2.insertCell().innerText = youitem.score;
+    // row2.insertCell().innerText = youitem.wpm;
 }
 
 export async function fetchAndDrawTable() {
-    if (name != "") {
         const items = await getItems(option);
-        const youitem = await getyouItems(option, name);
-        drawTable(items, youitem);
-    }
-
+        console.log(items);
+        drawTable(items);
 }
 //เดะทำ
-export async function handleCreateItem(name, score, wpm) {
+export async function handleCreateItem(name, score, wpm,mode) {
 
     const payload = {
         name: name,
@@ -69,7 +67,7 @@ export async function handleCreateItem(name, score, wpm) {
         wpm: wpm,
     };
 
-    await editItem(payload, option);
+    await editItem(payload, mode);
     await fetchAndDrawTable();
 
 }
