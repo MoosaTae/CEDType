@@ -1,38 +1,30 @@
 import mongoose from "mongoose";
 
-const itemSchema = new mongoose.Schema({
-  ranking: {
-    type: Number,
-    required: true,
+const itemSchema = new mongoose.Schema(
+  {
+    ranking: {
+      type: Number,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    score: {
+      type: Number,
+      required: true,
+    },
+    wpm: {
+      type: Number,
+      required: true,
+    },
+    leaderboardType: {
+      type: String,
+      required: true,
+    },
   },
-  name: {
-    type: String,
-    required: true,
-  },
-  score: {
-    type: Number,
-    required: true,
-  },
-  wpm: {
-    type: Number,
-    required: true,
-  },
-});
-const itemSchemo = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-  score: {
-    type: Number,
-    required: true,
-  },
-  wpm: {
-    type: Number,
-    required: true,
-  },
-});
-const Item = mongoose.model("Item", itemSchema);
-const editItem = mongoose.model("editItem", itemSchemo);
+  { versionKey: false }
+);
 
-export { Item, editItem };
+const Item = mongoose.model("Item", itemSchema);
+
+export { Item };

@@ -1,72 +1,49 @@
-import { Item, editItem } from "../itemModel.js";
-
-/** @type {import("express").RequestHandler} */
-/*export const createItem = async (req, res) => {
-  try {
-    const newItem = new Item(req.body);
-    await newItem.save();
-
-    res.status(200).json({ message: "OK" });
-  } catch (err) {
-    if (err.name === "ValidationError") {
-      res.status(400).json({ error: "Bad Request" });
-    } else {
-      res.status(500).json({ error: "Internal server error." });
-    }
-  }
-};*/
+import { Document } from "mongoose";
+import { Item } from "../itemModel.js";
 
 /** @type {import("express").RequestHandler} */
 export const getItems = async (req, res) => {
-  const items = await Item.find().sort({ score: -1, wpm: -1 });
-  console.log(items);
-  res.status(200).json(items);
-};
-/** @type {import("express").RequestHandler} */
-export const getItems2 = async (req, res) => {
-  const items = await editItem.find().sort({ score: -1, wpm: -1 });
-  console.log(items);
-  res.status(200).json(items);
+  try {
+    const query = req.params.leaderboardType;
+    const items = await Item.find({ leaderboardType: query }).sort({
+      score: -1,
+      wpm: -1,
+    });
+    console.log(items);
+    res.status(200).json(items);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Internal server error." });
+  }
 };
 /** @type {import("express").RequestHandler} */
 export const editItems = async (req, res) => {
   try {
-    const name = req.body.name;
-    const query = { name: name };
-    const updated = await Item.findOneAndUpdate(query, { score: req.body.score, wpm: req.body.wpm }, options)
-
+    const leaderboardType = req.params.leaderboardType;
+    const { name, score, wpm } = req.body;
+    // Validate incoming data
+    if (!name || typeof score !== "number" || typeof wpm !== "number") {
+      return res
+        .status(400)
+        .json({ error: "Bad Request: Invalid data format." });
+    }
+    // Update or create a new item by using findOneAndUpdate(<parameters extracted>, <value>, <option>)
+    const updated = await Item.findOneAndUpdate(
+      { name, leaderboardType },
+      { $max: { score }, wpm },
+      { new: true }
+    );
     if (updated) {
-      res.status(200).json({ message: "OK" });
+      res.status(200).json({ message: "OK", item: updated });
     } else {
-      const newItem = new Item(req.body);
+      const newItem = new Item({ name, score, wpm, leaderboardType });
       await newItem.save();
-      res.status(200).json({ message: "OK" });
+      res.status(201).json({ message: "Created", item: newItem });
     }
   } catch (err) {
+    console.error(err); // Log the error
     if (err.name === "CastError") {
-      res.status(400).json({ error: "Bad Request" });
-    } else {
-      res.status(500).json({ error: "Internal server error." });
-    }
-  }
-};
-/** @type {import("express").RequestHandler} */
-export const editItems2 = async (req, res) => {
-  try {
-    const name = req.body.name;
-    const query = { name: name };
-    const updated = await editItem.findOneAndUpdate(query, {$set: { score: req.body.score, wpm: req.body.wpm }})
-    
-    if (updated) {
-      res.status(200).json({ message: "OK" });
-    } else {
-      const newItem = new editItem(req.body);
-      await newItem.save();
-      res.status(200).json({ message: "OK" });
-    }
-  } catch (err) {
-    if (err.name === "CastError") {
-      res.status(400).json({ error: "Bad Request" });
+      res.status(400).json({ error: "Bad Request: Cast Error." });
     } else {
       res.status(500).json({ error: "Internal server error." });
     }
