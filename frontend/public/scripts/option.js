@@ -1,5 +1,5 @@
 import { setMaxTime, changeMode } from "./state.js";
-
+let name = "";
 function swapButtonActive(textButtons, button) {
   textButtons.forEach((btn) => {
     btn.classList.remove("textButton-active");
@@ -51,6 +51,7 @@ function initializeNameInputButton() {
   document.querySelector("#namesummitbutton").addEventListener("click", () => {
     document.querySelector("#loginS").innerHTML =
       document.querySelector("#name-input").value;
+    name = document.querySelector("#name-input").value;
     NameSS.classList.toggle("show");
     document.querySelector("#loginB").style.visibility = "hidden";
   });
@@ -64,12 +65,17 @@ function initializeTutorialButton() {
 
   document.querySelector(".education").addEventListener("click", toggleEdu);
 }
-
+function initializeLeaderboardButton() {
+  const leaderboard = document.querySelector(".leaderboard");
+  document.querySelector(".hallofframe").addEventListener("click", () => { leaderboard.classList.toggle("show"); });
+  document.querySelector("#LBRimg").addEventListener("click", () => { leaderboard.classList.toggle("show"); });
+}
 function initializeButton() {
   initializeTimeButton();
   initializeModeButton();
   initializeNameInputButton();
   initializeTutorialButton();
+  initializeLeaderboardButton();
 }
 
-export { initializeButton };
+export { initializeButton, name };

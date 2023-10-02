@@ -12,14 +12,12 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(
-    #fbe4d8,
-    #dfb6b2,
-    #854f6c,
-    #522b5b,
-    #2b124c,
-    #190019
-  );
+  background: linear-gradient(#fbe4d8,
+      #dfb6b2,
+      #854f6c,
+      #522b5b,
+      #2b124c,
+      #190019);
 }
 
 #HImage {
@@ -71,6 +69,69 @@ body {
   visibility: hidden;
 }
 
+.leaderboard {
+  position: absolute;
+  left: 25%;
+  top: 15%;
+  background-color: rgb(168, 67, 0);
+  border: #252525 solid 0.4ch;
+  text-align: center;
+  z-index: 1;
+  width: 50%;
+  height: 80%;
+
+  visibility: hidden;
+}
+
+#LBimg {
+  position: relative;
+  width: 80%;
+  left: -3%;
+  top: -10%;
+  background-color: rgb(255, 255, 255);
+
+}
+
+#LBRimg {
+  position: relative;
+  width: 5%;
+  left: 90%;
+  top: -6%;
+  z-index: 2;
+}
+
+.LBoption {
+  border: #000000 solid 2px;
+  height: 10%;
+}
+
+#LBtimeOp {
+  position: absolute;
+  width: 50%;
+  left: 0%;
+  top: 0%;
+}
+
+#LBEndlessOp {
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  top: 0%;
+}
+
+.selectedLBop {
+  background-color: rgb(255, 116, 23);
+}
+
+td {
+  padding: 5px 45px;
+  font-weight: lighter;
+}
+
+#LBtable {
+  overflow: hidden;
+}
+
 .NameS span {
   font-size: 30px;
   position: relative;
@@ -79,7 +140,7 @@ body {
 
 .NameS button {
   position: relative;
-  top: 50%;
+  top: 10%;
   background-color: aquamarine;
   width: 148px;
   height: 24px;
@@ -138,22 +199,27 @@ body {
 .typing-text::-webkit-scrollbar {
   width: 0;
 }
+
 .typing-text p {
   font-size: 21px;
   text-align: justify;
   letter-spacing: 1px;
   word-break: break-all;
 }
+
 .typing-text p span {
   position: relative;
 }
+
 .typing-text p span.correct {
   color: #d1d0c5;
 }
+
 .typing-text p span.incorrect {
   color: #ca4754;
   border-radius: 4px;
 }
+
 /* .typing-text p span.active {
     color: #17A2B8;
 } */
@@ -169,6 +235,7 @@ body {
   background: #ffffff;
   animation: blink 1s ease-in-out infinite;
 }
+
 @keyframes blink {
   50% {
     opacity: 1;
@@ -201,11 +268,9 @@ body {
 }
 
 #restart-button:hover {
-  background: linear-gradient(
-    to bottom,
-    cornflowerblue 5%,
-    cornflowerblue 100%
-  );
+  background: linear-gradient(to bottom,
+      cornflowerblue 5%,
+      cornflowerblue 100%);
 }
 
 .correct {
@@ -316,9 +381,11 @@ body {
 .eduTitle {
   color: #9c577c;
 }
+
 .eduSubTitle {
   color: #ad82a0;
 }
+
 .eduText {
   color: #522b5b;
 }
