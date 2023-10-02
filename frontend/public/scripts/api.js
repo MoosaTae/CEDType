@@ -1,7 +1,6 @@
-const BACKEND_URL = "http://44.201.155.243:3222";
+const BACKEND_URL = `${window.location.protocol}//${window.location.hostname}:3222`;
 
 /** @typedef {import("./leaderboard.js").People} People */
-
 export async function getItems(which) {
   /** @type {People[]} */
   const items = await fetch(`${BACKEND_URL}/leaderboard${which}`).then((r) => r.json());
