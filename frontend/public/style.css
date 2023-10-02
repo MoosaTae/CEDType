@@ -5,21 +5,32 @@
   font: 100% sans-serif;
 }
 
+:root {
+  --bgColor: #333;
+  --bgColorSecondary: #1e1e1e;
+  --textPrimary: #fff;
+  --textSecondary: #666;
+  --primaryColor: #fd5;
+  --error-color: #fc5d7c;
+  --error-extra-color: #ecac6a;
+  --text-correct-color: #e2e2e3;
+  --bgGradient: #FBE4D8, #DFB6B2, #854F6C, #522B5B, #2B124C, #190019;
+}
+
 body {
   /* overflow: hidden; */
+  font-family: 'Roboto', sans-serif;
   display: flex;
   padding: 0 10px;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(
-    #fbe4d8,
-    #dfb6b2,
-    #854f6c,
-    #522b5b,
-    #2b124c,
-    #190019
-  );
+  background: linear-gradient(#fbe4d8,
+      #dfb6b2,
+      #854f6c,
+      #522b5b,
+      #2b124c,
+      #190019);
 }
 
 #HImage {
@@ -125,35 +136,43 @@ body {
   cursor: pointer;
 }
 
-.container .typing-text {
+.container .typing-text,
+.container .non-typing-text {
   font-size: 1.5em;
-  font-weight: bold;
-  margin: 0px 10px 15px 10px;
+  /* margin: 0px 10px 15px 10px; */
+  color: #4e4e4e2f;
 }
 
-.container .typing-text {
-  color: #4e4e4e2f;
+.container .non-typing-text {
+  top: -30px;
+  left: 60%;
+  position: relative;
 }
 
 .typing-text::-webkit-scrollbar {
   width: 0;
 }
+
 .typing-text p {
   font-size: 21px;
   text-align: justify;
   letter-spacing: 1px;
   word-break: break-all;
 }
+
 .typing-text p span {
   position: relative;
 }
+
 .typing-text p span.correct {
   color: #d1d0c5;
 }
+
 .typing-text p span.incorrect {
   color: #ca4754;
   border-radius: 4px;
 }
+
 /* .typing-text p span.active {
     color: #17A2B8;
 } */
@@ -169,6 +188,7 @@ body {
   background: #ffffff;
   animation: blink 1s ease-in-out infinite;
 }
+
 @keyframes blink {
   50% {
     opacity: 1;
@@ -201,11 +221,9 @@ body {
 }
 
 #restart-button:hover {
-  background: linear-gradient(
-    to bottom,
-    cornflowerblue 5%,
-    cornflowerblue 100%
-  );
+  background: linear-gradient(to bottom,
+      cornflowerblue 5%,
+      cornflowerblue 100%);
 }
 
 .correct {
@@ -316,9 +334,11 @@ body {
 .eduTitle {
   color: #9c577c;
 }
+
 .eduSubTitle {
   color: #ad82a0;
 }
+
 .eduText {
   color: #522b5b;
 }
@@ -344,8 +364,100 @@ body {
   animation: fadeIn 1s;
 }
 
+#focus-error {
+  position: absolute;
+  inset: 0;
+  text-align: center;
+  padding-top: 35px;
+}
+
+#game:focus #focus-error {
+  display: none;
+}
+
 .NameS input {
   position: relative;
   top: 20%;
   height: 10%;
+}
+
+#game {
+  line-height: 35px;
+  height: 105px;
+  overflow: hidden;
+  position: relative;
+}
+
+#game:focus {
+  outline: 0;
+}
+
+#words {
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  opacity: .25;
+  color: var(--primaryColor);
+}
+
+#game:focus #words {
+  filter: blur(0);
+  opacity: 1;
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+  height: -moz-fit-content;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  width: 100%;
+}
+
+
+div.word {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.letter.correct {
+  color: var(--text-correct-color);
+}
+
+.letter.incorrect {
+  color: var(--error-color);
+}
+
+.letter.incorrect.extra {
+  color: var(--error-extra-color);
+}
+
+.word.incorrect {
+  text-decoration: underline;
+  text-decoration-color: var(--error-color);
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#cursor {
+  display: none;
+  width: 2px;
+  height: 1.5rem;
+  border-radius: 10px;
+  background: var(--primaryColor);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  animation: blink 1.1s infinite;
 }
