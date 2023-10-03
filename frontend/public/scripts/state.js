@@ -95,7 +95,7 @@ function addParagraph() {
   else if (game_mode == "time-mode") {
     document.querySelector("#endlessgame").style.visibility = "hidden";
     document.querySelector("#timegame").style.visibility = "visible";
-    document.querySelector("#game").style.height = "165px";
+    document.querySelector("#game").style.height = "160px";
     document.getElementById('words').innerHTML = '';
     for (let i = 0; i < 200; i++) {
       document.getElementById('words').innerHTML += formatWord(wordie[randomWord()]);
