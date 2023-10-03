@@ -1,4 +1,6 @@
-import { words } from "./items.js";
+import { words } from './items.js'
+import { name } from './option.js'
+import { handleCreateItem } from './leaderboard.js'
 
 const typingText = document.querySelector(".typing-text");
 const nontypingText = document.querySelector(".non-typing-text");
@@ -16,19 +18,20 @@ const wordsCount = wordie.length;
 window.timer = null;
 window.gameStart = null;
 
-let timer;
-let maxTime = 60;
-let timeLeft = maxTime;
-let charIndex = 0;
+let timer
+let wpm
+let maxTime = 60
+let timeLeft = maxTime
+let charIndex = 0
 let mistakes = 0
-let isTyping = 0;
-let misplay = 0;
-let score = 0;
-let multiplier = 1;
-let timepass = 0;
-let max_length = 10;
-let min_length = 5;
-let game_mode = "endless-mode";
+let isTyping = 0
+let misplay = 0
+let score = 0
+let multiplier = 1
+let timepass = 0
+let max_length = 10
+let min_length = 5
+let game_mode = 'endless-mode'
 
 // function generateRandomParagraph() {
 //   const paragraphLength = Math.floor(Math.random() * (max_length - min_length + 1)) + min_length;
@@ -117,9 +120,9 @@ function resetWord() {
 
 // randomly load a paragraph from the words
 function loadParagraph() {
-  resetWord()
-  document.addEventListener("keydown", () => inpField.focus());
-  typingText.addEventListener("click", () => inpField.focus());
+    resetWord()
+    document.addEventListener('keydown', () => inpField.focus())
+    typingText.addEventListener('click', () => inpField.focus())
 }
 
 function resetGame() {
@@ -180,15 +183,14 @@ function initTyping() {
 }
 
 function CheckWord() {
-  if (misplay == 0) {
-    score++;
-    scoreTag.innerText = score;
-    timeLeft += 2.5;
-  }
-  else {
-    timeLeft -= 5;
-  }
-  resetWord();
+    if (misplay == 0) {
+        score++
+        scoreTag.innerText = score
+        timeLeft += 2.5
+    } else {
+        timeLeft -= 5
+    }
+    resetWord()
 }
 
 function initTimer() {
@@ -211,8 +213,8 @@ function initTimer() {
 }
 
 function setMaxTime(newTime) {
-  maxTime = newTime;
-  resetGame();
+    maxTime = newTime
+    resetGame()
 }
 
 function changeMode(mode) {

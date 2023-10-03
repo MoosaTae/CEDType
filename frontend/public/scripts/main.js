@@ -1,3 +1,3 @@
-import { gameStart } from "./typing.js";
+import { gameStart } from './typing.js'
 
-gameStart();
+gameStart()
