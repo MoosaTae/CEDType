@@ -85,6 +85,8 @@ function addParagraph() {
     document.querySelector("#endlessgame").style.visibility = "visible";
     document.querySelector("#timegame").style.visibility = "hidden";
     document.querySelector("#game").style.height = "0px";
+    document.querySelector("#endlessgame").style.height = "50px";
+    
     if (nontypingText.innerHTML == "") {
       nontypingText.innerText = words[randomWord()];
     }
@@ -99,6 +101,7 @@ function addParagraph() {
     document.querySelector("#endlessgame").style.visibility = "hidden";
     document.querySelector("#timegame").style.visibility = "visible";
     document.querySelector("#game").style.height = "160px";
+    document.querySelector("#endlessgame").style.height = "0px";
     document.getElementById('words').innerHTML = '';
     for (let i = 0; i < 200; i++) {
       document.getElementById('words').innerHTML += formatWord(wordie[randomWord()]);
@@ -197,7 +200,7 @@ function initTimer() {
   if (timeLeft > 0) {
     timeLeft -= 0.01 * multiplier;
     timepass += 0.01;
-    multiplier = Math.ceil(timepass / 30);
+    if(game_mode="endless-mode") multiplier = Math.ceil(timepass / 30);
     if (timeLeft < 0) timeLeft = 0;
     timeTag.innerText = timeLeft;
     if (game_mode == "endless-mode") {
