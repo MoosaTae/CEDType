@@ -7,190 +7,181 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="header">
-            <img src="Col.png" id="HImage" />
-            <h id="HEAD">CEDType</h>
-            <div id="option">
-                <div id="setting-option">
-                    <div class="textButton education">
-                        <span>tutorial</span>
+        <div>
+            <div class="header">
+                <img src="Col.png" id="HImage" />
+                <h id="HEAD">CEDType</h>
+                <div id="option">
+                    <div id="setting-option">
+                        <div class="textButton education">
+                            <span>tutorial</span>
+                        </div>
+                        <div class="textButton hallofframe">
+                            <span>leaderboard</span>
+                        </div>
+                        <div class="textButton">
+                            <span>setting</span>
+                        </div>
                     </div>
-                    <div class="textButton hallofframe">
-                        <span>leaderboard</span>
+                    <div class="textButton" id="loginB"><span>login</span></div>
+                    <span id="loginS"></span>
+                </div>
+            </div>
+            <div class="Tutorial">
+                <h1 class="eduSubTitle">Tutorial for Beginners</h1>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="#lesson1" class="eduSubTitle">Lesson 1:Home Row</a>
+                        </li>
+                        <li>
+                            <a href="#lesson2" class="eduSubTitle">Lesson 2:Top Row</a>
+                        </li>
+                        <li>
+                            <a href="#lesson3" class="eduSubTitle">Lesson 3:Bottom Row </a>
+                        </li>
+                    </ul>
+                </div>
+                <h1 class="eduTitle">CEDTutorial</h1>
+                <h2 class="eduSubTitle" id="lesson1">Lesson 1:Home Row</h2>
+                <p class="eduText">
+                    The fisrt part of your <strong>JOURNEY</strong> comes from knowing how to type
+                    homerow correctly
+                </p>
+                <p class="eduText">
+                    For your <strong>Right Hand</strong>,put your finger above j k l ; start from
+                    your index finger to pinky finger
+                </p>
+                <p class="eduText">
+                    The same goes for <strong>Left Hand</strong>.Put your finger above f d s a .
+                </p>
+                <br /><img src="both.jpg" />
+                <p class="eduText">
+                    For <strong>G H</strong>,practice your index finger to reach these key .
+                </p>
+                <div class="practice">
+                    <div id="game" tabindex="0">
+                        <div id="homeRow"></div>
+                        <div id="cursor"></div>
+                        <div id="focus-error"></div>
+                    </div>
+                </div>
+                <br />
+                <h2 class="eduSubTitle" id="lesson2">Lesson 2:Top Row</h2>
+                <p class="eduText">
+                    Congrats! Now that you have master the home row key,you can move next to top row
+                    .It will cover from
+                    <strong>Q</strong> to <strong>P</strong>
+                </p>
+                <div class="practice">
+                    <div id="game" tabindex="0">
+                        <div id="topRow"></div>
+                        <div id="cursor"></div>
+                        <div id="focus-error"></div>
+                    </div>
+                </div>
+                <br />
+                <h2 class="eduSubTitle" id="lesson3">Lesson 3:Bottom Row</h2>
+                <p class="eduText">
+                    You've made excellent progress in learning the basic keys! Keep up the good work
+                    so that you can move on to your first typing test.
+                </p>
+                <p class="eduText">
+                    Now, let's shift our focus to the bottom row, which consists of the keys: Z X C
+                    V B N M , . /
+                </p>
+                <div class="practice">
+                    <div id="game" tabindex="0">
+                        <div id="bottomRow"></div>
+                        <div id="cursor"></div>
+                        <div id="focus-error"></div>
+                    </div>
+                </div>
+                <p class="eduText">
+                    Awesome! You're now fully prepared for your very first typing challenge.
+                </p>
+            </div>
+            <!--fLOAT-->
+            <div class="NameS">
+                <span> Enter your name </span>
+                <input type="text" id="name-input" />
+                <p>
+                    <br /><br /><br /><br /><br />Your performance will be summited to the
+                    leaderboard automatically once you have logined
+                </p>
+                <button id="namesummitbutton">Summit name</button>
+            </div>
+            <!---->
+            <!--fLOAT-->
+            <div class="leaderboard">
+                <img src="remove.png" id="LBRimg" />
+                <img src="leader.png" id="LBimg" />
+                <button class="LBoption selectedLBop" id="LBtimeOp">Time</button>
+                <button class="LBoption" id="LBEndlessOp">Endless</button>
+                <br /><br /><span>
+                    &emsp;Ranking &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Name
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Score
+                    &emsp;&emsp;&emsp;&nbsp; Wpm &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;</span
+                >
+                <div>
+                    <table>
+                        <tbody id="LBtable">
+                            <tr>
+                                <td>1</td>
+                                <td>Chanonpat</td>
+                                <td>20</td>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="container">
+                <input type="text" id="input-container" />
+                <div class="content-box">
+                    <div class="typing-text"></div>
+                    <div class="content">
+                        <div class="summarize">
+                            <ul class="result">
+                                <li>Time: <span id="time">60</span></li>
+                                <li>Score: <span id="score">0</span></li>
+                                <li>WPM: <span id="wpm">0</span></li>
+                                <li>ACC: <span id="acc">0</span></li>
+                            </ul>
+                        </div>
+                        <button id="restart-button">Restart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="option">
+                <div id="mode-option">
+                    <div class="textButton" id="time-mode">
+                        <span>⌚time</span>
+                    </div>
+                    <div class="textButton textButton-active" id="endless-mode">
+                        <span>⛔endless</span>
+                    </div>
+                    <div class="textButton" id="secret-mode">
+                        <span>🍔???</span>
+                    </div>
+                </div>
+                <div id="time-option">
+                    <div class="textButton">
+                        <span>15</span>
                     </div>
                     <div class="textButton">
-                        <span>setting</span>
+                        <span>30</span>
+                    </div>
+                    <div class="textButton textButton-active">
+                        <span>60</span>
+                    </div>
+                    <div class="textButton">
+                        <span>1</span>
                     </div>
                 </div>
-                <div class="textButton" id="loginB"><span>login</span></div>
-                <span id="loginS"></span>
             </div>
+            <script type="module" src="scripts/main.js"></script>
         </div>
-        <div class="Tutorial">
-            <h1 class="eduSubTitle">Tutorial for Beginners</h1>
-            <div>
-                <ul>
-                    <li>
-                        <a href="#lesson1" class="eduSubTitle"
-                            >Lesson 1:Home Row</a
-                        >
-                    </li>
-                    <li>
-                        <a href="#lesson2" class="eduSubTitle"
-                            >Lesson 2:Top Row</a
-                        >
-                    </li>
-                    <li>
-                        <a href="#lesson3" class="eduSubTitle"
-                            >Lesson 3:Bottom Row
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <h1 class="eduTitle">CEDTutorial</h1>
-            <h2 class="eduSubTitle" id="lesson1">Lesson 1:Home Row</h2>
-            <p class="eduText">
-                The fisrt part of your <strong>JOURNEY</strong> comes from
-                knowing how to type homerow correctly
-            </p>
-            <p class="eduText">
-                For your <strong>Right Hand</strong>,put your finger above j k l
-                ; start from your index finger to pinky finger
-            </p>
-            <p class="eduText">
-                The same goes for <strong>Left Hand</strong>.Put your finger
-                above f d s a .
-            </p>
-            <br /><img src="both.jpg" />
-            <p class="eduText">
-                For <strong>G H</strong>,practice your index finger to reach
-                these key .
-            </p>
-            <div class="practice">
-                <div id="game" tabindex="0">
-                    <div id="homeRow"></div>
-                    <div id="cursor"></div>
-                    <div id="focus-error"></div>
-                </div>
-            </div>
-            <br />
-            <h2 class="eduSubTitle" id="lesson2">Lesson 2:Top Row</h2>
-            <p class="eduText">
-                Congrats! Now that you have master the home row key,you can move
-                next to top row .It will cover from
-                <strong>Q</strong> to <strong>P</strong>
-            </p>
-            <div class="practice">
-                <div id="game" tabindex="0">
-                    <div id="topRow"></div>
-                    <div id="cursor"></div>
-                    <div id="focus-error"></div>
-                </div>
-            </div>
-            <br />
-            <h2 class="eduSubTitle" id="lesson3">Lesson 3:Bottom Row</h2>
-            <p class="eduText">
-                You've made excellent progress in learning the basic keys! Keep
-                up the good work so that you can move on to your first typing
-                test.
-            </p>
-            <p class="eduText">
-                Now, let's shift our focus to the bottom row, which consists of
-                the keys: Z X C V B N M , . /
-            </p>
-            <div class="practice">
-                <div id="game" tabindex="0">
-                    <div id="bottomRow"></div>
-                    <div id="cursor"></div>
-                    <div id="focus-error"></div>
-                </div>
-            </div>
-            <p class="eduText">
-                Awesome! You're now fully prepared for your very first typing
-                challenge.
-            </p>
-        </div>
-        <!--fLOAT-->
-        <div class="NameS">
-            <span> Enter your name </span>
-            <input type="text" id="name-input" />
-            <p>
-                <br /><br /><br /><br /><br />Your performance will be summited
-                to the leaderboard automatically once you have logined
-            </p>
-            <button id="namesummitbutton">Summit name</button>
-        </div>
-        <!---->
-        <!--fLOAT-->
-        <div class="leaderboard">
-            <img src="remove.png" id="LBRimg" />
-            <img src="leader.png" id="LBimg" />
-            <button class="LBoption selectedLBop" id="LBtimeOp">Time</button>
-            <button class="LBoption" id="LBEndlessOp">Endless</button>
-            <br /><br /><span>
-                &emsp;Ranking &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                Name &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                Score &emsp;&emsp;&emsp;&nbsp; Wpm
-                &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;</span
-            >
-            <div>
-                <table>
-                    <tbody id="LBtable">
-                        <tr>
-                            <td>1</td>
-                            <td>Chanonpat</td>
-                            <td>20</td>
-                            <td>5</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="container">
-            <input type="text" id="input-container" />
-            <div class="content-box">
-                <div class="typing-text"></div>
-                <div class="content">
-                    <div class="summarize">
-                        <ul class="result">
-                            <li>Time: <span id="time">60</span></li>
-                            <li>Score: <span id="score">0</span></li>
-                            <li>WPM: <span id="wpm">0</span></li>
-                            <li>ACC: <span id="acc">0</span></li>
-                        </ul>
-                    </div>
-                    <button id="restart-button">Restart</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="option">
-            <div id="mode-option">
-                <div class="textButton" id="time-mode">
-                    <span>⌚time</span>
-                </div>
-                <div class="textButton textButton-active" id="endless-mode">
-                    <span>⛔endless</span>
-                </div>
-                <div class="textButton" id="secret-mode">
-                    <span>🍔???</span>
-                </div>
-            </div>
-            <div id="time-option">
-                <div class="textButton">
-                    <span>15</span>
-                </div>
-                <div class="textButton">
-                    <span>30</span>
-                </div>
-                <div class="textButton textButton-active">
-                    <span>60</span>
-                </div>
-                <div class="textButton">
-                    <span>1</span>
-                </div>
-            </div>
-        </div>
-        <script type="module" src="scripts/main.js"></script>
     </body>
 </html>

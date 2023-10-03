@@ -23,9 +23,7 @@ export const editItems = async (req, res) => {
         const { name, score, wpm } = req.body
         // Validate incoming data
         if (!name || typeof score !== 'number' || typeof wpm !== 'number') {
-            return res
-                .status(400)
-                .json({ error: 'Bad Request: Invalid data format.' })
+            return res.status(400).json({ error: 'Bad Request: Invalid data format.' })
         }
         // Update or create a new item by using findOneAndUpdate(<parameters extracted>, <value>, <option>)
         const updated = await Item.findOneAndUpdate(
