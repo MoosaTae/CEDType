@@ -1,12 +1,12 @@
-import express from "express";
+import express from 'express'
 
-import * as itemController from "../controllers/itemController.js";
+import * as itemController from '../controllers/itemController.js'
 
-const router = express.Router();
+const router = express.Router()
 
-router.get("/:leaderboardType", itemController.getItems);
-router.put("/:leaderboardType", itemController.editItems);
+router.get('/:leaderboardType', itemController.getItems)
+router.put('/:leaderboardType', itemController.editItems)
 // router.post("/", itemController.createItem);
 // router.delete("/:id", itemController.deleteItem);
 
-export default router;
+export default router
