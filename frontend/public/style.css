@@ -10,10 +10,10 @@
   --bgColorSecondary: #1e1e1e;
   --textPrimary: #fff;
   --textSecondary: #666;
-  --primaryColor: #fd5;
-  --error-color: #fc5d7c;
+  --primaryColor: rgba(214, 214, 214, 0.726);
+  --error-color: #ff0033;
   --error-extra-color: #ecac6a;
-  --text-correct-color: #e2e2e3;
+  --text-correct-color: #fcd248;
   --bgGradient: #FBE4D8, #DFB6B2, #854F6C, #522B5B, #2B124C, #190019;
 }
 
@@ -364,17 +364,6 @@ body {
   animation: fadeIn 1s;
 }
 
-#focus-error {
-  position: absolute;
-  inset: 0;
-  text-align: center;
-  padding-top: 35px;
-}
-
-#game:focus #focus-error {
-  display: none;
-}
-
 .NameS input {
   position: relative;
   top: 20%;
@@ -383,7 +372,7 @@ body {
 
 #game {
   line-height: 35px;
-  height: 105px;
+  height: 115px;
   overflow: hidden;
   position: relative;
 }
@@ -395,6 +384,7 @@ body {
 #words {
   filter: blur(4px);
   -webkit-filter: blur(4px);
+  font-size: 20px;
   opacity: .25;
   color: var(--primaryColor);
 }
@@ -413,6 +403,16 @@ body {
   width: 100%;
 }
 
+#focus-error {
+  position: absolute;
+  inset: 0;
+  text-align: center;
+  padding-top: 35px;
+}
+
+#game:focus #focus-error {
+  display: none;
+}
 
 div.word {
   display: inline-block;
