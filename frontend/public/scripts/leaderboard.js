@@ -58,7 +58,7 @@ export async function fetchAndDrawTable() {
   drawTable(items);
 }
 //เดะทำ
-export async function handleCreateItem(name, score, wpm, mode) {
+async function handleCreateItem(name, score, wpm, mode) {
   const payload = {
     name: name,
     score: score,
