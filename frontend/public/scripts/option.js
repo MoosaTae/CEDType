@@ -44,19 +44,14 @@ function initializeNameInputButton() {
     document.querySelector('#loginB').addEventListener('click', () => {
         NameSS.classList.toggle('show')
 
-        document.addEventListener('keydown', () =>
-            document.querySelector('#name-input').focus(),
-        )
+        document.addEventListener('keydown', () => document.querySelector('#name-input').focus())
     })
-    document
-        .querySelector('#namesummitbutton')
-        .addEventListener('click', () => {
-            document.querySelector('#loginS').innerHTML =
-                document.querySelector('#name-input').value
-            name = document.querySelector('#name-input').value
-            NameSS.classList.toggle('show')
-            document.querySelector('#loginB').style.visibility = 'hidden'
-        })
+    document.querySelector('#namesummitbutton').addEventListener('click', () => {
+        document.querySelector('#loginS').innerHTML = document.querySelector('#name-input').value
+        name = document.querySelector('#name-input').value
+        NameSS.classList.toggle('show')
+        document.querySelector('#loginB').style.visibility = 'hidden'
+    })
 }
 
 function initializeTutorialButton() {

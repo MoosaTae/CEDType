@@ -26,8 +26,7 @@ let min_length = 5
 let game_mode = 'endless-mode'
 
 function generateRandomParagraph() {
-    const paragraphLength =
-        Math.floor(Math.random() * (max_length - min_length + 1)) + min_length
+    const paragraphLength = Math.floor(Math.random() * (max_length - min_length + 1)) + min_length
     const paragraph = []
 
     for (let i = 0; i < paragraphLength; i++) {
@@ -144,8 +143,7 @@ function initTimer() {
         clearInterval(timer)
         //เมื่อ create item ไป handle
         if (name != '') {
-            if (game_mode == 'endless-mode')
-                handleCreateItem(name, score, wpm, 2)
+            if (game_mode == 'endless-mode') handleCreateItem(name, score, wpm, 2)
             else handleCreateItem(name, score, wpm, 1)
         }
     }

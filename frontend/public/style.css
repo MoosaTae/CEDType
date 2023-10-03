@@ -12,14 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(
-        #fbe4d8,
-        #dfb6b2,
-        #854f6c,
-        #522b5b,
-        #2b124c,
-        #190019
-    );
+    background: linear-gradient(#fbe4d8, #dfb6b2, #854f6c, #522b5b, #2b124c, #190019);
 }
 
 #HImage {
@@ -269,11 +262,7 @@ td {
 }
 
 #restart-button:hover {
-    background: linear-gradient(
-        to bottom,
-        cornflowerblue 5%,
-        cornflowerblue 100%
-    );
+    background: linear-gradient(to bottom, cornflowerblue 5%, cornflowerblue 100%);
 }
 
 .correct {
