@@ -82,7 +82,7 @@ function setupTextAndMode() {
   if (game_mode == 'endless-mode') {
     document.querySelector('#endlessgame').style.visibility = 'visible'
     document.querySelector('#timegame').style.visibility = 'hidden'
-    document.querySelector('#game').style.height = '0px'
+    document.querySelector('#timegame').style.height = '0px'
     document.querySelector('#endlessgame').style.height = '50px'
 
     if (nontypingText.innerHTML == '') {
@@ -98,7 +98,7 @@ function setupTextAndMode() {
   } else if (game_mode == 'time-mode') {
     document.querySelector('#endlessgame').style.visibility = 'hidden'
     document.querySelector('#timegame').style.visibility = 'visible'
-    document.querySelector('#game').style.height = '160px'
+    document.querySelector('#timegame').style.height = '160px'
     document.querySelector('#endlessgame').style.height = '0px'
     document.getElementById('words').innerHTML = ''
     for (let i = 0; i < 200; i++) {
@@ -224,7 +224,8 @@ function changeMode(mode) {
 }
 
 //copypasta
-document.getElementById('game').addEventListener('keydown', (ev) => {
+const timegame = document.getElementById('timegame')
+timegame.addEventListener('keydown', (ev) => {
   const key = ev.key
   const currentWord = document.querySelector('.word.current')
   const currentLetter = document.querySelector('.letter.current')
