@@ -6,31 +6,26 @@
 }
 
 :root {
-  --bgColor: #333;
-  --bgColorSecondary: #1e1e1e;
-  --textPrimary: #fff;
-  --textSecondary: #666;
-  --primaryColor: rgba(214, 214, 214, 0.726);
-  --error-color: #ff0033;
-  --error-extra-color: #ecac6a;
-  --text-correct-color: #fcd248;
-  --bgGradient: #FBE4D8, #DFB6B2, #854F6C, #522B5B, #2B124C, #190019;
+    --bgColor: #333;
+    --bgColorSecondary: #1e1e1e;
+    --textPrimary: #fff;
+    --textSecondary: #666;
+    --primaryColor: rgba(214, 214, 214, 0.726);
+    --error-color: #ff0033;
+    --error-extra-color: #ecac6a;
+    --text-correct-color: #fcd248;
+    --bgGradient: #fbe4d8, #dfb6b2, #854f6c, #522b5b, #2b124c, #190019;
 }
 
 body {
-  /* overflow: hidden; */
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  padding: 0 10px;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: linear-gradient(#fbe4d8,
-      #dfb6b2,
-      #854f6c,
-      #522b5b,
-      #2b124c,
-      #190019);
+    /* overflow: hidden; */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#fbe4d8, #dfb6b2, #854f6c, #522b5b, #2b124c, #190019);
 }
 
 #HImage {
@@ -151,7 +146,7 @@ table {
 .table-container .table {
     flex: 1;
     margin: 10px;
-    max-height: 300px; 
+    max-height: 300px;
     overflow-y: auto;
 }
 .left-column {
@@ -231,62 +226,15 @@ table {
 
 .container .typing-text,
 .container .non-typing-text {
-  font-size: 1.5em;
-  /* margin: 0px 10px 15px 10px; */
-  color: #4e4e4e2f;
+    font-size: 1.5em;
+    color: #4e4e4e2f;
 }
 
 .container .non-typing-text {
-  top: -30px;
-  left: 60%;
-  position: relative;
-}
-
-.typing-text::-webkit-scrollbar {
-    width: 0;
-}
-
-
-.typing-text p {
-    font-size: 21px;
-    text-align: justify;
-    letter-spacing: 1px;
-    word-break: break-all;
-}
-
-
-.typing-text p span {
+    top: -1.5rem;
+    left: 60%;
     position: relative;
 }
-
-
-.typing-text p span.correct {
-    color: #d1d0c5;
-}
-
-
-.typing-text p span.incorrect {
-    color: #ca4754;
-    border-radius: 4px;
-}
-
-
-/* .typing-text p span.active {
-    color: #17A2B8;
-} */
-.typing-text p span.active::before {
-    position: absolute;
-    content: '';
-    height: 2px;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    border-radius: 5px;
-    background: #ffffff;
-    animation: blink 1s ease-in-out infinite;
-}
-
 
 @keyframes blink {
     50% {
@@ -379,10 +327,6 @@ table {
     margin: 0 1rem 0 0;
 }
 
-/* #setting-option span{
-    
-} */
-
 #time-option {
     justify-content: center;
     display: grid;
@@ -432,11 +376,9 @@ table {
     color: #9c577c;
 }
 
-
 .eduSubTitle {
     color: #ad82a0;
 }
-
 
 .eduText {
     color: #522b5b;
@@ -457,106 +399,129 @@ table {
     animation: fadeIn 1s;
 }
 
-.show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-}
-
 .NameS input {
     position: relative;
     top: 20%;
     height: 10%;
 }
 
-#game {
-  line-height: 35px;
-  height: 115px;
-  overflow: hidden;
-  position: relative;
+#timegame {
+    line-height: 35px;
+    height: 115px;
+    overflow: hidden;
+    position: relative;
+}
+#endlessgame {
+    overflow: hidden;
+    position: relative;
 }
 
-#game:focus {
-  outline: 0;
+#timegame:focus,
+#endlessgame:focus {
+    outline: 0;
+}
+#endlessgame .words,
+#timegame #words {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    font-size: 20px;
+    opacity: 0.25;
+    color: var(--primaryColor);
+    pointer-events: none; /* Make it non-interactive */
+    transition: opacity 0.3s;
+}
+#endlessgame.focused .words,
+#endlessgame:focus .words,
+#timegame:focus #words {
+    filter: blur(0);
+    opacity: 1;
+    align-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    height: -moz-fit-content;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: 100%;
+    pointer-events: auto; /* Restore interactivity */
+}
+#endlessgame.focused .focus-error {
+    display: none;
 }
 
-#words {
-  filter: blur(4px);
-  -webkit-filter: blur(4px);
-  font-size: 20px;
-  opacity: .25;
-  color: var(--primaryColor);
+.focus-error {
+    position: absolute;
+    inset: 0;
+    text-align: center;
+    z-index: 10;
+    display: block;
+}
+#timegame .focus-error {
+    padding-top: 2rem;
 }
 
-#game:focus #words {
-  filter: blur(0);
-  opacity: 1;
-  align-content: flex-start;
-  display: flex;
-  flex-wrap: wrap;
-  height: fit-content;
-  height: -moz-fit-content;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  width: 100%;
-}
-
-#focus-error {
-  position: absolute;
-  inset: 0;
-  text-align: center;
-  padding-top: 35px;
-}
-
-#game:focus #focus-error {
-  display: none;
+#endlessgame:focus .focus-error,
+#timegame:focus .focus-error {
+    display: none;
 }
 
 div.word {
-  display: inline-block;
-  margin: 0 5px;
+    display: inline-block;
+    margin: 0 5px;
 }
 
 .letter.correct {
-  color: var(--text-correct-color);
+    color: var(--text-correct-color);
 }
 
 .letter.incorrect {
-  color: var(--error-color);
+    color: var(--error-color);
 }
 
 .letter.incorrect.extra {
-  color: var(--error-extra-color);
+    color: var(--error-extra-color);
 }
 
 .word.incorrect {
-  text-decoration: underline;
-  text-decoration-color: var(--error-color);
+    text-decoration: underline;
+    text-decoration-color: var(--error-color);
 }
 
 @keyframes blink {
-  0% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 1;
+    }
 
-  50% {
-    opacity: 0;
-  }
+    50% {
+        opacity: 0;
+    }
 
-  100% {
-    opacity: 1;
-  }
+    100% {
+        opacity: 1;
+    }
 }
 
+#endless-cursor,
 #cursor {
-  display: none;
-  width: 2px;
-  height: 1.5rem;
-  border-radius: 10px;
-  background: var(--primaryColor);
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  animation: blink 1.1s infinite;
+    visibility: hidden;
+    width: 0.1rem;
+    height: 1.2rem;
+    border-radius: 10px;
+    background: var(--primaryColor);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    animation: blink 1.1s infinite;
+}
+#endlessgame.focused #endless-cursor,
+#endlessgame:focus #endless-cursor,
+#timegame:focus #cursor {
+    visibility: visible;
+}
+
+.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
 }

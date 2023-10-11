@@ -20,7 +20,6 @@ function changeoption() {
     endlessop.classList.toggle('selectedLBop')
     if (option == 1) option = 2
     else option = 1
-    console.log(option)
     fetchAndDrawTable()
 }
 function InitLeaderboard() {
@@ -29,40 +28,37 @@ function InitLeaderboard() {
     fetchAndDrawTable()
 }
 InitLeaderboard()
-const timeValues = [60, 30, 15, 1];
+const timeValues = [60, 30, 15, 1]
 function drawTable(items) {
     /** @type {HTMLTableSectionElement} */
     const table = document.querySelectorAll('.table')
     // const youtable = document.querySelector("#Yourtable");
 
     // Clear all elements
-    let j=1;
-    for(const itable of table){
+    let j = 1
+    for (const itable of table) {
         itable.innerHTML = ''
-        const headrow=itable.insertRow()
-        headrow.insertCell().innerText = "Ranking"
-        headrow.insertCell().innerText = "Name"
-        headrow.insertCell().innerText = "Score"
-        headrow.insertCell().innerText = "WPM"
-        let i=1;
+        const headrow = itable.insertRow()
+        headrow.insertCell().innerText = 'Ranking'
+        headrow.insertCell().innerText = 'Name'
+        headrow.insertCell().innerText = 'Score'
+        headrow.insertCell().innerText = 'WPM'
+        let i = 1
         for (const item of items) {
-            if(item.time==timeValues[j-1]){
-            const row = itable.insertRow()
-            row.insertCell().innerText = i.toString();
-            i++;
-            row.insertCell().innerText = item.name
-            row.insertCell().innerText = item.score
-            row.insertCell().innerText = item.wpm
-
+            if (item.time == timeValues[j - 1]) {
+                const row = itable.insertRow()
+                row.insertCell().innerText = i.toString()
+                i++
+                row.insertCell().innerText = item.name
+                row.insertCell().innerText = item.score
+                row.insertCell().innerText = item.wpm
             }
-            
         }
-        j++;
+        j++
     }
-    
+
     //youtable.innerHTML = "";
-    
-    
+
     // const row2 = youtable.insertRow();
     // row2.insertCell().innerText = youitem.ranking;
     // row2.insertCell().innerText = youitem.name;
@@ -70,15 +66,12 @@ function drawTable(items) {
     // row2.insertCell().innerText = youitem.wpm;
 }
 
-
-
 export async function fetchAndDrawTable() {
-
     const items = await getItems(option)
-    drawTable(items);
+    drawTable(items)
 }
 //เดะทำ
-async function handleCreateItem(name, score, wpm, time,mode) {
+async function handleCreateItem(name, score, wpm, time, mode) {
     const payload = {
         name: name,
         score: score,
