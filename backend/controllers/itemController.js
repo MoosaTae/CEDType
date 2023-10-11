@@ -21,6 +21,7 @@ export const editItems = async (req, res) => {
     try {
         const leaderboardType = req.params.leaderboardType
         const { name, score, wpm , time } = req.body
+        console.log(req.body)
         // Validate incoming data
         if (!name || typeof score !== 'number' || typeof wpm !== 'number') {
             return res.status(400).json({ error: 'Bad Request: Invalid data format.' })

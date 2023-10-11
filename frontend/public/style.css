@@ -90,7 +90,7 @@ body {
     border: #252525 solid 0.4ch;
     text-align: center;
     z-index: 1;
-    width: 75%;
+    width: 85%;
     height: 80%;
 
     visibility: hidden;
@@ -143,7 +143,7 @@ table {
     border-collapse: collapse;
 }
 .table-container {
-    left: -3%;
+    left: -5%;
     top: -3%;
     position: relative;
     display: flex;

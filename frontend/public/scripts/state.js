@@ -77,7 +77,8 @@ function getWpm() {
         return incorrectLetters.length === 0 && correctLetters.length === letters.length
     })
     scoreTag.innerText = correctWords.length + 1
-    wpmTag.innerText = Math.round(((correctWords.length + 1) * 60) / timepass)
+    wpm = Math.round(((correctWords.length + 1) * 60) / timepass)
+    wpmTag.innerText = wpm
 }
 
 function addParagraph() {
@@ -202,7 +203,7 @@ function initTimer() {
         if (timeLeft < 0) timeLeft = 0
         timeTag.innerText = timeLeft
         if (game_mode == 'endless-mode') {
-            let wpm = Math.round((score * 60) / timepass)
+            wpm = Math.round((score * 60) / timepass)
             wpmTag.innerText = wpm
         }
     } else {

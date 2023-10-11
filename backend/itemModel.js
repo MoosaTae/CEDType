@@ -22,7 +22,7 @@ const itemSchema = new mongoose.Schema(
             required: true,
         },
         time: {
-            type: int,
+            type: Number,
             required: true,
         },
     },
