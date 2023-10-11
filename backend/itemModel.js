@@ -21,6 +21,10 @@ const itemSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
+        time: {
+            type: int,
+            required: true,
+        },
     },
     { versionKey: false },
 )

@@ -6,6 +6,7 @@ import { name } from './option.js'
  * @property {string} name
  * @property {number} score
  * @property {number} wpm
+ * @property {number} time
  */
 /**
  * @param {People[]} people
@@ -28,23 +29,34 @@ function InitLeaderboard() {
     fetchAndDrawTable()
 }
 InitLeaderboard()
-
+const timeValues = [1, 15, 30, 60];
 function drawTable(items) {
     /** @type {HTMLTableSectionElement} */
-    const table = document.querySelector('#table')
+    const table = document.querySelectorAll('.table')
     // const youtable = document.querySelector("#Yourtable");
 
     // Clear all elements
-    table.innerHTML = ''
-    //youtable.innerHTML = "";
-    console.log(items)
-    for (const item of items) {
-        const row = table.insertRow()
-        row.insertCell().innerText = item.ranking
-        row.insertCell().innerText = item.name
-        row.insertCell().innerText = item.score
-        row.insertCell().innerText = item.wpm
+    let j=1;
+    for(const itable of table){
+        itable.innerHTML = ''
+        let i=1;
+        for (const item of items) {
+            if(item.time=timeValues[j-1]){
+            const row = table.insertRow()
+            row.insertCell().innerText = i.toString()+".";
+            i++;
+            row.insertCell().innerText = item.name
+            row.insertCell().innerText = item.score
+            row.insertCell().innerText = item.wpm
+            }
+            
+        }
+        j++;
     }
+    
+    //youtable.innerHTML = "";
+    
+    
     // const row2 = youtable.insertRow();
     // row2.insertCell().innerText = youitem.ranking;
     // row2.insertCell().innerText = youitem.name;
@@ -52,41 +64,20 @@ function drawTable(items) {
     // row2.insertCell().innerText = youitem.wpm;
 }
 
-let ranking = [];
 
-function updateTable(items) {
-    ranking = items.slice(); 
-    ranking.sort((a, b) => b.score - a.score);
-    for (let i = 0; i < ranking.length; i++) {
-        ranking[i].ranking = i + 1;
-    }
-    drawTable(ranking);
-}
-const timeValues = [1, 15, 30, 60];
-const leaderboardData = {};
 
-for (const timeValue of timeValues) {
-    leaderboardData[timeValue] = []; 
-}
 export async function fetchAndDrawTable() {
-    for (const timeValue of timeValues) {
-        const items = await getItems(timeValue);
-        leaderboardData[timeValue] = items;
-    }
-    const combinedData = leaderboardData[option]; 
-    drawTable(combinedData);
-    updateTable(combinedData);
+
     const items = await getItems(option)
-    console.log(items);
     drawTable(items);
-    updateTable(items);
 }
 //เดะทำ
-async function handleCreateItem(name, score, wpm, mode) {
+async function handleCreateItem(name, score, wpm, time,mode) {
     const payload = {
         name: name,
         score: score,
         wpm: wpm,
+        time:time,
     }
     await editItem(payload, mode)
     await fetchAndDrawTable()

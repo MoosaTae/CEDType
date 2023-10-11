@@ -207,6 +207,10 @@ function initTimer() {
         }
     } else {
         clearInterval(timer)
+        if(name!="") {
+            if(game_mode=="endless-mode") handleCreateItem(name, score, wpm, maxTime,2)
+            else handleCreateItem(name, score, wpm, maxTime,1)
+        }
         getWpm()
     }
 }
