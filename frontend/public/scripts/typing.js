@@ -21,5 +21,14 @@ function gameStart() {
 
   inpField.addEventListener('input', initTyping)
   tryAgainBtn.addEventListener('click', resetGame)
+  //   focus for endless mode
+  inpField.addEventListener('focus', () => {
+    const endlessGame = document.querySelector('#endlessgame')
+    endlessGame.classList.add('focused')
+  })
+  inpField.addEventListener('blur', () => {
+    const endlessGame = document.querySelector('#endlessgame')
+    endlessGame.classList.remove('focused')
+  })
 }
 export { gameStart }

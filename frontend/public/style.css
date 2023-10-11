@@ -205,43 +205,6 @@ td {
   position: relative;
 }
 
-/* .typing-text::-webkit-scrollbar {
-  width: 0;
-}
-
-.typing-text p {
-  font-size: 21px;
-  text-align: justify;
-  letter-spacing: 1px;
-  word-break: break-all;
-}
-
-.typing-text p span {
-  position: relative;
-}
-
-.typing-text p span.correct {
-  color: #d1d0c5;
-}
-
-.typing-text p span.incorrect {
-  color: #ca4754;
-  border-radius: 4px;
-}
-
-.typing-text p span.active::before {
-  position: absolute;
-  content: '';
-  height: 2px;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  border-radius: 5px;
-  background: #ffffff;
-  animation: blink 1s ease-in-out infinite;
-} */
-
 @keyframes blink {
   50% {
     opacity: 1;
@@ -333,10 +296,6 @@ td {
   margin: 0 1rem 0 0;
 }
 
-/* #setting-option span{
-    
-} */
-
 #time-option {
   justify-content: center;
   display: grid;
@@ -421,7 +380,6 @@ td {
   overflow: hidden;
   position: relative;
 }
-
 #endlessgame {
   overflow: hidden;
   position: relative;
@@ -438,7 +396,10 @@ td {
   font-size: 20px;
   opacity: 0.25;
   color: var(--primaryColor);
+  pointer-events: none; /* Make it non-interactive */
+  transition: opacity 0.3s;
 }
+#endlessgame.focused .words,
 #endlessgame:focus .words,
 #timegame:focus #words {
   filter: blur(0);
@@ -452,6 +413,10 @@ td {
   -moz-user-select: none;
   user-select: none;
   width: 100%;
+  pointer-events: auto; /* Restore interactivity */
+}
+#endlessgame.focused .focus-error {
+  display: none;
 }
 
 .focus-error {
@@ -461,7 +426,6 @@ td {
   z-index: 10;
   display: block;
 }
-
 #timegame .focus-error {
   padding-top: 2rem;
 }

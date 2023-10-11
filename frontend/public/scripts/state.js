@@ -24,8 +24,6 @@ let misplay = 0
 let score = 0
 let multiplier = 1
 let timepass = 0
-let max_length = 10
-let min_length = 5
 let game_mode = 'endless-mode'
 
 // function generateRandomParagraph() {
@@ -208,6 +206,7 @@ function initTimer() {
     clearInterval(timer)
     getWpm()
   }
+  // console.log(document.activeElement)
 }
 
 function setMaxTime(newTime) {
