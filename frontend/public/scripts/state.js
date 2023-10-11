@@ -8,6 +8,7 @@ const inpField = document.querySelector('#input-container')
 const timeTag = document.querySelector('#time')
 const wpmTag = document.querySelector('#wpm')
 const scoreTag = document.querySelector('#score')
+const endlessCursor = document.getElementById('endless-cursor')
 const timeFrequency = 10 // millisecond
 
 window.timer = null
@@ -112,6 +113,9 @@ function resetWord() {
   inpField.value = ''
   charIndex = 0
   setupTextAndMode()
+  if (game_mode == 'endless-mode') {
+    resetCursor()
+  }
 }
 
 // randomly load a paragraph from the words
@@ -124,7 +128,7 @@ function loadParagraph() {
 function resetGame() {
   loadParagraph()
   clearInterval(timer)
-  if (game_mode == 'time-mode') resetCursor()
+  resetCursor()
   timeLeft = maxTime
   charIndex = mistakes = isTyping = 0
   inpField.value = ''
@@ -155,6 +159,7 @@ function initTyping() {
         }
         characters[charIndex].classList.remove('correct', 'incorrect')
       }
+      resetCursor()
     }
     // normal case
     else {
@@ -167,6 +172,9 @@ function initTyping() {
       charIndex++
       if (charIndex == characters.length) {
         CheckWord()
+      } else {
+        endlessCursor.style.left = characters[charIndex].getBoundingClientRect().left + 'px'
+        endlessCursor.style.top = characters[charIndex].getBoundingClientRect().top + 'px'
       }
     }
   } else {
@@ -325,7 +333,10 @@ document.getElementById('timegame').addEventListener('keydown', (ev) => {
 })
 
 function resetCursor() {
-  if (game_mode == 'time-mode') {
+  if (game_mode == 'endless-mode') {
+    endlessCursor.style.left = typingText.getBoundingClientRect().left + 'px'
+    endlessCursor.style.top = typingText.getBoundingClientRect().top + 'px'
+  } else if (game_mode == 'time-mode') {
     const cursor = document.getElementById('cursor')
     cursor.style.top =
       document.querySelector('.letter.current').getBoundingClientRect().top + 4 + 'px'
