@@ -216,11 +216,7 @@ function initTimer() {
         }
         getWpm()
     }
-  } else {
-    clearInterval(timer)
-    getWpm()
   }
-}
 
 function setMaxTime(newTime) {
   maxTime = newTime
