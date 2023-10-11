@@ -41,18 +41,33 @@
                   </div>
                 </div>
               </div>
-              <div class="div-typingtest">
-                <div class="div-testmodesnotice">
-                  <div class="div-textbutton-7">
+              <div class="container">
+                <div class="uppercontainer">
                     <div class="i-fas-margin">
                       <div class="i-fas-2"><div class="symbol-3"></div></div>
                     </div>
-                    <div class="text-mode-5">english</div>
-                  </div>
+                    <div class="text-uppercontainer">Score: <span id="score">0</span></div>
+                    <div class="text-uppercontainer">Time: <span id="time">30</span></div>
+                    <div class="text-uppercontainer">WPM: <span id="wpm">0</span></div>
                 </div>
-                <div class="div-wordswrapper"><div class="div-caret"></div></div>
-                <div class="div-restarttest">
-                  <div class="button-restart-test"><div class="symbol-3"></div></div>
+                <div class="div-wordswrapper">
+                    <div id="timegame" tabindex="0">
+                        <div id="words"></div>
+                        <div id="cursor"></div>
+                        <div class="focus-error">Click here to focus</div>
+                    </div>
+                      <div id="endlessgame" tabindex="0">
+                          <input type="text" id="input-container" />
+                          <div class="words typing-text">hello</div>
+                          <div class="words non-typing-text">world</div>
+                          <div class="focus-error">Click here to focus</div>
+                          <div id="endless-cursor"></div>
+                      </div>
+                </div>
+                <div class="restart">
+                  <div class="button-restart-test">
+                    <button id="restart-button"><div class="symbol-3"></div></button>
+                  </div>
                 </div>
               </div>
             </div>
