@@ -34,6 +34,7 @@ export async function getItems(which) {
 
 export async function editItem(item, which) {
     try {
+        console.log(JSON.stringify(item))
         await fetch(`${BACKEND_URL}/leaderboard/${which}`, {
             method: 'PUT',
             headers: {

@@ -79,13 +79,13 @@ body {
 
 .leaderboard {
   position: absolute;
-  left: 25%;
-  top: 15%;
+  left: 15%;
+  top: 25%;
   background-color: rgb(168, 67, 0);
   border: #252525 solid 0.4ch;
   text-align: center;
   z-index: 1;
-  width: 50%;
+  width: 85%;
   height: 80%;
 
   visibility: hidden;
@@ -95,7 +95,7 @@ body {
   position: relative;
   width: 80%;
   left: -3%;
-  top: -10%;
+  top: -17%;
   background-color: rgb(255, 255, 255);
 }
 
@@ -134,11 +134,42 @@ td {
   padding: 5px 45px;
   font-weight: lighter;
 }
-
-#LBtable {
+table {
+  border-collapse: collapse;
+}
+.table-container {
+  left: -5%;
+  top: -3%;
+  position: relative;
+  display: flex;
+}
+.table-container .table {
+  flex: 1;
+  margin: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.left-column {
+  text-align: left;
+}
+.right-column {
+  text-align: right;
+}
+#60LBtable {
   overflow: hidden;
 }
-
+#30LBtable {
+  overflow: hidden;
+}
+#15LBtable {
+  overflow: hidden;
+}
+#1LBtable {
+  overflow: hidden;
+}
+#tmlb {
+  font-size: 27px;
+}
 .NameS span {
   font-size: 30px;
   position: relative;

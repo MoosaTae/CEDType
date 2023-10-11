@@ -72,7 +72,8 @@ function getWpm() {
     return incorrectLetters.length === 0 && correctLetters.length === letters.length
   })
   scoreTag.innerText = correctWords.length + 1
-  wpmTag.innerText = Math.round(((correctWords.length + 1) * 60) / timepass)
+  wpm = Math.round(((correctWords.length + 1) * 60) / timepass)
+  wpmTag.innerText = wpm
 }
 
 function setupTextAndMode() {
@@ -203,15 +204,19 @@ function initTimer() {
   if (timeLeft > 0) {
     timeLeft -= 0.01 * multiplier
     timepass += 0.01
-    if (game_mode == 'endless-mode') multiplier = Math.ceil(timepass / 30)
+    if ((game_mode = 'endless-mode')) multiplier = Math.ceil(timepass / 30)
     if (timeLeft < 0) timeLeft = 0
     timeTag.innerText = timeLeft
     if (game_mode == 'endless-mode') {
-      let wpm = Math.round((score * 60) / timepass)
+      wpm = Math.round((score * 60) / timepass)
       wpmTag.innerText = wpm
     }
   } else {
     clearInterval(timer)
+    if (name != '') {
+      if (game_mode == 'endless-mode') handleCreateItem(name, score, wpm, maxTime, 2)
+      else handleCreateItem(name, score, wpm, maxTime, 1)
+    }
     getWpm()
   }
   // console.log(document.activeElement)
