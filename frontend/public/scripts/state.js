@@ -160,7 +160,8 @@ function initTyping() {
         }
         characters[charIndex].classList.remove('correct', 'incorrect')
       }
-      resetCursor()
+      endlessCursor.style.left = characters[charIndex].getBoundingClientRect().left + 'px'
+      endlessCursor.style.top = characters[charIndex].getBoundingClientRect().top + 4 + 'px'
     }
     // normal case
     else {
@@ -175,7 +176,7 @@ function initTyping() {
         CheckWord()
       } else {
         endlessCursor.style.left = characters[charIndex].getBoundingClientRect().left + 'px'
-        endlessCursor.style.top = characters[charIndex].getBoundingClientRect().top + 'px'
+        endlessCursor.style.top = characters[charIndex].getBoundingClientRect().top + 4 + 'px'
       }
     }
   } else {
@@ -340,7 +341,7 @@ document.getElementById('timegame').addEventListener('keydown', (ev) => {
 function resetCursor() {
   if (game_mode == 'endless-mode') {
     endlessCursor.style.left = typingText.getBoundingClientRect().left + 'px'
-    endlessCursor.style.top = typingText.getBoundingClientRect().top + 'px'
+    endlessCursor.style.top = typingText.getBoundingClientRect().top + 4 + 'px'
   } else if (game_mode == 'time-mode') {
     const cursor = document.getElementById('cursor')
     cursor.style.top =
