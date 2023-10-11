@@ -18,7 +18,7 @@
 }
 
 body {
-    /* overflow: hidden; */
+    overflow: hidden;
     font-family: 'Roboto', sans-serif;
     display: flex;
     padding: 0 10px;
@@ -79,31 +79,39 @@ body {
 
 .leaderboard {
     position: absolute;
-    left: 15%;
-    top: 25%;
     background-color: rgb(168, 67, 0);
     border: #252525 solid 0.4ch;
     text-align: center;
     z-index: 1;
-    width: 85%;
+    width: 80%;
     height: 80%;
-
+    margin: auto;
     visibility: hidden;
+    top: 10%;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
-
+/* .leaderboard-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+} */
 #LBimg {
     position: relative;
+    height: 10%;
     width: 80%;
-    left: -3%;
-    top: -17%;
-    background-color: rgb(255, 255, 255);
+    top: -15%;
+    max-width: 760px;
 }
 
 #LBRimg {
-    position: relative;
-    width: 5%;
-    left: 90%;
-    top: -6%;
+    position: absolute;
+    width: 52px;
+    /* move to top right */
+    top: -20px;
+    right: -20px;
     z-index: 2;
 }
 
