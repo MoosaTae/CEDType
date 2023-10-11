@@ -31,7 +31,7 @@ InitLeaderboard()
 
 function drawTable(items) {
     /** @type {HTMLTableSectionElement} */
-    const table = document.querySelector('#LBtable')
+    const table = document.querySelector('#table')
     // const youtable = document.querySelector("#Yourtable");
 
     // Clear all elements
@@ -52,10 +52,34 @@ function drawTable(items) {
     // row2.insertCell().innerText = youitem.wpm;
 }
 
+let ranking = [];
+
+function updateTable(items) {
+    ranking = items.slice(); 
+    ranking.sort((a, b) => b.score - a.score);
+    for (let i = 0; i < ranking.length; i++) {
+        ranking[i].ranking = i + 1;
+    }
+    drawTable(ranking);
+}
+const timeValues = [1, 15, 30, 60];
+const leaderboardData = {};
+
+for (const timeValue of timeValues) {
+    leaderboardData[timeValue] = []; 
+}
 export async function fetchAndDrawTable() {
+    for (const timeValue of timeValues) {
+        const items = await getItems(timeValue);
+        leaderboardData[timeValue] = items;
+    }
+    const combinedData = leaderboardData[option]; 
+    drawTable(combinedData);
+    updateTable(combinedData);
     const items = await getItems(option)
-    console.log(items)
-    drawTable(items)
+    console.log(items);
+    drawTable(items);
+    updateTable(items);
 }
 //เดะทำ
 async function handleCreateItem(name, score, wpm, mode) {
