@@ -64,18 +64,19 @@ function formatWord(wordie) {
 }
 
 function getWpm() {
-  const words = [...document.querySelectorAll('.word')]
-  const lastTypedWord = document.querySelector('.word.current')
-  const lastTypedWordIndex = words.indexOf(lastTypedWord)
-  const typedWords = words.slice(0, lastTypedWordIndex)
-  const correctWords = typedWords.filter((word) => {
-    const letters = [...word.children]
-    const incorrectLetters = letters.filter((letter) => letter.classList.contains('incorrect'))
-    const correctLetters = letters.filter((letter) => letter.classList.contains('correct'))
-    return incorrectLetters.length === 0 && correctLetters.length === letters.length
-  })
-  scoreTag.innerText = correctWords.length + 1
-  wpmTag.innerText = Math.round(((correctWords.length + 1) * 60) / timepass)
+    const words = [...document.querySelectorAll('.word')]
+    const lastTypedWord = document.querySelector('.word.current')
+    const lastTypedWordIndex = words.indexOf(lastTypedWord)
+    const typedWords = words.slice(0, lastTypedWordIndex)
+    const correctWords = typedWords.filter((word) => {
+        const letters = [...word.children]
+        const incorrectLetters = letters.filter((letter) => letter.classList.contains('incorrect'))
+        const correctLetters = letters.filter((letter) => letter.classList.contains('correct'))
+        return incorrectLetters.length === 0 && correctLetters.length === letters.length
+    })
+    scoreTag.innerText = correctWords.length + 1
+    wpm = Math.round(((correctWords.length + 1) * 60) / timepass)
+    wpmTag.innerText = wpm
 }
 
 function setupTextAndMode() {
@@ -197,15 +198,23 @@ function CheckWord() {
 }
 
 function initTimer() {
-  if (timeLeft > 0) {
-    timeLeft -= 0.01 * multiplier
-    timepass += 0.01
-    if (game_mode == 'endless-mode') multiplier = Math.ceil(timepass / 30)
-    if (timeLeft < 0) timeLeft = 0
-    timeTag.innerText = timeLeft
-    if (game_mode == 'endless-mode') {
-      let wpm = Math.round((score * 60) / timepass)
-      wpmTag.innerText = wpm
+    if (timeLeft > 0) {
+        timeLeft -= 0.01 * multiplier
+        timepass += 0.01
+        if ((game_mode = 'endless-mode')) multiplier = Math.ceil(timepass / 30)
+        if (timeLeft < 0) timeLeft = 0
+        timeTag.innerText = timeLeft
+        if (game_mode == 'endless-mode') {
+            wpm = Math.round((score * 60) / timepass)
+            wpmTag.innerText = wpm
+        }
+    } else {
+        clearInterval(timer)
+        if(name!="") {
+            if(game_mode=="endless-mode") handleCreateItem(name, score, wpm, maxTime,2)
+            else handleCreateItem(name, score, wpm, maxTime,1)
+        }
+        getWpm()
     }
   } else {
     clearInterval(timer)
