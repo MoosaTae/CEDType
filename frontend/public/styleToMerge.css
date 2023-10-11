@@ -1,0 +1,717 @@
+.body {
+    display: flex;
+    background: linear-gradient(180deg, rgb(76, 26, 196) 0%, rgb(56, 170, 228) 45.31%);
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    align-items: flex-start;
+    min-width: 760px;
+    overflow: hidden;
+  }
+  
+  .body .overlap-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100vw;
+    height: 100vh;
+    min-width: 760px;
+    position: relative;
+  }
+  
+  .body .overlap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    min-width: 760px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .body .union {
+    height: 630px;
+    top: 292px;
+    mix-blend-mode: overlay;
+    position: absolute;
+    width: 100vw;  
+    min-width: 760px;
+  }
+  
+  .body .union-1 {
+    height: 768px;
+    top: 154px;
+    mix-blend-mode: overlay;
+    position: absolute;
+    width: 100vw;
+    min-width: 760px;
+  }
+  
+  .body .union-2 {
+    height: 864px;
+    top: 58px;
+    mix-blend-mode: overlay;
+    position: absolute;
+    width: 100vw;
+    min-width: 760px;
+  }
+  
+  .body .union-3 {
+    height: 662px;
+    position: absolute;
+    width: 1920px;
+    bottom: 0;
+  }
+  
+  .body .div-contentwrapper {
+    position: relative;
+    width: 65vw;
+    height: 100vh;
+    top: 0;
+    min-width: 500px;
+  }
+  
+  .body .main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 785px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 150px;
+    min-width: 500px;
+  }
+  
+  .body .div-testconfig {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 207.94px 16px 207.92px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: auto;
+  }
+  
+  .body .div-row {
+    position: relative;
+    width: 390px  ;
+    height: 42px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px #00000080;
+  }
+  
+  .body .div-mode {
+    display: inline-flex;
+    align-items: flex-start;
+    padding: 0px 0px 1.58px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+  }
+  
+  .body .div-textbutton {
+    gap: 6.01px;
+    padding: 12px 8px 11.2px 16px;
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+    flex: 0 0 auto;
+    border-radius: 8px;
+  }
+  
+  .body .i-fas {
+    display: flex;
+    width: 15px;
+    padding: 0px 1.4px 0px 1.6px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .body .symbol {
+    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+    color: #e2b714;
+    font-size: 12px;
+    line-height: 15px;
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  
+  .body .text-wrapper {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Roboto Mono", Helvetica;
+    font-weight: 400;
+    color: #e2b714;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 15px;
+    white-space: nowrap;
+  }
+  
+  .body .div {
+    gap: 5.61px;
+    padding: 12px 7.41px 11.2px 8px;
+    margin-left: -0.2px;
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+    flex: 0 0 auto;
+    border-radius: 8px;
+  }
+  
+  .body .symbol-wrapper {
+    display: flex;
+    width: 15px;
+    padding: 0px 1.9px 0px 2.1px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .body .symbol-2 {
+    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+    color: #646669;
+    font-size: 12px;
+    line-height: 15px;
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  
+  .body .text-wrapper-2 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Roboto Mono", Helvetica;
+    font-weight: 400;
+    color: #646669;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 15px;
+    white-space: nowrap;
+  }
+  
+  .body .div-textbutton-2 {
+    gap: 5.9px;
+    padding: 12px 8px 11.2px;
+    margin-left: -0.2px;
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+    flex: 0 0 auto;
+    border-radius: 8px;
+  }
+  
+  .body .div-wrapper {
+    display: flex;
+    width: 15px;
+    padding: 0px 0px 0px 0.2px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .body .overlap-group {
+    position: absolute;
+    width: 178px;
+    height: 40px;
+    top: 1px;
+    left: 212px;
+  }
+  
+  .body .div-spacer-margin {
+    display: flex;
+    flex-direction: column;
+    width: 4px;
+    align-items: flex-start;
+    padding: 8px 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .body .div-spacer {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 23.78px;
+    background-color: #646669;
+    border-radius: 4px;
+  }
+  
+  .body .div-time {
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 2px;
+  }
+  
+  .body .div-textbutton-3 {
+    padding: 12px 7.6px 8.38px 15.81px;
+    align-self: stretch;
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+    flex: 0 0 auto;
+    border-radius: 8px;
+  }
+  
+  .body .text-wrapper-3 {
+    color: #646669;
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Roboto Mono", Helvetica;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 16px;
+    white-space: nowrap;
+  }
+  
+  .body .div-textbutton-4 {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    padding: 12px 7.6px 8.38px 7.81px;
+    position: relative;
+    align-self: stretch;
+    flex: 0 0 auto;
+    border-radius: 8px;
+  }
+  
+  .body .text-wrapper-4 {
+    color: #e2b714;
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Roboto Mono", Helvetica;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 16px;
+    white-space: nowrap;
+  }
+  
+  .body .div-textbutton-5 {
+    padding: 12px 8px 8.38px;
+    align-self: stretch;
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+    flex: 0 0 auto;
+    border-radius: 8px;
+  }
+  
+  .body .div-textbutton-6 {
+    padding: 13.6px 17.4px 11.18px 9.6px;
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+    flex: 0 0 auto;
+    border-radius: 8px;
+  }
+  
+  .body .div-typingtest {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 175px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0px 0px 20px #00000080;
+    min-width: 500px;
+  }
+  
+  .body .div-restarttest {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .body .button-restart-test {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+    flex: 0 0 auto;
+    border-radius: 8px;
+  }
+  
+  .body .symbol-3 {
+    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+    color: #646669;
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  
+  .body .div-wordswrapper {
+    position: relative;
+    width: 100%;
+    height: 105px;
+  }
+  
+  .body .div-caret {
+    position: relative;
+    width: 2px;
+    height: 29px;
+    background-color: #e2b714;
+    border-radius: 8px;
+    opacity: 0.23;
+  }
+  
+  .body .div-testmodesnotice {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 35px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0px 0px;
+    position: relative;
+  }
+  
+  .body .div-textbutton-7 {
+    height: 36px;
+    gap: 7.71px;
+    padding: 8px 7.51px 8px 7.85px;
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+    flex: 0 0 auto;
+    border-radius: 8px;
+  }
+  
+  .body .i-fas-margin {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 7.65px 0px 0px;
+    position: relative;
+    align-self: stretch;
+    flex: 0 0 auto;
+  }
+  
+  .body .i-fas-2 {
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .body .text-wrapper-5 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Roboto Mono", Helvetica;
+    font-weight: 400;
+    color: #646669;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 20px;
+    white-space: nowrap;
+  }
+  
+  .body .header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    top: 70px;
+    background-color: transparent;
+  }
+  
+  .body .link-margin {
+    position: relative;
+    width: 187px;
+    height: 36px;
+  }
+  
+  .body .link {
+    width: 195px;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 5.6px 4px;
+    top: -3px;
+    left: -4px;
+    display: flex;
+    position: relative;
+  }
+  
+  .body .div-icon {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    object-fit: cover;
+  }
+  
+  .body .heading-margin {
+    position: relative;
+    align-self: stretch;
+    width: 192.52px;
+    margin-right: -54px;
+  }
+  
+  .body .heading {
+    display: flex;
+    flex-direction: column;
+    width: 193px;
+    align-items: flex-start;
+    position: relative;
+    top: -4px;
+  }
+  
+  .body .text-wrapper-6 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Lexend Deca", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: 32px;
+    white-space: nowrap;
+  }
+  
+  .body .nav {
+    display: flex;
+    width: 212px;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .body .div-icon-wrapper {
+    width: 36px;
+    align-items: baseline;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    position: relative;
+  }
+  
+  .body .i-fas-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 20px;
+    height: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .body .i-fas-3 {
+    display: flex;
+    height: 20px;
+    padding: 0px 0.9px 0px 1.1px;
+    align-self: stretch;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .body .symbol-99 {
+    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 20px;
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  
+  .body .symbol-4 {
+    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  
+  .body .button {
+    padding: 8px;
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+    flex: 0 0 auto;
+    border-radius: 8px;
+    all: unset;
+    box-sizing: border-box;
+  }
+  
+  .body .i-fas-4 {
+    display: flex;
+    height: 20px;
+    padding: 0px 0px 0px 0.2px;
+    align-self: stretch;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .body .symbol-5 {
+    margin-left: -0.1px;
+    margin-right: -0.1px;
+    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  
+  .body .i-fas-5 {
+    display: flex;
+    height: 20px;
+    padding: 0px 6.9px 0px 7.1px;
+    align-self: stretch;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .body .link-2 {
+    width: 36px;
+    height: 36px;
+    align-items: baseline;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    position: relative;
+  }
+  
+  .body .i-fas-6 {
+    display: flex;
+    height: 20px;
+    padding: 0px 1.9px 0px 2.1px;
+    align-self: stretch;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .body .symbol-6 {
+    font-family: "Font Awesome 5 Free-Regular", Helvetica;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  
+  .body .div-banner {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f1caff;
+    min-width: 760px;
+  }
+  
+  .body .div-container {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .body .div-text-margin {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 8px 0px;
+  }
+  
+  .body .made-with-love-by {
+    position: relative;
+    width: fit-content;
+    font-family: "Roboto Mono", Helvetica;
+    font-weight: 400;
+    color: #323437;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 20px;
+    white-space: nowrap;
+  }
+  
