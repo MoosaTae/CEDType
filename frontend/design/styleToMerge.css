@@ -8,9 +8,9 @@
     align-items: flex-start;
     min-width: 760px;
     overflow: hidden;
-  }
-  
-  .body .overlap-wrapper {
+}
+
+.body .overlap-wrapper {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -20,9 +20,9 @@
     height: 100vh;
     min-width: 760px;
     position: relative;
-  }
-  
-  .body .overlap {
+}
+
+.body .overlap {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -32,51 +32,51 @@
     min-width: 760px;
     position: relative;
     overflow: hidden;
-  }
-  
-  .body .union {
+}
+
+.body .union {
     height: 630px;
     top: 292px;
     mix-blend-mode: overlay;
     position: absolute;
-    width: 100vw;  
+    width: 100vw;
     min-width: 760px;
-  }
-  
-  .body .union-1 {
+}
+
+.body .union-1 {
     height: 768px;
     top: 154px;
     mix-blend-mode: overlay;
     position: absolute;
     width: 100vw;
     min-width: 760px;
-  }
-  
-  .body .union-2 {
+}
+
+.body .union-2 {
     height: 864px;
     top: 58px;
     mix-blend-mode: overlay;
     position: absolute;
     width: 100vw;
     min-width: 760px;
-  }
-  
-  .body .union-3 {
+}
+
+.body .union-3 {
     height: 662px;
     position: absolute;
     width: 1920px;
     bottom: 0;
-  }
-  
-  .body .div-contentwrapper {
+}
+
+.body .div-contentwrapper {
     position: relative;
     width: 65vw;
     height: 100vh;
     top: 0;
     min-width: 500px;
-  }
-  
-  .body .main {
+}
+
+.body .main {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -86,9 +86,9 @@
     position: relative;
     top: 150px;
     min-width: 500px;
-  }
-  
-  .body .div-testconfig {
+}
+
+.body .div-testconfig {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,27 +97,30 @@
     align-self: stretch;
     width: 100%;
     height: auto;
-  }
-  
-  .body .div-row {
+}
+
+.body .option {
     position: relative;
-    width: 390px  ;
+    width: 390px;
     height: 42px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0px 0px 20px #00000080;
-  }
-  
-  .body .div-mode {
+}
+
+.body .div-mode {
     display: inline-flex;
     align-items: flex-start;
     padding: 0px 0px 1.58px;
     position: absolute;
     top: 1px;
     left: 1px;
-  }
-  
-  .body .div-textbutton {
+    /* justify-content: center; */
+    /* grid-auto-flow: column; */
+    margin: 0 1rem 0 0;
+}
+
+.body .div-textbutton {
     gap: 6.01px;
     padding: 12px 8px 11.2px 16px;
     display: inline-flex;
@@ -126,19 +129,10 @@
     position: relative;
     flex: 0 0 auto;
     border-radius: 8px;
-  }
-  
-  .body .i-fas {
-    display: flex;
-    width: 15px;
-    padding: 0px 1.4px 0px 1.6px;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-  }
-  
-  .body .symbol {
-    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+}
+
+.body .symbol {
+    font-family: 'Font Awesome 5 Free-Solid', Helvetica;
     color: #e2b714;
     font-size: 12px;
     line-height: 15px;
@@ -149,23 +143,8 @@
     text-align: center;
     letter-spacing: 0;
     white-space: nowrap;
-  }
-  
-  .body .text-wrapper {
-    position: relative;
-    width: fit-content;
-    margin-top: -1px;
-    font-family: "Roboto Mono", Helvetica;
-    font-weight: 400;
-    color: #e2b714;
-    font-size: 12px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 15px;
-    white-space: nowrap;
-  }
-  
-  .body .div {
+}
+.body .div {
     gap: 5.61px;
     padding: 12px 7.41px 11.2px 8px;
     margin-left: -0.2px;
@@ -175,19 +154,19 @@
     position: relative;
     flex: 0 0 auto;
     border-radius: 8px;
-  }
-  
-  .body .symbol-wrapper {
+}
+
+.body .symbol-wrapper {
     display: flex;
     width: 15px;
     padding: 0px 1.9px 0px 2.1px;
     flex-direction: column;
     align-items: center;
     position: relative;
-  }
-  
-  .body .symbol-2 {
-    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+}
+
+.body .symbol-2 {
+    font-family: 'Font Awesome 5 Free-Solid', Helvetica;
     color: #646669;
     font-size: 12px;
     line-height: 15px;
@@ -198,23 +177,9 @@
     text-align: center;
     letter-spacing: 0;
     white-space: nowrap;
-  }
-  
-  .body .text-wrapper-2 {
-    position: relative;
-    width: fit-content;
-    margin-top: -1px;
-    font-family: "Roboto Mono", Helvetica;
-    font-weight: 400;
-    color: #646669;
-    font-size: 12px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 15px;
-    white-space: nowrap;
-  }
-  
-  .body .div-textbutton-2 {
+}
+
+.body .div-textbutton-2 {
     gap: 5.9px;
     padding: 12px 8px 11.2px;
     margin-left: -0.2px;
@@ -224,80 +189,77 @@
     position: relative;
     flex: 0 0 auto;
     border-radius: 8px;
-  }
-  
-  .body .div-wrapper {
-    display: flex;
-    width: 15px;
-    padding: 0px 0px 0px 0.2px;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-  }
-  
-  .body .overlap-group {
+}
+.body .time-option {
     position: absolute;
     width: 178px;
     height: 40px;
     top: 1px;
     left: 212px;
-  }
-  
-  .body .div-spacer-margin {
+}
+
+.body .div-time {
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    top: -1px;
+    left: 20px;
+}
+
+.body .div-spacer-margin {
     display: flex;
     flex-direction: column;
-    width: 4px;
+    width: 2px;
     align-items: flex-start;
     padding: 8px 0px;
     position: absolute;
     top: 0;
     left: 0;
-  }
-  
-  .body .div-spacer {
+}
+
+.body .div-spacer {
     position: relative;
     align-self: stretch;
     width: 100%;
     height: 23.78px;
     background-color: #646669;
     border-radius: 4px;
-  }
-  
-  .body .div-time {
+}
+
+.body .mode-option {
     display: inline-flex;
     align-items: flex-start;
     justify-content: center;
     position: absolute;
     top: 0;
     left: 2px;
-  }
-  
-  .body .div-textbutton-3 {
-    padding: 12px 7.6px 8.38px 15.81px;
-    align-self: stretch;
+}
+
+.body .text-time {
     display: inline-flex;
     align-items: baseline;
     justify-content: center;
     position: relative;
     flex: 0 0 auto;
     border-radius: 8px;
-  }
-  
-  .body .text-wrapper-3 {
+}
+
+.body .text-wrapper-3 {
     color: #646669;
     position: relative;
     width: fit-content;
     margin-top: -1px;
-    font-family: "Roboto Mono", Helvetica;
+    font-family: 'Roboto Mono', Helvetica;
     font-weight: 400;
     font-size: 12px;
     text-align: center;
     letter-spacing: 0;
     line-height: 16px;
     white-space: nowrap;
-  }
-  
-  .body .div-textbutton-4 {
+}
+
+.body .div-textbutton-4 {
     display: inline-flex;
     align-items: baseline;
     justify-content: center;
@@ -306,23 +268,23 @@
     align-self: stretch;
     flex: 0 0 auto;
     border-radius: 8px;
-  }
-  
-  .body .text-wrapper-4 {
+}
+
+.body .text-wrapper-4 {
     color: #e2b714;
     position: relative;
     width: fit-content;
     margin-top: -1px;
-    font-family: "Roboto Mono", Helvetica;
+    font-family: 'Roboto Mono', Helvetica;
     font-weight: 400;
     font-size: 12px;
     text-align: center;
     letter-spacing: 0;
     line-height: 16px;
     white-space: nowrap;
-  }
-  
-  .body .div-textbutton-5 {
+}
+
+.body .div-textbutton-5 {
     padding: 12px 8px 8.38px;
     align-self: stretch;
     display: inline-flex;
@@ -331,9 +293,9 @@
     position: relative;
     flex: 0 0 auto;
     border-radius: 8px;
-  }
-  
-  .body .div-textbutton-6 {
+}
+
+.body .div-textbutton-6 {
     padding: 13.6px 17.4px 11.18px 9.6px;
     display: inline-flex;
     align-items: baseline;
@@ -341,9 +303,9 @@
     position: relative;
     flex: 0 0 auto;
     border-radius: 8px;
-  }
-  
-  .body .div-typingtest {
+}
+
+.body .div-typingtest {
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -352,9 +314,9 @@
     border-radius: 24px;
     box-shadow: 0px 0px 20px #00000080;
     min-width: 500px;
-  }
-  
-  .body .div-restarttest {
+}
+
+.body .div-restarttest {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -362,19 +324,19 @@
     align-items: center;
     justify-content: center;
     position: relative;
-  }
-  
-  .body .button-restart-test {
+}
+
+.body .button-restart-test {
     display: inline-flex;
     align-items: baseline;
     justify-content: center;
     position: relative;
     flex: 0 0 auto;
     border-radius: 8px;
-  }
-  
-  .body .symbol-3 {
-    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+}
+
+.body .symbol-3 {
+    font-family: 'Font Awesome 5 Free-Solid', Helvetica;
     color: #646669;
     font-size: 16px;
     line-height: 20px;
@@ -385,24 +347,24 @@
     text-align: center;
     letter-spacing: 0;
     white-space: nowrap;
-  }
-  
-  .body .div-wordswrapper {
+}
+
+.body .div-wordswrapper {
     position: relative;
     width: 100%;
     height: 105px;
-  }
-  
-  .body .div-caret {
+}
+
+.body .div-caret {
     position: relative;
     width: 2px;
     height: 29px;
     background-color: #e2b714;
     border-radius: 8px;
     opacity: 0.23;
-  }
-  
-  .body .div-testmodesnotice {
+}
+
+.body .div-testmodesnotice {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -411,9 +373,9 @@
     justify-content: center;
     gap: 0px 0px;
     position: relative;
-  }
-  
-  .body .div-textbutton-7 {
+}
+
+.body .div-textbutton-7 {
     height: 36px;
     gap: 7.71px;
     padding: 8px 7.51px 8px 7.85px;
@@ -423,9 +385,9 @@
     position: relative;
     flex: 0 0 auto;
     border-radius: 8px;
-  }
-  
-  .body .i-fas-margin {
+}
+
+.body .i-fas-margin {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
@@ -433,21 +395,21 @@
     position: relative;
     align-self: stretch;
     flex: 0 0 auto;
-  }
-  
-  .body .i-fas-2 {
+}
+
+.body .i-fas-2 {
     display: inline-flex;
     flex: 0 0 auto;
     flex-direction: column;
     align-items: center;
     position: relative;
-  }
-  
-  .body .text-wrapper-5 {
+}
+
+.body .text-wrapper-5 {
     position: relative;
     width: fit-content;
     margin-top: -1px;
-    font-family: "Roboto Mono", Helvetica;
+    font-family: 'Roboto Mono', Helvetica;
     font-weight: 400;
     color: #646669;
     font-size: 16px;
@@ -455,9 +417,9 @@
     letter-spacing: 0;
     line-height: 20px;
     white-space: nowrap;
-  }
-  
-  .body .header {
+}
+
+.body .header {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -466,15 +428,15 @@
     position: absolute;
     top: 70px;
     background-color: transparent;
-  }
-  
-  .body .link-margin {
+}
+
+.body .link-margin {
     position: relative;
     width: 187px;
     height: 36px;
-  }
-  
-  .body .link {
+}
+
+.body .link {
     width: 195px;
     align-items: flex-start;
     gap: 8px;
@@ -483,54 +445,54 @@
     left: -4px;
     display: flex;
     position: relative;
-  }
-  
-  .body .div-icon {
+}
+
+.body .div-icon {
     position: relative;
     width: 40px;
     height: 30px;
     object-fit: cover;
-  }
-  
-  .body .heading-margin {
+}
+
+.body .heading-margin {
     position: relative;
     align-self: stretch;
     width: 192.52px;
     margin-right: -54px;
-  }
-  
-  .body .heading {
+}
+
+.body .heading {
     display: flex;
     flex-direction: column;
     width: 193px;
     align-items: flex-start;
     position: relative;
     top: -4px;
-  }
-  
-  .body .text-wrapper-6 {
+}
+
+.body .text-wrapper-6 {
     position: relative;
     width: fit-content;
     margin-top: -1px;
-    font-family: "Lexend Deca", Helvetica;
+    font-family: 'Lexend Deca', Helvetica;
     font-weight: 400;
     color: #ffffff;
     font-size: 32px;
     letter-spacing: 0;
     line-height: 32px;
     white-space: nowrap;
-  }
-  
-  .body .nav {
+}
+
+.body .nav {
     display: flex;
     width: 212px;
     align-items: center;
     gap: 8px;
     position: relative;
     flex: 0 0 auto;
-  }
-  
-  .body .div-icon-wrapper {
+}
+
+.body .div-icon-wrapper {
     width: 36px;
     align-items: baseline;
     justify-content: center;
@@ -538,9 +500,9 @@
     border-radius: 8px;
     display: flex;
     position: relative;
-  }
-  
-  .body .i-fas-wrapper {
+}
+
+.body .i-fas-wrapper {
     display: flex;
     flex-direction: column;
     width: 20px;
@@ -548,9 +510,9 @@
     align-items: flex-start;
     justify-content: center;
     position: relative;
-  }
-  
-  .body .i-fas-3 {
+}
+
+.body .i-fas-3 {
     display: flex;
     height: 20px;
     padding: 0px 0.9px 0px 1.1px;
@@ -559,10 +521,10 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-  }
+}
 
-  .body .symbol-99 {
-    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+.body .symbol-99 {
+    font-family: 'Font Awesome 5 Free-Solid', Helvetica;
     color: #ffffff;
     font-size: 18px;
     line-height: 20px;
@@ -573,10 +535,10 @@
     text-align: center;
     letter-spacing: 0;
     white-space: nowrap;
-  }
-  
-  .body .symbol-4 {
-    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+}
+
+.body .symbol-4 {
+    font-family: 'Font Awesome 5 Free-Solid', Helvetica;
     color: #ffffff;
     font-size: 16px;
     line-height: 20px;
@@ -587,9 +549,9 @@
     text-align: center;
     letter-spacing: 0;
     white-space: nowrap;
-  }
-  
-  .body .button {
+}
+
+.body .button {
     padding: 8px;
     display: inline-flex;
     align-items: baseline;
@@ -599,9 +561,9 @@
     border-radius: 8px;
     all: unset;
     box-sizing: border-box;
-  }
-  
-  .body .i-fas-4 {
+}
+
+.body .i-fas-4 {
     display: flex;
     height: 20px;
     padding: 0px 0px 0px 0.2px;
@@ -610,12 +572,12 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-  }
-  
-  .body .symbol-5 {
+}
+
+.body .symbol-5 {
     margin-left: -0.1px;
     margin-right: -0.1px;
-    font-family: "Font Awesome 5 Free-Solid", Helvetica;
+    font-family: 'Font Awesome 5 Free-Solid', Helvetica;
     color: #ffffff;
     font-size: 16px;
     line-height: 20px;
@@ -626,9 +588,9 @@
     text-align: center;
     letter-spacing: 0;
     white-space: nowrap;
-  }
-  
-  .body .i-fas-5 {
+}
+
+.body .i-fas-5 {
     display: flex;
     height: 20px;
     padding: 0px 6.9px 0px 7.1px;
@@ -637,9 +599,9 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-  }
-  
-  .body .link-2 {
+}
+
+.body .link-2 {
     width: 36px;
     height: 36px;
     align-items: baseline;
@@ -648,9 +610,9 @@
     border-radius: 8px;
     display: flex;
     position: relative;
-  }
-  
-  .body .i-fas-6 {
+}
+
+.body .i-fas-6 {
     display: flex;
     height: 20px;
     padding: 0px 1.9px 0px 2.1px;
@@ -659,10 +621,10 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-  }
-  
-  .body .symbol-6 {
-    font-family: "Font Awesome 5 Free-Regular", Helvetica;
+}
+
+.body .symbol-6 {
+    font-family: 'Font Awesome 5 Free-Regular', Helvetica;
     color: #ffffff;
     font-size: 16px;
     line-height: 20px;
@@ -673,9 +635,9 @@
     text-align: center;
     letter-spacing: 0;
     white-space: nowrap;
-  }
-  
-  .body .div-banner {
+}
+
+.body .div-banner {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -686,32 +648,81 @@
     left: 0;
     background-color: #f1caff;
     min-width: 760px;
-  }
-  
-  .body .div-container {
+}
+
+.body .div-container {
     position: relative;
     align-items: center;
     justify-content: center;
     height: 100%;
-  }
-  
-  .body .div-text-margin {
+}
+
+.body .div-text-margin {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     padding: 8px 0px;
-  }
-  
-  .body .made-with-love-by {
+}
+
+.body .text-mode {
+    display: flex;
     position: relative;
     width: fit-content;
-    font-family: "Roboto Mono", Helvetica;
+    margin-top: -1px;
+    font-family: 'Roboto Mono', Helvetica;
+    font-weight: 400;
+    color: #e2b714;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 15px;
+    white-space: nowrap;
+}
+
+.body .made-with-love-by {
+    position: relative;
+    width: fit-content;
+    font-family: 'Roboto Mono', Helvetica;
     font-weight: 400;
     color: #323437;
     font-size: 16px;
     letter-spacing: 0;
     line-height: 20px;
     white-space: nowrap;
-  }
-  
+}
+
+.body .text-time {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: 'Roboto Mono', Helvetica;
+    font-weight: 400;
+    color: #8c8c8c;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 15px;
+    white-space: nowrap;
+}
+
+.textButton,
+.option .textButton-active {
+    padding: 0.8rem 0.5rem;
+}
+.option .textButton-active {
+    color: #000000;
+    transition: color 0.3s;
+}
+
+.option .textButton:hover,
+.option .text-wrapper:hover,
+.option .textButton-active:hover {
+    color: rgb(0, 255, 247);
+    /* update size */
+    transition: color 0.3s;
+}
+
+.option .textButton-active {
+    transition: color 0.3s;
+}
