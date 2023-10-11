@@ -16,7 +16,7 @@ window.gameStart = null
 
 let timer
 let wpm
-let maxTime = 30
+let maxTime = 30.0
 let timeLeft = maxTime
 let charIndex = 0
 let mistakes = 0
