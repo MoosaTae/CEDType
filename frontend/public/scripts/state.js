@@ -6,12 +6,10 @@ const typingText = document.querySelector('.typing-text')
 const nontypingText = document.querySelector('.non-typing-text')
 const inpField = document.querySelector('#input-container')
 const timeTag = document.querySelector('#time')
-//const mistakeTag = document.querySelector(".mistake span")
 const wpmTag = document.querySelector('#wpm')
 const scoreTag = document.querySelector('#score')
 const timeFrequency = 10 // millisecond
 
-const wordsCount = wordie.length
 window.timer = null
 window.gameStart = null
 
@@ -53,7 +51,7 @@ function randomWord() {
     const randomIndex = Math.ceil(Math.random() * words.length)
     return randomIndex - 1
   } else {
-    const randomIndex = Math.ceil(Math.random() * wordsCount)
+    const randomIndex = Math.ceil(Math.random() * wordie.length)
     return randomIndex - 1
   }
 }
@@ -101,7 +99,7 @@ function setupTextAndMode() {
     document.querySelector('#timegame').style.height = '160px'
     document.querySelector('#endlessgame').style.height = '0px'
     document.getElementById('words').innerHTML = ''
-    for (let i = 0; i < 200; i++) {
+    for (let i = 0; i < Math.max(200, maxTime * 4.5); i++) {
       document.getElementById('words').innerHTML += formatWord(wordie[randomWord()])
     }
     addClass(document.querySelector('.word'), 'current')
@@ -110,7 +108,6 @@ function setupTextAndMode() {
     document.getElementById('words').style.marginTop = 0
     resetCursor()
   }
-  // typingText.querySelector("span").classList.add("active");
 }
 function resetWord() {
   typingText.innerHTML = ''
@@ -223,9 +220,7 @@ function changeMode(mode) {
   resetGame()
 }
 
-//copypasta
-const timegame = document.getElementById('timegame')
-timegame.addEventListener('keydown', (ev) => {
+document.getElementById('timegame').addEventListener('keydown', (ev) => {
   const key = ev.key
   const currentWord = document.querySelector('.word.current')
   const currentLetter = document.querySelector('.letter.current')
@@ -236,29 +231,11 @@ timegame.addEventListener('keydown', (ev) => {
   const isFirstLetter = currentLetter === currentWord.firstChild
   const firstWord = document.querySelector('#words').firstChild
   const isExtra = currentWord.lastChild.classList.contains('extra')
+  const wordHeight = document.querySelector('.word').offsetHeight
+  const maxHeight = 10 * wordHeight //approximately 3
 
-  // if (document.querySelector('#game.over')) {
-  //   return;
-  // }
-
-  // if (!window.timer && (isLetter || isSpace)) {
-  //   window.timer = setInterval(() => {
-  //     if (!window.gameStart) {
-  //       window.gameStart = (new Date()).getTime();
-  //     }
-  //     const currentTime = (new Date()).getTime();
-  //     const msPassed = currentTime - window.gameStart;
-  //     const sPassed = Math.round(msPassed / 1000);
-  //     const sLeft = (gameTime / 1000) - sPassed;
-  //     if (sLeft <= 0) {
-  //       gameOver();
-  //       return;
-  //     }
-  //     document.getElementById('info').innerHTML = sLeft;
-  //   }, 1000);
-  // }
   if (timeLeft > 0) {
-    if (!isTyping) {
+    if (!isTyping && key.length === 1) {
       timer = setInterval(initTimer, timeFrequency)
       isTyping = true
     }
@@ -328,10 +305,10 @@ timegame.addEventListener('keydown', (ev) => {
     }
 
     // move lines
-    if (currentWord.getBoundingClientRect().top > 560) {
+    if (currentWord.getBoundingClientRect().top > maxHeight) {
       const words = document.getElementById('words')
       const margin = parseInt(words.style.marginTop || '0px')
-      words.style.marginTop = margin - 35 + 'px'
+      words.style.marginTop = margin - wordHeight + 'px'
     }
 
     // move cursor
