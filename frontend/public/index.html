@@ -1,306 +1,348 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="body">
-      <div class="overlap-wrapper">
-        <div class="overlap">
-          <img class="union" src="https://c.animaapp.com/JvKG01jv/img/union.svg" />
-          <img class="union-1" src="https://c.animaapp.com/JvKG01jv/img/union-3.svg" />
-          <img class="union-2" src="https://c.animaapp.com/JvKG01jv/img/union-2.svg" />
-          <img class="union-3" src="https://c.animaapp.com/JvKG01jv/img/union-1.svg" />
-          <div class="div-contentwrapper">
-            <div class="main">
-              <div class="div-testconfig">
-                <div class="option">
-                  <div class="mode-option">
-                    <div class="textButton-active textButton text-mode" id="time-mode">
-                      <div class="symbol-wrapper"><div class="symbol-2"></div></div>
-                      <span>time</span>
+    <head>
+        <link rel="stylesheet" href="globals.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="body">
+            <div class="overlap-wrapper">
+                <div class="overlap">
+                    <img class="union" src="https://c.animaapp.com/JvKG01jv/img/union.svg" />
+                    <img class="union-1" src="https://c.animaapp.com/JvKG01jv/img/union-3.svg" />
+                    <img class="union-2" src="https://c.animaapp.com/JvKG01jv/img/union-2.svg" />
+                    <img class="union-3" src="https://c.animaapp.com/JvKG01jv/img/union-1.svg" />
+                    <div class="div-contentwrapper">
+                        <div class="main">
+                            <div class="div-testconfig">
+                                <div class="option">
+                                    <div class="mode-option">
+                                        <div
+                                            class="textButton-active textButton text-mode"
+                                            id="time-mode"
+                                        >
+                                            <div class="symbol-wrapper">
+                                                <div class="symbol-2"></div>
+                                            </div>
+                                            <span>time</span>
+                                        </div>
+                                        <div class="textButton text-mode" id="endless-mode">
+                                            <div class="symbol-wrapper">
+                                                <div class="symbol-2"></div>
+                                            </div>
+                                            <span>endless</span>
+                                        </div>
+                                        <div class="textButton text-mode" id="secret-mode">
+                                            <div class="symbol-wrapper">
+                                                <div class="symbol-2"></div>
+                                            </div>
+                                            <span>idk</span>
+                                        </div>
+                                    </div>
+                                    <div class="time-option">
+                                        <div class="div-spacer-margin">
+                                            <div class="div-spacer"></div>
+                                        </div>
+                                        <div class="div-time">
+                                            <div class="text-time textButton"><span>15</span></div>
+                                            <div class="text-time textButton textButton-active">
+                                                <span>30</span>
+                                            </div>
+                                            <div class="text-time textButton"><span>60</span></div>
+                                            <div class="text-time textButton"><span>120</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="uppercontainer">
+                                    <div class="i-fas-margin">
+                                        <div class="i-fas-2"><div class="symbol-3"></div></div>
+                                    </div>
+                                    <div class="text-uppercontainer">
+                                        Score: <span id="score">0</span>
+                                    </div>
+                                    <div class="text-uppercontainer">
+                                        Time: <span id="time">30</span>
+                                    </div>
+                                    <div class="text-uppercontainer">
+                                        WPM: <span id="wpm">0</span>
+                                    </div>
+                                </div>
+                                <div class="div-wordswrapper">
+                                    <div id="timegame" tabindex="0">
+                                        <div id="words"></div>
+                                        <div id="cursor"></div>
+                                        <div class="focus-error">Click here to focus</div>
+                                    </div>
+                                    <div id="endlessgame" tabindex="0">
+                                        <input type="text" id="input-container" />
+                                        <div class="words typing-text">hello</div>
+                                        <div class="words non-typing-text">world</div>
+                                        <div class="focus-error">Click here to focus</div>
+                                        <div id="endless-cursor"></div>
+                                    </div>
+                                </div>
+                                <div class="restart">
+                                    <div class="button-restart-test">
+                                        <button id="restart-button">
+                                            <div class="symbol-3"></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <header class="header">
+                            <div class="link-margin">
+                                <div class="link">
+                                    <img
+                                        class="div-icon"
+                                        src="https://c.animaapp.com/JvKG01jv/img/div-icon.svg"
+                                    />
+                                    <div class="heading-margin">
+                                        <div class="heading">
+                                            <div class="text-wrapper-6">CEDType</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nav">
+                                <div class="div-icon-wrapper">
+                                    <div class="i-fas-wrapper">
+                                        <div class="i-fas-3"><div class="symbol-99"></div></div>
+                                    </div>
+                                </div>
+                                <div class="div-icon-wrapper">
+                                    <div class="i-fas-wrapper">
+                                        <div class="i-fas-4">
+                                            <div class="symbol-5">
+                                                <div class="hallofframe"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="div-icon-wrapper">
+                                    <div class="i-fas-wrapper">
+                                        <div class="i-fas-5">
+                                            <div class="symbol-4">
+                                                <div class="education"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="div-icon-wrapper">
+                                    <div class="i-fas-wrapper">
+                                        <div class="i-fas-6"><div class="symbol-4"></div></div>
+                                    </div>
+                                </div>
+                                <div class="div-icon-wrapper">
+                                    <div class="i-fas-wrapper">
+                                        <div class="i-fas-6">
+                                            <div class="symbol-4"><div id="loginB"></div></div>
+                                        </div>
+                                        <span id="loginS"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
                     </div>
-                    <div class="textButton text-mode" id="endless-mode">
-                      <div class="symbol-wrapper"><div class="symbol-2"></div></div>
-                      <span>endless</span>
+                    <div class="div-banner">
+                        <div class="div-container">
+                            <div class="div-text-margin">
+                                <p class="made-with-love-by">
+                                    Made with love &lt;3, by CEDT students.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="textButton text-mode" id="secret-mode">
-                      <div class="symbol-wrapper"><div class="symbol-2"></div></div>
-                      <span>idk</span>
-                    </div>
-                  </div>
-                  <div class="time-option">
-                    <div class="div-spacer-margin"><div class="div-spacer"></div></div>
-                    <div class="div-time">
-                      <div class="text-time textButton"><span>15</span></div>
-                      <div class="text-time textButton textButton-active"><span>30</span></div>
-                      <div class="text-time textButton"><span>60</span></div>
-                      <div class="text-time textButton"><span>120</span></div>
-                    </div>
-                  </div>
                 </div>
-              </div>
-              <div class="container">
-                <div class="uppercontainer">
-                    <div class="i-fas-margin">
-                      <div class="i-fas-2"><div class="symbol-3"></div></div>
-                    </div>
-                      <div class="text-uppercontainer">Score: <span id="score">0</span></div>
-                      <div class="text-uppercontainer">Time: <span id="time">30</span></div>
-                      <div class="text-uppercontainer">WPM: <span id="wpm">0</span></div>
-                    </div>
-                <div class="div-wordswrapper">
-                    <div id="timegame" tabindex="0">
-                        <div id="words"></div>
-                        <div id="cursor"></div>
-                        <div class="focus-error">Click here to focus</div>
-                    </div>
-                      <div id="endlessgame" tabindex="0">
-                          <input type="text" id="input-container" />
-                          <div class="words typing-text">hello</div>
-                          <div class="words non-typing-text">world</div>
-                          <div class="focus-error">Click here to focus</div>
-                          <div id="endless-cursor"></div>
-                      </div>
-                </div>
-                <div class="restart">
-                  <div class="button-restart-test">
-                    <button id="restart-button"><div class="symbol-3"></div></button>
-                  </div>
-                </div>
-              </div>
             </div>
-            <header class="header">
-              <div class="link-margin">
-                <div class="link">
-                  <img class="div-icon" src="https://c.animaapp.com/JvKG01jv/img/div-icon.svg" />
-                  <div class="heading-margin">
-                    <div class="heading"><div class="text-wrapper-6">CEDType</div></div>
-                  </div>
-                </div>
-              </div>
-              <div class="nav">
-                <div class="div-icon-wrapper">
-                  <div class="i-fas-wrapper">
-                    <div class="i-fas-3"><div class="symbol-99"></div></div>
-                  </div>
-                </div>
-                <div class="div-icon-wrapper">
-                  <div class="i-fas-wrapper">
-                    <div class="i-fas-4"><div class="symbol-5"><div class ="hallofframe"></div></div></div>
-                  </div>
-                </div>
-                </button>
-                <div class="div-icon-wrapper">
-                  <div class="i-fas-wrapper">
-                    <div class="i-fas-5"><div class="symbol-4"><div class ="education"></div></div></div>
-                  </div>
-                </div>
-                <div class="div-icon-wrapper">
-                  <div class="i-fas-wrapper">
-                    <div class="i-fas-6"><div class="symbol-4"></div></div>
-                  </div>
-                </div>
-                <div class="div-icon-wrapper">
-                  <div class="i-fas-wrapper">
-                    <div class="i-fas-6"><div class="symbol-4"><div id ="loginB"></div></div></div>
-                    <span id="loginS"></span>
-                  </div>
-                </div>
-              </div>
-            </header>
-          </div>
-          <div class="div-banner">
-            <div class="div-container">
-              <div class="div-text-margin">
-                <p class="made-with-love-by">Made with love &lt;3, by CEDT students.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!--fLOAT-->
-      <div class="leaderboard-wrapper">
-        <div class="leaderboard">
-            <img src="remove.png" id="LBRimg" />
-            <img src="leader.png" id="LBimg" />
-            <button class="LBoption selectedLBop" id="LBtimeOp">Time</button>
-            <button class="LBoption" id="LBEndlessOp">Endless</button>
-            <br />
-            <div class="table-container">  
-              <div id="tmlb">60 seconds</div><br>
-              <div class="LBtable">
-              <table class ="table">              
-                  <thead>
-                    <tr>
-                      <th>Ranking</th>
-                      <th>Name</th>
-                      <th>Score</th>
-                      <th>WPM</th>
-                    </tr>
-                  </thead>
-                  <tbody id="60LBtable">
-                      <tr>
-                          <td>1</td>
-                          <td>Chanonpat</td>
-                          <td>20</td>
-                          <td>5</td>
-                      </tr>
-                  </tbody>
-              </table>
-              </div>
-              <div id="tmlb">30 seconds</div><br>
-              <div class="LBtable">
-              <table class ="table">
-                <thead>
-                  <tr>
-                      <th>Ranking</th>
-                      <th>Name</th>
-                      <th>Score</th>
-                      <th>WPM</th>
-                  </tr>
-                </thead>
-                  <tbody id="30Lbtable">
-                    <tr>
-                      <td>1</td>
-                      <td>Chanonpat</td>
-                      <td>20</td>
-                      <td>5</td>
-                  </tr>
-                  </tbody>
-              </table>
-              </div>
-              </div><br>
-          <div class="table-container">
-            <div id="tmlb">15 seconds</div><br>
-            <div class="LBtable">    
-            <table class ="table">
-                  <thead>
-                    <tr>
-                        <th>Ranking</th>
-                        <th>Name</th>
-                        <th>Score</th>
-                        <th>WPM</th>
-                    </tr>
-                  </thead>
-                    <tbody id="15LBtable">
-                        <tr>
-                            <td>1</td>
-                            <td>Chanonpat</td>
-                            <td>20</td>
-                            <td>5</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!--fLOAT-->
+            <div class="leaderboard-wrapper">
+                <div class="leaderboard">
+                    <img src="remove.png" id="LBRimg" />
+                    <img src="leader.png" id="LBimg" />
+                    <button class="LBoption selectedLBop" id="LBtimeOp">Time</button>
+                    <button class="LBoption" id="LBEndlessOp">Endless</button>
+                    <br />
+                    <div class="table-container">
+                        <div id="tmlb">60 seconds</div>
+                        <br />
+                        <div class="LBtable">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Ranking</th>
+                                        <th>Name</th>
+                                        <th>Score</th>
+                                        <th>WPM</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="60LBtable">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Chanonpat</td>
+                                        <td>20</td>
+                                        <td>5</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="tmlb">30 seconds</div>
+                        <br />
+                        <div class="LBtable">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Ranking</th>
+                                        <th>Name</th>
+                                        <th>Score</th>
+                                        <th>WPM</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="30Lbtable">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Chanonpat</td>
+                                        <td>20</td>
+                                        <td>5</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="table-container">
+                        <div id="tmlb">15 seconds</div>
+                        <br />
+                        <div class="LBtable">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Ranking</th>
+                                        <th>Name</th>
+                                        <th>Score</th>
+                                        <th>WPM</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="15LBtable">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Chanonpat</td>
+                                        <td>20</td>
+                                        <td>5</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="tmlb">1 seconds</div>
+                        <br />
+                        <div class="LBtable">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Ranking</th>
+                                        <th>Name</th>
+                                        <th>Score</th>
+                                        <th>WPM</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="1Lbtable">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Chanonpat</td>
+                                        <td>20</td>
+                                        <td>5</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                <div id="tmlb">1 seconds</div><br>
-                <div class="LBtable">
-                <table class ="table">
-                  <thead>
-                    <tr>
-                        <th>Ranking</th>
-                        <th>Name</th>
-                        <th>Score</th>
-                        <th>WPM</th>
-                    </tr>
-                  </thead>  
-                  <tbody id="1Lbtable">
-                      <tr>
-                        <td>1</td>
-                        <td>Chanonpat</td>
-                        <td>20</td>
-                        <td>5</td>
-                    </tr>
-                    </tbody>
-                </table>
+            </div>
+            <!--fLOAT-->
+            <!--fLOAT-->
+            <div class="Tutorial">
+                <h1 class="eduSubTitle">Tutorial for Beginners</h1>
+                <div>
+                    <ul>
+                        <li><a href="#lesson1" class="eduSubTitle">Lesson 1:Home Row</a></li>
+                        <li><a href="#lesson2" class="eduSubTitle">Lesson 2:Top Row</a></li>
+                        <li><a href="#lesson3" class="eduSubTitle">Lesson 3:Bottom Row </a></li>
+                    </ul>
                 </div>
-              </div>  
-        </div>
-    </div>
-      <!--fLOAT-->
-        <!--fLOAT-->
-      <div class="Tutorial">
-        <h1 class="eduSubTitle">Tutorial for Beginners</h1>
-        <div>
-            <ul>
-                <li><a href="#lesson1" class="eduSubTitle">Lesson 1:Home Row</a></li>
-                <li><a href="#lesson2" class="eduSubTitle">Lesson 2:Top Row</a></li>
-                <li><a href="#lesson3" class="eduSubTitle">Lesson 3:Bottom Row </a></li>
-            </ul>
-        </div>
-        <h1 class="eduTitle">CEDTutorial</h1>
-        <h2 class="eduSubTitle" id="lesson1">Lesson 1:Home Row</h2>
-        <p class="eduText">
-            The fisrt part of your <strong>JOURNEY</strong> comes from knowing how to type
-            homerow correctly
-        </p>
-        <p class="eduText">
-            For your <strong>Right Hand</strong>,put your finger above j k l ; start from
-            your index finger to pinky finger
-        </p>
-        <p class="eduText">
-            The same goes for <strong>Left Hand</strong>.Put your finger above f d s a .
-        </p>
-        <br /><img src="both.jpg" />
-        <p class="eduText">
-            For <strong>G H</strong>,practice your index finger to reach these key .
-        </p>
-        <div class="practice">
-            <div class="game" tabindex="0">
-                <div class="homeRow"></div>
-                <div class="cursor"></div>
-                <div class="focus-error"></div>
+                <h1 class="eduTitle">CEDTutorial</h1>
+                <h2 class="eduSubTitle" id="lesson1">Lesson 1:Home Row</h2>
+                <p class="eduText">
+                    The fisrt part of your <strong>JOURNEY</strong> comes from knowing how to type
+                    homerow correctly
+                </p>
+                <p class="eduText">
+                    For your <strong>Right Hand</strong>,put your finger above j k l ; start from
+                    your index finger to pinky finger
+                </p>
+                <p class="eduText">
+                    The same goes for <strong>Left Hand</strong>.Put your finger above f d s a .
+                </p>
+                <br /><img src="both.jpg" />
+                <p class="eduText">
+                    For <strong>G H</strong>,practice your index finger to reach these key .
+                </p>
+                <div class="practice">
+                    <div class="game" tabindex="0">
+                        <div class="homeRow"></div>
+                        <div class="cursor"></div>
+                        <div class="focus-error"></div>
+                    </div>
+                </div>
+                <br />
+                <h2 class="eduSubTitle" id="lesson2">Lesson 2:Top Row</h2>
+                <p class="eduText">
+                    Congrats! Now that you have master the home row key,you can move next to top row
+                    .It will cover from <strong>Q</strong> to <strong>P</strong>
+                </p>
+                <div class="practice">
+                    <div class="game" tabindex="0">
+                        <div class="topRow"></div>
+                        <div class="cursor"></div>
+                        <div class="focus-error"></div>
+                    </div>
+                </div>
+                <br />
+                <h2 class="eduSubTitle" id="lesson3">Lesson 3:Bottom Row</h2>
+                <p class="eduText">
+                    You've made excellent progress in learning the basic keys! Keep up the good work
+                    so that you can move on to your first typing test.
+                </p>
+                <p class="eduText">
+                    Now, let's shift our focus to the bottom row, which consists of the keys: Z X C
+                    V B N M , . /
+                </p>
+                <div class="practice">
+                    <div class="game" tabindex="0">
+                        <div class="bottomRow"></div>
+                        <div class="cursor"></div>
+                        <div class="focus-error"></div>
+                    </div>
+                </div>
+                <p class="eduText">
+                    Awesome! You're now fully prepared for your very first typing challenge.
+                </p>
             </div>
-        </div>
-        <br />
-        <h2 class="eduSubTitle" id="lesson2">Lesson 2:Top Row</h2>
-        <p class="eduText">
-            Congrats! Now that you have master the home row key,you can move next to top row
-            .It will cover from <strong>Q</strong> to <strong>P</strong>
-        </p>
-        <div class="practice">
-            <div class="game" tabindex="0">
-                <div class="topRow"></div>
-                <div class="cursor"></div>
-                <div class="focus-error"></div>
+            <!--fLOAT-->
+            <!--fLOAT-->
+            <div class="NameS">
+                <span> Enter your name </span>
+                <input type="text" id="name-input" />
+                <p>
+                    <br /><br /><br /><br /><br />Your performance will be summited to the
+                    leaderboard automatically once you have logined
+                </p>
+                <button id="namesummitbutton">Summit name</button>
             </div>
+            <!--fLOAT-->
         </div>
-        <br />
-        <h2 class="eduSubTitle" id="lesson3">Lesson 3:Bottom Row</h2>
-        <p class="eduText">
-            You've made excellent progress in learning the basic keys! Keep up the good work
-            so that you can move on to your first typing test.
-        </p>
-        <p class="eduText">
-            Now, let's shift our focus to the bottom row, which consists of the keys: Z X C
-            V B N M , . /
-        </p>
-        <div class="practice">
-            <div class="game" tabindex="0">
-                <div class="bottomRow"></div>
-                <div class="cursor"></div>
-                <div class="focus-error"></div>
-            </div>
-        </div>
-        <p class="eduText">
-            Awesome! You're now fully prepared for your very first typing challenge.
-        </p>
-      </div>
-        <!--fLOAT-->
-      <!--fLOAT-->
-      <div class="NameS">
-        <span> Enter your name </span>
-        <input type="text" id="name-input" />
-        <p>
-            <br /><br /><br /><br /><br />Your performance will be summited to the
-            leaderboard automatically once you have logined
-        </p>
-        <button id="namesummitbutton">Summit name</button>
-      </div>
-      <!--fLOAT-->
-    </div>
-  <script type="module" src="scripts/main.js"></script>
-  </body>
+        <script type="module" src="scripts/main.js"></script>
+    </body>
 </html>

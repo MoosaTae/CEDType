@@ -8,9 +8,9 @@
     align-items: flex-start;
     min-width: 760px;
     overflow: hidden;
-  }
-  
-  .body .overlap-wrapper {
+}
+
+.body .overlap-wrapper {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -20,9 +20,9 @@
     height: 100vh;
     min-width: 760px;
     position: relative;
-  }
-  
-  .body .overlap {
+}
+
+.body .overlap {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -32,51 +32,51 @@
     min-width: 760px;
     position: relative;
     overflow: hidden;
-  }
-  
-  .body .union {
+}
+
+.body .union {
     height: 630px;
     top: 292px;
     mix-blend-mode: overlay;
     position: absolute;
     width: 100vw;
     min-width: 760px;
-  }
-  
-  .body .union-1 {
+}
+
+.body .union-1 {
     height: 768px;
     top: 154px;
     mix-blend-mode: overlay;
     position: absolute;
     width: 100vw;
     min-width: 760px;
-  }
-  
-  .body .union-2 {
+}
+
+.body .union-2 {
     height: 864px;
     top: 58px;
     mix-blend-mode: overlay;
     position: absolute;
     width: 100vw;
     min-width: 760px;
-  }
-  
-  .body .union-3 {
+}
+
+.body .union-3 {
     height: 662px;
     position: absolute;
     width: 1920px;
     bottom: 0;
-  }
-  
-  .body .div-contentwrapper {
+}
+
+.body .div-contentwrapper {
     position: relative;
     width: 65vw;
     height: 100vh;
     top: 0;
     min-width: 500px;
-  }
-  
-  .body .main {
+}
+
+.body .main {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -86,9 +86,9 @@
     position: relative;
     top: 150px;
     min-width: 500px;
-  }
-  
-  .body .div-testconfig {
+}
+
+.body .div-testconfig {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,18 +97,18 @@
     align-self: stretch;
     width: 100%;
     height: auto;
-  }
-  
-  .body .option {
+}
+
+.body .option {
     position: relative;
     width: 390px;
     height: 42px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0px 0px 20px #00000080;
-  }
-  
-  .body .div-mode {
+}
+
+.body .div-mode {
     display: inline-flex;
     align-items: flex-start;
     padding: 0px 0px 1.58px;
@@ -118,9 +118,9 @@
     /* justify-content: center; */
     /* grid-auto-flow: column; */
     margin: 0 1rem 0 0;
-  }
-  
-  .body .div-textbutton {
+}
+
+.body .div-textbutton {
     gap: 6.01px;
     padding: 12px 8px 11.2px 16px;
     display: inline-flex;
@@ -129,9 +129,9 @@
     position: relative;
     flex: 0 0 auto;
     border-radius: 8px;
-  }
-  
-  .body .symbol {
+}
+
+.body .symbol {
     font-family: 'Font Awesome 5 Free-Solid', Helvetica;
     color: #e2b714;
     font-size: 12px;
@@ -143,8 +143,8 @@
     text-align: center;
     letter-spacing: 0;
     white-space: nowrap;
-  }
-  .body .div {
+}
+.body .div {
     gap: 5.61px;
     padding: 12px 7.41px 11.2px 8px;
     margin-left: -0.2px;
@@ -154,18 +154,18 @@
     position: relative;
     flex: 0 0 auto;
     border-radius: 8px;
-  }
-  
-  .body .symbol-wrapper {
+}
+
+.body .symbol-wrapper {
     display: flex;
     width: 15px;
     padding: 0px 1.9px 0px 2.1px;
     flex-direction: column;
     align-items: center;
     position: relative;
-  }
-  
-  .body .symbol-2 {
+}
+
+.body .symbol-2 {
     font-family: 'Font Awesome 5 Free-Solid', Helvetica;
     color: #646669;
     font-size: 12px;
@@ -177,9 +177,9 @@
     text-align: center;
     letter-spacing: 0;
     white-space: nowrap;
-  }
-  
-  .body .div-textbutton-2 {
+}
+
+.body .div-textbutton-2 {
     gap: 5.9px;
     padding: 12px 8px 11.2px;
     margin-left: -0.2px;
@@ -189,25 +189,25 @@
     position: relative;
     flex: 0 0 auto;
     border-radius: 8px;
-  }
-  .body .time-option {
+}
+.body .time-option {
     position: absolute;
     width: 178px;
     height: 40px;
     top: 1px;
     left: 212px;
-  }
-  
-  .body .div-time {
+}
+
+.body .div-time {
     display: inline-flex;
     align-items: flex-start;
     justify-content: center;
     position: absolute;
     top: -1px;
     left: 20px;
-  }
-  
-  .body .div-spacer-margin {
+}
+
+.body .div-spacer-margin {
     display: flex;
     flex-direction: column;
     width: 2px;
@@ -216,36 +216,36 @@
     position: absolute;
     top: 0;
     left: 0;
-  }
-  
-  .body .div-spacer {
+}
+
+.body .div-spacer {
     position: relative;
     align-self: stretch;
     width: 100%;
     height: 23.78px;
     background-color: #646669;
     border-radius: 4px;
-  }
-  
-  .body .mode-option {
+}
+
+.body .mode-option {
     display: inline-flex;
     align-items: flex-start;
     justify-content: center;
     position: absolute;
     top: 0;
     left: 2px;
-  }
-  
-  .body .text-time {
+}
+
+.body .text-time {
     display: inline-flex;
     align-items: baseline;
     justify-content: center;
     position: relative;
     flex: 0 0 auto;
     border-radius: 8px;
-  }
-  
-  .body .text-wrapper-3 {
+}
+
+.body .text-wrapper-3 {
     color: #646669;
     position: relative;
     width: fit-content;
@@ -257,9 +257,9 @@
     letter-spacing: 0;
     line-height: 16px;
     white-space: nowrap;
-  }
-  
-  .body .div-textbutton-4 {
+}
+
+.body .div-textbutton-4 {
     display: inline-flex;
     align-items: baseline;
     justify-content: center;
@@ -268,9 +268,9 @@
     align-self: stretch;
     flex: 0 0 auto;
     border-radius: 8px;
-  }
-  
-  .body .text-wrapper-4 {
+}
+
+.body .text-wrapper-4 {
     color: #e2b714;
     position: relative;
     width: fit-content;
@@ -282,9 +282,9 @@
     letter-spacing: 0;
     line-height: 16px;
     white-space: nowrap;
-  }
-  
-  .body .div-textbutton-5 {
+}
+
+.body .div-textbutton-5 {
     padding: 12px 8px 8.38px;
     align-self: stretch;
     display: inline-flex;
@@ -293,9 +293,9 @@
     position: relative;
     flex: 0 0 auto;
     border-radius: 8px;
-  }
-  
-  .body .div-textbutton-6 {
+}
+
+.body .div-textbutton-6 {
     padding: 13.6px 17.4px 11.18px 9.6px;
     display: inline-flex;
     align-items: baseline;
@@ -303,9 +303,9 @@
     position: relative;
     flex: 0 0 auto;
     border-radius: 8px;
-  }
-  
-  .body .container {
+}
+
+.body .container {
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -315,9 +315,9 @@
     box-shadow: 0px 0px 20px #00000080;
     min-width: 500px;
     overflow: hidden;
-  }
-  
-  .body .restart {
+}
+
+.body .restart {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -326,18 +326,18 @@
     justify-content: center;
     position: absolute;
     bottom: 0;
-  }
-  
-  .body .button-restart-test {
+}
+
+.body .button-restart-test {
     display: inline-flex;
     align-items: baseline;
     justify-content: center;
     position: relative;
     flex: 0 0 auto;
     border-radius: 8px;
-  }
-  
-  .body .symbol-3 {
+}
+
+.body .symbol-3 {
     font-family: 'Font Awesome 5 Free-Solid', Helvetica;
     color: #646669;
     font-size: 16px;
@@ -349,15 +349,15 @@
     text-align: center;
     letter-spacing: 0;
     white-space: nowrap;
-  }
-  
-  .body .div-wordswrapper {
+}
+
+.body .div-wordswrapper {
     position: relative;
     width: 100%;
     height: 105px;
-  }
-  
-  .body .uppercontainer {
+}
+
+.body .uppercontainer {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -368,9 +368,9 @@
     flex-direction: row;
     gap: 12px;
     padding: 8px;
-  }
-  
-  .body .i-fas-margin {
+}
+
+.body .i-fas-margin {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
@@ -378,17 +378,17 @@
     position: relative;
     align-self: stretch;
     flex: 0 0 auto;
-  }
-  
-  .body .i-fas-2 {
+}
+
+.body .i-fas-2 {
     display: inline-flex;
     flex: 0 0 auto;
     flex-direction: column;
     align-items: center;
     position: relative;
-  }
-  
-  .body .text-wrapper-5 {
+}
+
+.body .text-wrapper-5 {
     position: relative;
     width: fit-content;
     margin-top: -1px;
@@ -400,9 +400,9 @@
     letter-spacing: 0;
     line-height: 20px;
     white-space: nowrap;
-  }
-  
-  .body .header {
+}
+
+.body .header {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -411,15 +411,15 @@
     position: absolute;
     top: 70px;
     background-color: transparent;
-  }
-  
-  .body .link-margin {
+}
+
+.body .link-margin {
     position: relative;
     width: 187px;
     height: 36px;
-  }
-  
-  .body .link {
+}
+
+.body .link {
     width: 195px;
     align-items: flex-start;
     gap: 8px;
@@ -428,32 +428,32 @@
     left: -4px;
     display: flex;
     position: relative;
-  }
-  
-  .body .div-icon {
+}
+
+.body .div-icon {
     position: relative;
     width: 40px;
     height: 30px;
     object-fit: cover;
-  }
-  
-  .body .heading-margin {
+}
+
+.body .heading-margin {
     position: relative;
     align-self: stretch;
     width: 192.52px;
     margin-right: -54px;
-  }
-  
-  .body .heading {
+}
+
+.body .heading {
     display: flex;
     flex-direction: column;
     width: 193px;
     align-items: flex-start;
     position: relative;
     top: -4px;
-  }
-  
-  .body .text-wrapper-6 {
+}
+
+.body .text-wrapper-6 {
     position: relative;
     width: fit-content;
     margin-top: -1px;
@@ -464,18 +464,18 @@
     letter-spacing: 0;
     line-height: 32px;
     white-space: nowrap;
-  }
-  
-  .body .nav {
+}
+
+.body .nav {
     display: flex;
     width: 212px;
     align-items: center;
     gap: 8px;
     position: relative;
     flex: 0 0 auto;
-  }
-  
-  .body .div-icon-wrapper {
+}
+
+.body .div-icon-wrapper {
     width: 36px;
     align-items: baseline;
     justify-content: center;
@@ -483,9 +483,9 @@
     border-radius: 8px;
     display: flex;
     position: relative;
-  }
-  
-  .body .i-fas-wrapper {
+}
+
+.body .i-fas-wrapper {
     display: flex;
     flex-direction: column;
     width: 20px;
@@ -493,9 +493,9 @@
     align-items: flex-start;
     justify-content: center;
     position: relative;
-  }
-  
-  .body .i-fas-3 {
+}
+
+.body .i-fas-3 {
     display: flex;
     height: 20px;
     padding: 0px 0.9px 0px 1.1px;
@@ -504,9 +504,9 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-  }
-  
-  .body .symbol-99 {
+}
+
+.body .symbol-99 {
     font-family: 'Font Awesome 5 Free-Solid', Helvetica;
     color: #ffffff;
     font-size: 18px;
@@ -518,9 +518,9 @@
     text-align: center;
     letter-spacing: 0;
     white-space: nowrap;
-  }
-  
-  .body .symbol-4 {
+}
+
+.body .symbol-4 {
     font-family: 'Font Awesome 5 Free-Solid', Helvetica;
     color: #ffffff;
     font-size: 16px;
@@ -532,9 +532,9 @@
     text-align: center;
     letter-spacing: 0;
     white-space: nowrap;
-  }
-  
-  .body .button {
+}
+
+.body .button {
     padding: 8px;
     display: inline-flex;
     align-items: baseline;
@@ -544,9 +544,9 @@
     border-radius: 8px;
     all: unset;
     box-sizing: border-box;
-  }
-  
-  .body .i-fas-4 {
+}
+
+.body .i-fas-4 {
     display: flex;
     height: 20px;
     padding: 0px 0px 0px 0.2px;
@@ -555,9 +555,9 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-  }
-  
-  .body .symbol-5 {
+}
+
+.body .symbol-5 {
     margin-left: -0.1px;
     margin-right: -0.1px;
     font-family: 'Font Awesome 5 Free-Solid', Helvetica;
@@ -571,9 +571,9 @@
     text-align: center;
     letter-spacing: 0;
     white-space: nowrap;
-  }
-  
-  .body .i-fas-5 {
+}
+
+.body .i-fas-5 {
     display: flex;
     height: 20px;
     padding: 0px 6.9px 0px 7.1px;
@@ -582,9 +582,9 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-  }
-  
-  .body .link-2 {
+}
+
+.body .link-2 {
     width: 36px;
     height: 36px;
     align-items: baseline;
@@ -593,9 +593,9 @@
     border-radius: 8px;
     display: flex;
     position: relative;
-  }
-  
-  .body .i-fas-6 {
+}
+
+.body .i-fas-6 {
     display: flex;
     height: 20px;
     padding: 0px 1.9px 0px 2.1px;
@@ -604,9 +604,9 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-  }
-  
-  .body .symbol-6 {
+}
+
+.body .symbol-6 {
     font-family: 'Font Awesome 5 Free-Regular', Helvetica;
     color: #ffffff;
     font-size: 16px;
@@ -618,9 +618,9 @@
     text-align: center;
     letter-spacing: 0;
     white-space: nowrap;
-  }
-  
-  .body .div-banner {
+}
+
+.body .div-banner {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -631,24 +631,24 @@
     left: 0;
     background-color: #f1caff;
     min-width: 760px;
-  }
-  
-  .body .div-container {
+}
+
+.body .div-container {
     position: relative;
     align-items: center;
     justify-content: center;
     height: 100%;
-  }
-  
-  .body .div-text-margin {
+}
+
+.body .div-text-margin {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     padding: 8px 0px;
-  }
-  
-  .body .text-mode {
+}
+
+.body .text-mode {
     display: flex;
     position: relative;
     width: fit-content;
@@ -662,9 +662,9 @@
     line-height: 15px;
     white-space: nowrap;
     transition: color 0.3s;
-  }
-  
-  .body .made-with-love-by {
+}
+
+.body .made-with-love-by {
     position: relative;
     width: fit-content;
     font-family: 'Roboto Mono', Helvetica;
@@ -674,9 +674,9 @@
     letter-spacing: 0;
     line-height: 20px;
     white-space: nowrap;
-  }
-  
-  .body .text-time {
+}
+
+.body .text-time {
     position: relative;
     width: fit-content;
     margin-top: -1px;
@@ -689,90 +689,90 @@
     line-height: 15px;
     white-space: nowrap;
     transition: color 0.3s;
-  }
-  
-  .textButton,
-  .option .textButton-active {
+}
+
+.textButton,
+.option .textButton-active {
     padding: 0.8rem 0.5rem;
-  }
-  .option .textButton-active {
+}
+.option .textButton-active {
     color: #e2b714;
     transition: color 0.3s;
-  }
-  
-  .option .textButton:hover,
-  .option .text-wrapper:hover,
-  .option .textButton-active:hover {
+}
+
+.option .textButton:hover,
+.option .text-wrapper:hover,
+.option .textButton-active:hover {
     color: #ffd000;
     transition: color 0.3s;
-  }
-  
-  .container #input-container {
+}
+
+.container #input-container {
     opacity: 0;
     position: absolute;
     cursor: pointer;
-  }
-  
-  .container .typing-text,
-  .container .non-typing-text {
+}
+
+.container .typing-text,
+.container .non-typing-text {
     font-size: 1.5em;
     color: #aaaeb3;
-  }
-  
-  .container .non-typing-text {
+}
+
+.container .non-typing-text {
     top: -1.5rem;
     left: 60%;
     position: relative;
-  }
-  
-  @keyframes blink {
+}
+
+@keyframes blink {
     0% {
-      opacity: 1;
+        opacity: 1;
     }
     50% {
-      opacity: 0;
+        opacity: 0;
     }
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  .correct {
+}
+
+.correct {
     color: #323437;
-  }
-  
-  .incorrect {
+}
+
+.incorrect {
     color: #da3333;
-  }
-  
-  .letter.incorrect.extra {
+}
+
+.letter.incorrect.extra {
     color: #791717;
-  }
-  
-  .word.incorrect {
+}
+
+.word.incorrect {
     text-decoration: underline;
     text-decoration-color: #da3333;
-  }
-  
-  #timegame {
+}
+
+#timegame {
     line-height: 35px;
     height: 105px;
     overflow: hidden;
     position: relative;
     padding: 0 10px;
-  }
-  #endlessgame {
+}
+#endlessgame {
     overflow: hidden;
     visibility: hidden;
     position: relative;
-  }
-  
-  #timegame:focus,
-  #endlessgame:focus {
+}
+
+#timegame:focus,
+#endlessgame:focus {
     outline: 0;
-  }
-  #endlessgame .words,
-  #timegame #words {
+}
+#endlessgame .words,
+#timegame #words {
     filter: blur(4px);
     -webkit-filter: blur(4px);
     font-size: 1.4rem;
@@ -782,10 +782,10 @@
     transition: opacity 0.3s;
     font-family: 'Roboto Mono', monospace;
     /* make text show following row */
-  }
-  #endlessgame.focused .words,
-  #endlessgame:focus .words,
-  #timegame:focus #words {
+}
+#endlessgame.focused .words,
+#endlessgame:focus .words,
+#timegame:focus #words {
     filter: blur(0);
     opacity: 1;
     align-content: flex-start;
@@ -798,31 +798,31 @@
     user-select: none;
     width: 100%;
     pointer-events: auto; /* Restore interactivity */
-  }
-  #endlessgame.focused .focus-error {
+}
+#endlessgame.focused .focus-error {
     display: none;
-  }
-  .word {
+}
+.word {
     display: inline-block;
     margin: 0 5px;
-  }
-  .focus-error {
+}
+.focus-error {
     position: absolute;
     inset: 0;
     text-align: center;
     z-index: 1;
     display: block;
-  }
-  #timegame .focus-error {
+}
+#timegame .focus-error {
     padding-top: 2rem;
-  }
-  
-  #endlessgame:focus .focus-error,
-  #timegame:focus .focus-error {
+}
+
+#endlessgame:focus .focus-error,
+#timegame:focus .focus-error {
     display: none;
-  }
-  #endless-cursor,
-  #cursor {
+}
+#endless-cursor,
+#cursor {
     visibility: hidden;
     width: 0.1rem;
     height: 1.2rem;
@@ -832,17 +832,17 @@
     top: 0px;
     left: 0px;
     animation: blink 1.1s infinite;
-  }
-  #endlessgame.focused #endless-cursor,
-  #endlessgame:focus #endless-cursor,
-  #timegame:focus #cursor {
+}
+#endlessgame.focused #endless-cursor,
+#endlessgame:focus #endless-cursor,
+#timegame:focus #cursor {
     visibility: visible;
-  }
-  .result {
+}
+.result {
     display: flex;
     flex-direction: row;
-  }
-  #restart-button {
+}
+#restart-button {
     border-radius: 20px;
     padding: 5px 10px;
     margin: 0 auto;
@@ -851,13 +851,13 @@
     outline: none;
     background: none;
     border: none;
-  }
-  
-  #restart-button:hover {
+}
+
+#restart-button:hover {
     background: linear-gradient(to bottom, cornflowerblue 5%, cornflowerblue 100%);
-  }
-  
-  .NameS {
+}
+
+.NameS {
     width: 300px;
     height: 300px;
     position: absolute;
@@ -869,73 +869,73 @@
     visibility: hidden;
     -webkit-animation: fadeOut 1s;
     animation: fadeOut 1s;
-  }
-  
-  .NameS span {
+}
+
+.NameS span {
     font-size: 30px;
     position: relative;
     top: 10%;
-  }
-  
-  .NameS button {
+}
+
+.NameS button {
     position: relative;
     top: 10%;
     background-color: aquamarine;
     width: 148px;
     height: 24px;
-  }
-  
-  .NameS input {
+}
+
+.NameS input {
     position: relative;
     top: 20%;
     height: 10%;
-  }
-  
-  #loginS {
+}
+
+#loginS {
     color: #e9e9e9;
-  }
-  
-  @-webkit-keyframes fadeIn {
+}
+
+@-webkit-keyframes fadeIn {
     from {
-      opacity: 0;
+        opacity: 0;
     }
-  
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  @keyframes fadeIn {
+}
+
+@keyframes fadeIn {
     from {
-      opacity: 0;
+        opacity: 0;
     }
-  
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  @-webkit-keyframes fadeOut {
+}
+
+@-webkit-keyframes fadeOut {
     from {
-      opacity: 1;
+        opacity: 1;
     }
-  
+
     to {
-      opacity: 0;
+        opacity: 0;
     }
-  }
-  
-  @keyframes fadeOut {
+}
+
+@keyframes fadeOut {
     from {
-      opacity: 1;
+        opacity: 1;
     }
-  
+
     to {
-      opacity: 0;
+        opacity: 0;
     }
-  }
-  
-  .Tutorial {
+}
+
+.Tutorial {
     background-color: rgb(230, 213, 189);
     position: absolute;
     opacity: 1;
@@ -952,23 +952,23 @@
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: #888 #f1f1f1;
-  }
-  
-  .Tutorial::-webkit-scrollbar {
+}
+
+.Tutorial::-webkit-scrollbar {
     width: 12px;
-  }
-  
-  .Tutorial::-webkit-scrollbar-track {
+}
+
+.Tutorial::-webkit-scrollbar-track {
     background-color: #ad82a0;
     border-radius: 20px;
-  }
-  
-  .Tutorial::-webkit-scrollbar-thumb:hover {
+}
+
+.Tutorial::-webkit-scrollbar-thumb:hover {
     background-color: burlywood;
     border-radius: 6px;
-  }
-  
-  .leaderboard {
+}
+
+.leaderboard {
     position: absolute;
     background-color: rgb(168, 67, 0);
     border: #252525 solid 0.4ch;
@@ -982,108 +982,112 @@
     left: 0;
     bottom: 0;
     right: 0;
-  }
-  
-  /* .leaderboard-wrapper {
+}
+
+/* .leaderboard-wrapper {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
   } */
-  
-  #LBimg {
+
+#LBimg {
     position: relative;
     height: 10%;
     width: 80%;
     top: -15%;
     max-width: 760px;
-  }
-  
-  #LBRimg {
+}
+
+#LBRimg {
     position: absolute;
     width: 52px;
     /* move to top right */
     top: -20px;
     right: -20px;
     z-index: 2;
-  }
-  
-  .LBoption {
+}
+
+.LBoption {
     border: #000000 solid 2px;
     height: 10%;
-  }
-  
-  #LBtimeOp {
+}
+
+#LBtimeOp {
     position: absolute;
     width: 50%;
     left: 0%;
     top: 0%;
-  }
-  
-  #LBEndlessOp {
+}
+
+#LBEndlessOp {
     position: absolute;
     width: 50%;
     left: 50%;
     top: 0%;
-  }
-  
-  .selectedLBop {
+}
+
+.selectedLBop {
     background-color: rgb(255, 116, 23);
-  }
-  
-  td {
+}
+
+td {
     padding: 5px 45px;
     font-weight: lighter;
-  }
-  
-  table {
+}
+
+table {
     border-collapse: collapse;
-  }
-  
-  .table-container {
+}
+
+.table-container {
     top: -2%;
     left: -6%;
     position: relative;
     display: flex;
-  }
-  
-  .table-container .LBtable {
+}
+
+.table-container .LBtable {
     position: relative;
-    flex:1;
+    flex: 1;
     margin: 10px;
-    height: 200px; 
+    height: 200px;
     overflow-y: auto;
-  }
-  
-  .left-column {
+}
+
+.left-column {
     text-align: left;
-  }
-  
-  .right-column {
+}
+
+.right-column {
     text-align: right;
-  }
-  
-  #60LBtable,#30LBtable,#15LBtable,#1LBtable {
+}
+
+#60LBtable,
+#30LBtable,
+#15LBtable,
+#1LBtable {
     overflow: hidden;
-  }
-  
-  #tmlb {
+}
+
+#tmlb {
     font-size: 27px;
     position: relative;
-  }
-  .table-container #tmlb {
+}
+.table-container #tmlb {
     position: relative;
     top: -20px;
     left: 24%;
-  }
-  table, th, td {
+}
+table,
+th,
+td {
     border: 1px solid black;
     background-color: rgb(254, 206, 206);
-  }
-  
-  .show {
+}
+
+.show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
-  }
-  
+}

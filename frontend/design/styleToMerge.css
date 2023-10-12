@@ -1049,9 +1049,9 @@ table {
 
 .table-container .LBtable {
   position: relative;
-  flex:1;
+  flex: 1;
   margin: 10px;
-  height: 200px; 
+  height: 200px;
   overflow-y: auto;
 }
 
@@ -1063,7 +1063,10 @@ table {
   text-align: right;
 }
 
-#60LBtable,#30LBtable,#15LBtable,#1LBtable {
+#60LBtable,
+#30LBtable,
+#15LBtable,
+#1LBtable {
   overflow: hidden;
 }
 
@@ -1076,7 +1079,9 @@ table {
   top: -20px;
   left: 24%;
 }
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
   background-color: rgb(254, 206, 206);
 }
