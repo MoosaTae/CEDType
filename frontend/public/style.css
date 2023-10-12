@@ -978,6 +978,7 @@
 .LBoption {
     border: #000000 solid 2px;
     height: 10%;
+    color: black;
     background-color: #dcfbfb;
 }
 
@@ -1031,7 +1032,7 @@ table {
     position: relative;
     flex: 1;
     margin: 10px;
-    height: 200px;
+    height: 180px;
     overflow-y: auto;
 }
 
