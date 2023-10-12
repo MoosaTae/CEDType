@@ -1,6 +1,6 @@
 import { loadParagraph, initTyping, resetGame } from './state.js'
 import { initializeButton } from './option.js'
-// import { InitLeaderboard } from './leaderboard.js'
+import { InitLeaderboard } from './leaderboard.js'
 
 const inpField = document.querySelector('#input-container')
 const tryAgainBtn = document.querySelector('#restart-button')
@@ -13,7 +13,7 @@ function TabReset(e) {
 }
 function gameStart() {
   initializeButton()
-  //   InitLeaderboard()
+  InitLeaderboard()
   loadParagraph()
   inpField.addEventListener('keydown', TabReset)
   tryAgainBtn.addEventListener('keydown', TabReset)
