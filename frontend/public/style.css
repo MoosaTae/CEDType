@@ -937,7 +937,7 @@
 }
 .leaderboard {
     position: absolute;
-    background-color: rgb(168, 67, 0);
+    background-color: rgb(202 255 183 / 91%);
     border: #252525 solid 0.4ch;
     text-align: center;
     z-index: 1;
@@ -978,6 +978,7 @@
 .LBoption {
     border: #000000 solid 2px;
     height: 10%;
+    background-color: #dcfbfb;
 }
 
 #LBtimeOp {
@@ -995,20 +996,32 @@
 }
 
 .selectedLBop {
-    background-color: rgb(255, 116, 23);
+    background-color: rgb(171 253 218);
 }
-
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px grey;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(142, 255, 255);
+    border-radius: 5px;
+}
 td {
-    padding: 5px 45px;
+    padding: 5px 10px;
     font-weight: lighter;
 }
-
+.nametd{
+    padding: 5px 51px;
+}
 table {
     border-collapse: collapse;
 }
 
 .table-container {
-    top: -2%;
+    top: 5%;
     left: -6%;
     position: relative;
     display: flex;
@@ -1049,8 +1062,9 @@ table {
 table,
 th,
 td {
-    border: 1px solid black;
-    background-color: rgb(254, 206, 206);
+    border-bottom: groove;
+    background-color: rgb(192 255 228);
+    border-bottom-color: #3effe95e;
 }
 
 /*********************TUTORIAL****************************/

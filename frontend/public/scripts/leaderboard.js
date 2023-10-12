@@ -28,7 +28,7 @@ function InitLeaderboard() {
     fetchAndDrawTable()
 }
 InitLeaderboard()
-const timeValues = [60, 30, 15, 1]
+const timeValues = [120, 60, 30, 15]
 function drawTable(items) {
     /** @type {HTMLTableSectionElement} */
     const table = document.querySelectorAll('.table')
@@ -40,7 +40,9 @@ function drawTable(items) {
         itable.innerHTML = ''
         const headrow = itable.insertRow()
         headrow.insertCell().innerText = 'Ranking'
-        headrow.insertCell().innerText = 'Name'
+        let hdata = headrow.insertCell()
+        hdata.innerText = 'Name'
+        hdata.classList.add("nametd")
         headrow.insertCell().innerText = 'Score'
         headrow.insertCell().innerText = 'WPM'
         let i = 1
@@ -49,7 +51,9 @@ function drawTable(items) {
                 const row = itable.insertRow()
                 row.insertCell().innerText = i.toString()
                 i++
-                row.insertCell().innerText = item.name
+                let namedata = row.insertCell();
+                namedata.innerText=item.name;
+                namedata.classList.add("nametd");
                 row.insertCell().innerText = item.score
                 row.insertCell().innerText = item.wpm
             }
