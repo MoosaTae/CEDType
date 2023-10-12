@@ -718,6 +718,10 @@
     font-size: 1.5em;
     color: #aaaeb3;
 }
+.container .typing-text{
+    position: relative;
+    left: 20%;
+}
 
 .container .non-typing-text {
     top: -1.5rem;
@@ -765,6 +769,7 @@
     overflow: hidden;
     visibility: hidden;
     position: relative;
+    top:50%;
 }
 
 #timegame:focus,
