@@ -246,7 +246,7 @@ timegame.addEventListener('keydown', (ev) => {
     const firstWord = document.querySelector('#words').firstChild
     const isExtra = currentWord.lastChild.classList.contains('extra')
     const wordHeight = document.querySelector('.word').offsetHeight
-    const maxHeight = wordHeight + 507.5 //approximately 2
+    const maxHeight = wordHeight + 407.5 //approximately 2
 
     if (timeLeft > 0) {
         if (!isTyping && key.length === 1) {
@@ -319,6 +319,7 @@ timegame.addEventListener('keydown', (ev) => {
         }
 
         // move lines
+
         if (currentWord.getBoundingClientRect().top > maxHeight) {
             const words = document.getElementById('words')
             const margin = parseInt(words.style.marginTop || '0px')

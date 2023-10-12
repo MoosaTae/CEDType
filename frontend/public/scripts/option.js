@@ -52,6 +52,7 @@ function initializeNameInputButton() {
         name = document.querySelector('#name-input').value
         NameSS.classList.toggle('show')
         document.querySelector('#loginB').style.visibility = 'hidden'
+        // remove loginB
     })
 }
 
