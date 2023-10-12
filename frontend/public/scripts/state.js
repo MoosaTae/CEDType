@@ -1,7 +1,6 @@
 import { words, wordie } from './items.js'
 import { name } from './option.js'
-import { handleCreateItem } from './leaderboard.js'
-
+// import { handleCreateItem } from './leaderboard.js'
 const typingText = document.querySelector('.typing-text')
 const nontypingText = document.querySelector('.non-typing-text')
 const inpField = document.querySelector('#input-container')
@@ -16,7 +15,7 @@ window.gameStart = null
 
 let timer
 let wpm
-let maxTime = 60
+let maxTime = 30.0
 let timeLeft = maxTime
 let charIndex = 0
 let mistakes = 0
@@ -25,8 +24,9 @@ let misplay = 0
 let score = 0
 let multiplier = 1
 let timepass = 0
-let game_mode = 'endless-mode'
+let game_mode = 'time-mode'
 
+const timegame = document.getElementById('timegame')
 // function generateRandomParagraph() {
 //   const paragraphLength = Math.floor(Math.random() * (max_length - min_length + 1)) + min_length;
 //   const paragraph = [];
@@ -44,6 +44,16 @@ function addClass(el, name) {
 
 function removeClass(el, name) {
     el.classList.remove(name)
+}
+
+function setMaxTime(newTime) {
+    maxTime = parseFloat(newTime)
+    resetGame()
+}
+
+function changeMode(mode) {
+    game_mode = mode
+    resetGame()
 }
 function randomWord() {
     if (game_mode == 'endless-mode') {
@@ -96,10 +106,10 @@ function setupTextAndMode() {
     } else if (game_mode == 'time-mode') {
         document.querySelector('#endlessgame').style.visibility = 'hidden'
         document.querySelector('#timegame').style.visibility = 'visible'
-        document.querySelector('#timegame').style.height = '160px'
+        document.querySelector('#timegame').style.height = '105px'
         document.querySelector('#endlessgame').style.height = '0px'
         document.getElementById('words').innerHTML = ''
-        for (let i = 0; i < Math.max(200, maxTime * 4.5); i++) {
+        for (let i = 0; i < Math.max(200, maxTime * 4); i++) {
             document.getElementById('words').innerHTML += formatWord(wordie[randomWord()])
         }
         addClass(document.querySelector('.word'), 'current')
@@ -133,7 +143,7 @@ function resetGame() {
     timeLeft = maxTime
     charIndex = mistakes = isTyping = 0
     inpField.value = ''
-    timeTag.innerText = timeLeft
+    timeTag.innerText = maxTime.toFixed(1)
     wpmTag.innerText = 0
     scoreTag.innerText = 0
     score = 0
@@ -206,9 +216,9 @@ function initTimer() {
     if (timeLeft > 0) {
         timeLeft -= 0.01 * multiplier
         timepass += 0.01
-        if ((game_mode = 'endless-mode')) multiplier = Math.ceil(timepass / 30)
+        if (game_mode == 'endless-mode') multiplier = Math.ceil(timepass / 30)
         if (timeLeft < 0) timeLeft = 0
-        timeTag.innerText = timeLeft
+        timeTag.innerText = timeLeft.toFixed(1)
         if (game_mode == 'endless-mode') {
             wpm = Math.round((score * 60) / timepass)
             wpmTag.innerText = wpm
@@ -224,17 +234,7 @@ function initTimer() {
     // console.log(document.activeElement)
 }
 
-function setMaxTime(newTime) {
-    maxTime = newTime
-    resetGame()
-}
-
-function changeMode(mode) {
-    game_mode = mode
-    resetGame()
-}
-
-document.getElementById('timegame').addEventListener('keydown', (ev) => {
+timegame.addEventListener('keydown', (ev) => {
     const key = ev.key
     const currentWord = document.querySelector('.word.current')
     const currentLetter = document.querySelector('.letter.current')
@@ -246,7 +246,7 @@ document.getElementById('timegame').addEventListener('keydown', (ev) => {
     const firstWord = document.querySelector('#words').firstChild
     const isExtra = currentWord.lastChild.classList.contains('extra')
     const wordHeight = document.querySelector('.word').offsetHeight
-    const maxHeight = 10 * wordHeight //approximately 3
+    const maxHeight = wordHeight + 507.5 //approximately 2
 
     if (timeLeft > 0) {
         if (!isTyping && key.length === 1) {

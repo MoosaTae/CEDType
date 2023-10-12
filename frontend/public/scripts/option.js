@@ -1,4 +1,5 @@
 import { setMaxTime, changeMode } from './state.js'
+import { sleep } from './utils.js'
 let name = ''
 function swapButtonActive(textButtons, button) {
     textButtons.forEach((btn) => {
@@ -8,7 +9,7 @@ function swapButtonActive(textButtons, button) {
 }
 
 function initializeTimeButton() {
-    const textButtons = document.querySelectorAll('#time-option .textButton')
+    const textButtons = document.querySelectorAll('.time-option .textButton')
     textButtons.forEach((button) => {
         button.addEventListener('click', () => {
             const timeValue = button.querySelector('span').textContent
@@ -19,10 +20,11 @@ function initializeTimeButton() {
 }
 
 function initializeModeButton() {
-    const textButtons = document.querySelectorAll('#mode-option .textButton')
+    const textButtons = document.querySelectorAll('.mode-option .textButton')
     textButtons.forEach((button) => {
         button.addEventListener('click', () => {
             const mode = button.querySelector('span').parentElement.id
+            console.log(mode)
             switch (mode) {
                 case 'time-mode':
                     changeMode('time-mode')
@@ -62,6 +64,7 @@ function initializeTutorialButton() {
 
     document.querySelector('.education').addEventListener('click', toggleEdu)
 }
+
 function initializeLeaderboardButton() {
     const leaderboard = document.querySelector('.leaderboard')
     document.querySelector('.hallofframe').addEventListener('click', () => {
