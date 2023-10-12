@@ -18,15 +18,15 @@
                 <div class="option">
                   <div class="mode-option">
                     <div class="textButton-active textButton text-mode" id="time-mode">
-                      <div class="symbol-wrapper"><div class="symbol"></div></div>
+                      <div class="symbol-wrapper"><div class="symbol-2"></div></div>
                       <span>time</span>
                     </div>
                     <div class="textButton text-mode" id="endless-mode">
-                      <div class="symbol-wrapper"><div class="symbol-2"></div></div>
+                      <div class="symbol-wrapper"><div class="symbol-2"></div></div>
                       <span>endless</span>
                     </div>
                     <div class="textButton text-mode" id="secret-mode">
-                      <div class="symbol-wrapper"><div class="symbol-2"></div></div>
+                      <div class="symbol-wrapper"><div class="symbol-2"></div></div>
                       <span>idk</span>
                     </div>
                   </div>
@@ -46,10 +46,10 @@
                     <div class="i-fas-margin">
                       <div class="i-fas-2"><div class="symbol-3"></div></div>
                     </div>
-                    <div class="text-uppercontainer">Score: <span id="score">0</span></div>
-                    <div class="text-uppercontainer">Time: <span id="time">30</span></div>
-                    <div class="text-uppercontainer">WPM: <span id="wpm">0</span></div>
-                </div>
+                      <div class="text-uppercontainer">Score: <span id="score">0</span></div>
+                      <div class="text-uppercontainer">Time: <span id="time">30</span></div>
+                      <div class="text-uppercontainer">WPM: <span id="wpm">0</span></div>
+                    </div>
                 <div class="div-wordswrapper">
                     <div id="timegame" tabindex="0">
                         <div id="words"></div>
@@ -76,7 +76,7 @@
                 <div class="link">
                   <img class="div-icon" src="https://c.animaapp.com/JvKG01jv/img/div-icon.svg" />
                   <div class="heading-margin">
-                    <div class="heading"><div class="text-mode-6">CEDType</div></div>
+                    <div class="heading"><div class="text-wrapper-6">CEDType</div></div>
                   </div>
                 </div>
               </div>
@@ -88,13 +88,13 @@
                 </div>
                 <div class="div-icon-wrapper">
                   <div class="i-fas-wrapper">
-                    <div class="i-fas-4"><div class="symbol-5"></div></div>
+                    <div class="i-fas-4"><div class="symbol-5"><div class ="hallofframe"></div></div></div>
                   </div>
                 </div>
                 </button>
                 <div class="div-icon-wrapper">
                   <div class="i-fas-wrapper">
-                    <div class="i-fas-5"><div class="symbol-4"></div></div>
+                    <div class="i-fas-5"><div class="symbol-4"><div class ="education"></div></div></div>
                   </div>
                 </div>
                 <div class="div-icon-wrapper">
@@ -104,7 +104,7 @@
                 </div>
                 <div class="div-icon-wrapper">
                   <div class="i-fas-wrapper">
-                    <div class="i-fas-6"><div class="symbol-4"></div></div>
+                    <div class="i-fas-6"><div class="symbol-4"><div id ="loginB"></div></div></div>
                   </div>
                 </div>
               </div>
@@ -119,6 +119,186 @@
           </div>
         </div>
       </div>
+
+      <!--fLOAT-->
+      <div class="leaderboard-wrapper">
+        <div class="leaderboard">
+            <img src="remove.png" id="LBRimg" />
+            <img src="leader.png" id="LBimg" />
+            <button class="LBoption selectedLBop" id="LBtimeOp">Time</button>
+            <button class="LBoption" id="LBEndlessOp">Endless</button>
+            <div id="tmlb">
+                60
+                seconds&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;30
+                seconds
+            </div>
+            <br />
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Ranking</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                            <th>WPM</th>
+                        </tr>
+                    </thead>
+                    <tbody id="60LBtable">
+                        <tr>
+                            <td>1</td>
+                            <td>Chanonpat</td>
+                            <td>20</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Ranking</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                            <th>WPM</th>
+                        </tr>
+                    </thead>
+                    <tbody id="30Lbtable">
+                        <tr>
+                            <td>1</td>
+                            <td>Chanonpat</td>
+                            <td>20</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="tmlb">
+                15
+                seconds&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;1
+                seconds
+            </div>
+            <br />
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Ranking</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                            <th>WPM</th>
+                        </tr>
+                    </thead>
+                    <tbody id="15LBtable">
+                        <tr>
+                            <td>1</td>
+                            <td>Chanonpat</td>
+                            <td>20</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Ranking</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                            <th>WPM</th>
+                        </tr>
+                    </thead>
+                    <tbody id="1Lbtable">
+                        <tr>
+                            <td>1</td>
+                            <td>Chanonpat</td>
+                            <td>20</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+      </div>
+      <!--fLOAT-->
+
+      <!--fLOAT-->
+      <div class="Tutorial">
+        <h1 class="eduSubTitle">Tutorial for Beginners</h1>
+        <div>
+            <ul>
+                <li><a href="#lesson1" class="eduSubTitle">Lesson 1:Home Row</a></li>
+                <li><a href="#lesson2" class="eduSubTitle">Lesson 2:Top Row</a></li>
+                <li><a href="#lesson3" class="eduSubTitle">Lesson 3:Bottom Row </a></li>
+            </ul>
+        </div>
+        <h1 class="eduTitle">CEDTutorial</h1>
+        <h2 class="eduSubTitle" id="lesson1">Lesson 1:Home Row</h2>
+        <p class="eduText">
+            The fisrt part of your <strong>JOURNEY</strong> comes from knowing how to type
+            homerow correctly
+        </p>
+        <p class="eduText">
+            For your <strong>Right Hand</strong>,put your finger above j k l ; start from
+            your index finger to pinky finger
+        </p>
+        <p class="eduText">
+            The same goes for <strong>Left Hand</strong>.Put your finger above f d s a .
+        </p>
+        <br /><img src="both.jpg" />
+        <p class="eduText">
+            For <strong>G H</strong>,practice your index finger to reach these key .
+        </p>
+        <div class="practice">
+            <div class="game" tabindex="0">
+                <div class="homeRow"></div>
+                <div class="cursor"></div>
+                <div class="focus-error"></div>
+            </div>
+        </div>
+        <br />
+        <h2 class="eduSubTitle" id="lesson2">Lesson 2:Top Row</h2>
+        <p class="eduText">
+            Congrats! Now that you have master the home row key,you can move next to top row
+            .It will cover from <strong>Q</strong> to <strong>P</strong>
+        </p>
+        <div class="practice">
+            <div class="game" tabindex="0">
+                <div class="topRow"></div>
+                <div class="cursor"></div>
+                <div class="focus-error"></div>
+            </div>
+        </div>
+        <br />
+        <h2 class="eduSubTitle" id="lesson3">Lesson 3:Bottom Row</h2>
+        <p class="eduText">
+            You've made excellent progress in learning the basic keys! Keep up the good work
+            so that you can move on to your first typing test.
+        </p>
+        <p class="eduText">
+            Now, let's shift our focus to the bottom row, which consists of the keys: Z X C
+            V B N M , . /
+        </p>
+        <div class="practice">
+            <div class="game" tabindex="0">
+                <div class="bottomRow"></div>
+                <div class="cursor"></div>
+                <div class="focus-error"></div>
+            </div>
+        </div>
+        <p class="eduText">
+            Awesome! You're now fully prepared for your very first typing challenge.
+        </p>
+      </div>
+        <!--fLOAT-->
+      <!--fLOAT-->
+      <div class="NameS">
+        <span> Enter your name </span>
+        <input type="text" id="name-input" />
+        <p>
+            <br /><br /><br /><br /><br />Your performance will be summited to the
+            leaderboard automatically once you have logined
+        </p>
+        <button id="namesummitbutton">Summit name</button>
+      </div>
+      <!--fLOAT-->
     </div>
   <script type="module" src="scripts/main.js"></script>
   </body>

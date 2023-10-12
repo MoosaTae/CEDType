@@ -1,4 +1,5 @@
 import { setMaxTime, changeMode } from './state.js'
+import { sleep } from './utils.js'
 let name = ''
 function swapButtonActive(textButtons, button) {
   textButtons.forEach((btn) => {
@@ -63,6 +64,7 @@ function initializeTutorialButton() {
 
   document.querySelector('.education').addEventListener('click', toggleEdu)
 }
+
 function initializeLeaderboardButton() {
   const leaderboard = document.querySelector('.leaderboard')
   document.querySelector('.hallofframe').addEventListener('click', () => {
@@ -75,9 +77,9 @@ function initializeLeaderboardButton() {
 function initializeButton() {
   initializeTimeButton()
   initializeModeButton()
-  // initializeNameInputButton()
-  // initializeTutorialButton()
-  // initializeLeaderboardButton())
+  initializeNameInputButton()
+  initializeTutorialButton()
+  initializeLeaderboardButton()
 }
 
 export { initializeButton, name }

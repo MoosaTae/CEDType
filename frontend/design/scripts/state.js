@@ -108,7 +108,7 @@ function setupTextAndMode() {
     console.log(game_mode)
     document.querySelector('#endlessgame').style.visibility = 'hidden'
     document.querySelector('#timegame').style.visibility = 'visible'
-    document.querySelector('#timegame').style.height = '200px'
+    document.querySelector('#timegame').style.height = '105px'
     document.querySelector('#endlessgame').style.height = '0px'
     document.getElementById('words').innerHTML = ''
     for (let i = 0; i < Math.max(180, maxTime * 4); i++) {

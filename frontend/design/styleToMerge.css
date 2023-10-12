@@ -655,12 +655,13 @@
   margin-top: -1px;
   font-family: 'Roboto Mono', Helvetica;
   font-weight: 400;
-  color: #e2b714;
+  color: #646669;
   font-size: 12px;
   text-align: center;
   letter-spacing: 0;
   line-height: 15px;
   white-space: nowrap;
+  transition: color 0.3s;
 }
 
 .body .made-with-love-by {
@@ -687,6 +688,7 @@
   letter-spacing: 0;
   line-height: 15px;
   white-space: nowrap;
+  transition: color 0.3s;
 }
 
 .textButton,
@@ -694,18 +696,14 @@
   padding: 0.8rem 0.5rem;
 }
 .option .textButton-active {
-  color: #000000;
+  color: #e2b714;
   transition: color 0.3s;
 }
 
 .option .textButton:hover,
 .option .text-wrapper:hover,
 .option .textButton-active:hover {
-  color: rgb(0, 255, 247);
-  transition: color 0.3s;
-}
-
-.option .textButton-active {
+  color: #ffd000;
   transition: color 0.3s;
 }
 
@@ -718,7 +716,7 @@
 .container .typing-text,
 .container .non-typing-text {
   font-size: 1.5em;
-  color: #4e4e4e2f;
+  color: #aaaeb3;
 }
 
 .container .non-typing-text {
@@ -728,24 +726,37 @@
 }
 
 @keyframes blink {
+  0% {
+    opacity: 1;
+  }
   50% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
 
 .correct {
-  color: #ffc933;
-  transition: color 0.1s;
+  color: #323437;
 }
 
 .incorrect {
-  color: #ff0000;
-  border-radius: 4px;
+  color: #da3333;
+}
+
+.letter.incorrect.extra {
+  color: #791717;
+}
+
+.word.incorrect {
+  text-decoration: underline;
+  text-decoration-color: #da3333;
 }
 
 #timegame {
   line-height: 35px;
-  height: 115px;
+  height: 105px;
   overflow: hidden;
   position: relative;
   padding: 0 10px;
@@ -764,11 +775,12 @@
 #timegame #words {
   filter: blur(4px);
   -webkit-filter: blur(4px);
-  font-size: 20px;
+  font-size: 1.4rem;
   opacity: 0.25;
-  color: var(--primaryColor);
+  color: #aaaeb3;
   pointer-events: none; /* Make it non-interactive */
   transition: opacity 0.3s;
+  font-family: 'Roboto Mono', monospace;
   /* make text show following row */
 }
 #endlessgame.focused .words,
@@ -798,7 +810,7 @@
   position: absolute;
   inset: 0;
   text-align: center;
-  z-index: 10;
+  z-index: 1;
   display: block;
 }
 #timegame .focus-error {
@@ -815,7 +827,7 @@
   width: 0.1rem;
   height: 1.2rem;
   border-radius: 10px;
-  background: #00000080;
+  background: #e2b714;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -843,4 +855,235 @@
 
 #restart-button:hover {
   background: linear-gradient(to bottom, cornflowerblue 5%, cornflowerblue 100%);
+}
+
+.NameS {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 30%;
+  background-color: white;
+  border: #555 solid 0.4ch;
+  text-align: center;
+  z-index: 2;
+  visibility: hidden;
+  -webkit-animation: fadeOut 1s;
+  animation: fadeOut 1s;
+}
+
+.NameS span {
+  font-size: 30px;
+  position: relative;
+  top: 10%;
+}
+
+.NameS button {
+  position: relative;
+  top: 10%;
+  background-color: aquamarine;
+  width: 148px;
+  height: 24px;
+}
+
+.NameS input {
+  position: relative;
+  top: 20%;
+  height: 10%;
+}
+
+#loginS {
+  color: #e9e9e9;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.Tutorial {
+  background-color: rgb(230, 213, 189);
+  position: absolute;
+  opacity: 1;
+  z-index: 3;
+  border-radius: 1%;
+  top: 150px;
+  visibility: hidden;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  height: 600px;
+  width: 1100px;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.Tutorial::-webkit-scrollbar {
+  width: 12px;
+}
+
+.Tutorial::-webkit-scrollbar-track {
+  background-color: #ad82a0;
+  border-radius: 20px;
+}
+
+.Tutorial::-webkit-scrollbar-thumb:hover {
+  background-color: burlywood;
+  border-radius: 6px;
+}
+
+.leaderboard {
+  position: absolute;
+  background-color: rgb(168, 67, 0);
+  border: #252525 solid 0.4ch;
+  text-align: center;
+  z-index: 1;
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  visibility: hidden;
+  top: 10%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* .leaderboard-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+} */
+
+#LBimg {
+  position: relative;
+  height: 10%;
+  width: 80%;
+  top: -15%;
+  max-width: 760px;
+}
+
+#LBRimg {
+  position: absolute;
+  width: 52px;
+  /* move to top right */
+  top: -20px;
+  right: -20px;
+  z-index: 2;
+}
+
+.LBoption {
+  border: #000000 solid 2px;
+  height: 10%;
+}
+
+#LBtimeOp {
+  position: absolute;
+  width: 50%;
+  left: 0%;
+  top: 0%;
+}
+
+#LBEndlessOp {
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  top: 0%;
+}
+
+.selectedLBop {
+  background-color: rgb(255, 116, 23);
+}
+
+td {
+  padding: 5px 45px;
+  font-weight: lighter;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.table-container {
+  left: -5%;
+  top: -3%;
+  position: relative;
+  display: flex;
+}
+
+.table-container .table {
+  flex: 1;
+  margin: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.left-column {
+  text-align: left;
+}
+
+.right-column {
+  text-align: right;
+}
+
+#60LBtable {
+  overflow: hidden;
+}
+
+#30LBtable {
+  overflow: hidden;
+}
+
+#15LBtable {
+  overflow: hidden;
+}
+
+#1LBtable {
+  overflow: hidden;
+}
+
+#tmlb {
+  font-size: 27px;
+}
+
+.show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
 }
