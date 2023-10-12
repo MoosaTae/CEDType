@@ -61,6 +61,8 @@ function initializeTutorialButton() {
     }
 
     document.querySelector('.education').addEventListener('click', toggleEdu)
+   
+    document.querySelector('.close-tutorial').addEventListener('click',toggleEdu);
 }
 function initializeLeaderboardButton() {
     const leaderboard = document.querySelector('.leaderboard')
