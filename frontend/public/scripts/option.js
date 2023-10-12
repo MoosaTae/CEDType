@@ -57,7 +57,7 @@ function initializeNameInputButton() {
 function initializeTutorialButton() {
     const tutorial = document.querySelector('.Tutorial')
     function toggleEdu() {
-        tutorial.classList.toggle('show')
+        tutorial.classList.toggle('show');
     }
 
     document.querySelector('.education').addEventListener('click', toggleEdu)

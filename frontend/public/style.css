@@ -848,7 +848,7 @@ div.word {
   .Hletter.correct-homeRow,
   .Tletter.correct-topRow,
   .Bletter.correct-botRow {
-    color: var(--text-correct-color);
+    color: #fbe4d8;
   }
   
   .Hletter.incorrect-homeRow,
@@ -986,5 +986,6 @@ div.word {
     left: 0px;
     animation: blink 1.1s infinite;
   }
+
 
   /**********************End TUTORIAL ********************/

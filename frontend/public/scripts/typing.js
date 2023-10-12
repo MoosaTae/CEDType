@@ -15,15 +15,15 @@ function TabReset(e) {
 function gameStart() {
     initializeButton()
     InitLeaderboard()
-    loadParagraph()
+    loadParagraph(which)
 
     function InitMainGame(ev) {
       console.log("Main");
-    inpField.addEventListener('keydown', TabReset)
-    tryAgainBtn.addEventListener('keydown', TabReset)
-    timeGame.addEventListener('keydown', TabReset)
+    inpField.addEventListener(ev, TabReset)
+    tryAgainBtn.addEventListener(ev, TabReset)
+    timeGame.addEventListener(ev, TabReset)
 
-    initTyping();
+    inpField.addEventListener(ev, initTyping)
     tryAgainBtn.addEventListener('click', resetGame)
     //   focus for endless mode
     inpField.addEventListener('focus', () => {
@@ -36,6 +36,7 @@ function gameStart() {
     })
   }
   document.querySelector('#input-container').addEventListener('click',()=> {which = 5 ;});
+
 
 
 

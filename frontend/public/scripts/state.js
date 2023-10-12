@@ -120,9 +120,9 @@ function resetWord() {
 }
 
 // randomly load a paragraph from the words
-function loadParagraph() {
+function loadParagraph(ev) {
     resetWord()
-    document.addEventListener('keydown', () => inpField.focus())
+
     typingText.addEventListener('click', () => inpField.focus())
 }
 
