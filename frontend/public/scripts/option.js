@@ -24,7 +24,6 @@ function initializeModeButton() {
     textButtons.forEach((button) => {
         button.addEventListener('click', () => {
             const mode = button.querySelector('span').parentElement.id
-            console.log(mode)
             switch (mode) {
                 case 'time-mode':
                     changeMode('time-mode')
@@ -63,6 +62,7 @@ function initializeTutorialButton() {
     }
 
     document.querySelector('.education').addEventListener('click', toggleEdu)
+    document.querySelector('.close-tutorial').addEventListener('click', toggleEdu)
 }
 
 function initializeLeaderboardButton() {

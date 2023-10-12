@@ -11,7 +11,7 @@
                     <img class="union" src="https://c.animaapp.com/JvKG01jv/img/union.svg" />
                     <img class="union-1" src="https://c.animaapp.com/JvKG01jv/img/union-3.svg" />
                     <img class="union-2" src="https://c.animaapp.com/JvKG01jv/img/union-2.svg" />
-                    <img class="union-3" src="https://c.animaapp.com/JvKG01jv/img/union-1.svg" />
+                    <!-- <img class="union-3" src="https://c.animaapp.com/JvKG01jv/img/union-1.svg" /> -->
                     <div class="div-contentwrapper">
                         <div class="main">
                             <div class="div-testconfig">
@@ -263,73 +263,85 @@
             </div>
             <!--fLOAT-->
             <!--fLOAT-->
-            <div class="Tutorial">
-                <h1 class="eduSubTitle">Tutorial for Beginners</h1>
-                <div>
-                    <ul>
-                        <li><a href="#lesson1" class="eduSubTitle">Lesson 1:Home Row</a></li>
-                        <li><a href="#lesson2" class="eduSubTitle">Lesson 2:Top Row</a></li>
-                        <li><a href="#lesson3" class="eduSubTitle">Lesson 3:Bottom Row </a></li>
-                    </ul>
-                </div>
-                <h1 class="eduTitle">CEDTutorial</h1>
-                <h2 class="eduSubTitle" id="lesson1">Lesson 1:Home Row</h2>
-                <p class="eduText">
-                    The fisrt part of your <strong>JOURNEY</strong> comes from knowing how to type
-                    homerow correctly
-                </p>
-                <p class="eduText">
-                    For your <strong>Right Hand</strong>,put your finger above j k l ; start from
-                    your index finger to pinky finger
-                </p>
-                <p class="eduText">
-                    The same goes for <strong>Left Hand</strong>.Put your finger above f d s a .
-                </p>
-                <br /><img src="both.jpg" />
-                <p class="eduText">
-                    For <strong>G H</strong>,practice your index finger to reach these key .
-                </p>
-                <div class="practice">
-                    <div class="game" tabindex="0">
-                        <div class="homeRow"></div>
-                        <div class="cursor"></div>
-                        <div class="focus-error"></div>
+            <main>
+                <div class = "Tutorial">
+                  <button class="close-tutorial">Close</button>
+                  <br>
+                  <br>
+                  <h1 class = "eduTitle">CEDTutorial</h1>
+                  <br>
+                  <h1 class="eduSubTitle">Tutorial for Beginners</h1>
+                    <br>
+                    <div>
+                        <ul>
+                            <li><a href="#lesson1" class="eduSubTitle">Lesson 1:Home Row<span></span></a></li>
+                            <li><a href="#lesson2"class="eduSubTitle ">Lesson 2:Top Row<span></span></a></li>
+                            <li><a href="#lesson3"class="eduSubTitle">Lesson 3:Bottom Row<span></span> </a></li>
+                        </ul>
+                    </div>
+                    <br>
+                    <h2 class = "eduSubTitle" id = "lesson1">Lesson 1:Home Row</h2>
+                    <p class = "eduText">The fisrt part of your <strong>JOURNEY</strong> comes from  knowing how to type homerow correctly</p>
+                    <p class = "eduText">For your <strong>Right Hand</strong>,put your finger above j k l ; start from your index finger to pinky finger</p>
+                    <p class = "eduText">The same goes for <strong>Left Hand</strong>.Put your finger above f d s a . </p>
+                    <br>
+                    <img src="both.jpg"></img>
+                    <p class ="eduText">For <strong>G H</strong>,practice your index finger to reach these key .</p>
+                    
+                  
+            
+            <div id="homeRow-header">
+                    <div id="homeRow-btn">
+                        <button id="homeRow-try-again">Try Again</button>
                     </div>
                 </div>
-                <br />
-                <h2 class="eduSubTitle" id="lesson2">Lesson 2:Top Row</h2>
-                <p class="eduText">
-                    Congrats! Now that you have master the home row key,you can move next to top row
-                    .It will cover from <strong>Q</strong> to <strong>P</strong>
-                </p>
-                <div class="practice">
-                    <div class="game" tabindex="0">
-                        <div class="topRow"></div>
-                        <div class="cursor"></div>
-                        <div class="focus-error"></div>
+                <div class="practice-homeRow">
+                    <div id="homeRow-game" tabindex="0">
+                        <div id="hChar"></div>
+                        <div id="homeRow-cursor"></div>
+                        <div id="homeRow-focus-error">Click here to focus</div>
                     </div>
                 </div>
-                <br />
-                <h2 class="eduSubTitle" id="lesson3">Lesson 3:Bottom Row</h2>
-                <p class="eduText">
-                    You've made excellent progress in learning the basic keys! Keep up the good work
-                    so that you can move on to your first typing test.
-                </p>
-                <p class="eduText">
-                    Now, let's shift our focus to the bottom row, which consists of the keys: Z X C
-                    V B N M , . /
-                </p>
-                <div class="practice">
-                    <div class="game" tabindex="0">
-                        <div class="bottomRow"></div>
-                        <div class="cursor"></div>
-                        <div class="focus-error"></div>
-                    </div>
-                </div>
-                <p class="eduText">
-                    Awesome! You're now fully prepared for your very first typing challenge.
-                </p>
-            </div>
+            
+                    <br>
+                    <h2 class ="eduSubTitle" id = "lesson2">Lesson 2:Top Row</h2>
+                    <p class = "eduText">Congrats! Now that you have master the home row key,you can move next to top row .It will cover from <strong>Q</strong> to <strong>P</strong> </p>
+                    <div id="topRow-header">
+                      <div id="topRow-btn">
+                          <button id="topRow-try-again">Try Again</button>
+                      </div>
+                  </div>
+                  <div class="practice-topRow">
+                      <div id="topRow-game" tabindex="0">
+                          <div id="tChar"></div>
+                          <div id="topRow-cursor"></div>
+                          <div id="topRow-focus-error">Click here to focus</div>
+                      </div>
+                  </div>
+                
+                  
+                
+                    <br>
+                    <h2 class ="eduSubTitle" id  = "lesson3">Lesson 3:Bottom Row </h2>
+                    <p class= "eduText">
+                        You've made excellent progress in learning the basic keys! Keep up the good work so that you can move on to your first typing test.</p>
+                    <p class="eduText">Now, let's shift our focus to the bottom row, which consists of the keys: Z X C V B N M , . /</p>
+                  
+                    <div id="botRow-header">
+                      <div id="botRow-btn">
+                          <button id="botRow-try-again">Try Again</button>
+                      </div>
+                  </div>
+                  <div class="practice-botRow">
+                      <div id="botRow-game" tabindex="0">
+                          <div id="bChar"></div>
+                          <div id="botRow-cursor"></div>
+                          <div id="botRow-focus-error">Click here to focus</div>
+                      </div>
+                  </div>
+                    <p class="eduText">Awesome! You're now fully prepared for your very first typing challenge.</p>
+                </div>  
+              </main>
             <!--fLOAT-->
             <!--fLOAT-->
             <div class="NameS">
